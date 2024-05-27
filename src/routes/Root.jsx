@@ -18,8 +18,23 @@ function Header() {
 function Title() {
   return (
     <div>
-      <span>Perfect</span>
-      <em>Plan</em>
+      <span
+        style={{
+          fontFamily: 'Bodoni Moda',
+          fontSize: 100,
+        }}
+      >
+        Perfect{' '}
+      </span>
+      <span
+        style={{
+          fontFamily: 'Bodoni Moda',
+          fontSize: 100,
+          color: `var(--active)`,
+        }}
+      >
+        Plan
+      </span>
     </div>
   )
 }
