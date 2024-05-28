@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
   font-size: 280px;
-  line-height: 1;
-  margin-top: 150px;
 `
 
 const StyledEm = styled.em`

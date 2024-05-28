@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledHeaderLayout = styled.div`
@@ -38,7 +39,9 @@ export default function Header() {
   return (
     <StyledHeaderLayout>
       <HeaderTitle>
-        PERF<HeaderEm>AN</HeaderEm>
+        <Link>
+          PERF<HeaderEm>AN</HeaderEm>
+        </Link>
       </HeaderTitle>
       <HeaderSide>
         <HeaderItem>

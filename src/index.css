@@ -3,6 +3,7 @@
 :root {
   --active: #185644;
   --background: #eeeae4;
+  --gray: #a9a9a9;
 }
 
 html {
@@ -21,4 +22,17 @@ body {
   background-color: var(--background);
   margin: 0;
   padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
 }
