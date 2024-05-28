@@ -15,9 +15,10 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'S-Core Dream', sans-serif;
-  font-weight: normal;
+  font-family: 'SCoreDream', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
+  margin: 0;
+  padding: 0;
 }
