@@ -1,23 +1,22 @@
+import styled from 'styled-components'
+
+const StyledTitle = styled.div`
+  text-align: center;
+  font-family: 'Bodoni Moda', sans-serif;
+  font-size: 280px;
+  line-height: 1;
+  margin-top: 150px;
+`
+
+const StyledEm = styled.em`
+  font-style: normal;
+  color: var(--active);
+`
+
 export default function Title() {
   return (
-    <div>
-      <span
-        style={{
-          fontFamily: '"Bodoni Moda", sans-serif',
-          fontSize: 100,
-        }}
-      >
-        Perfect{' '}
-      </span>
-      <span
-        style={{
-          fontFamily: '"Bodoni Moda", sans-serif',
-          fontSize: 100,
-          color: `var(--active)`,
-        }}
-      >
-        Plan
-      </span>
-    </div>
+    <StyledTitle>
+      Perfect <StyledEm>Plan</StyledEm>
+    </StyledTitle>
   )
 }
