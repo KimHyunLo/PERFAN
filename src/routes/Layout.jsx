@@ -2,6 +2,11 @@ import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
 import Title from '../components/Title'
 import Nav from '../components/Nav'
+import styled from 'styled-components'
+
+const StyledMain = styled.main`
+  margin-top: 50vh;
+`
 
 function Layout() {
   return (
@@ -9,7 +14,9 @@ function Layout() {
       <Header />
       <Title />
       <Nav />
-      <Outlet />
+      <StyledMain>
+        <Outlet />
+      </StyledMain>
     </>
   )
 }

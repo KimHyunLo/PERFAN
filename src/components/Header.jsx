@@ -33,6 +33,15 @@ const HeaderItem = styled.div`
   align-items: center;
   gap: 7px;
   font-size: 14px;
+
+  &.left-item::before {
+    content: '';
+    background-image: url(megaphone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+  }
 `
 
 export default function Header() {
@@ -44,10 +53,7 @@ export default function Header() {
         </Link>
       </HeaderTitle>
       <HeaderSide>
-        <HeaderItem>
-          <img src="megaphone.svg" alt="megaphone" />
-          <span>Highflier Developer</span>
-        </HeaderItem>
+        <HeaderItem className="left-item">Highflier Developer</HeaderItem>
         <HeaderItem>portfolio</HeaderItem>
       </HeaderSide>
     </StyledHeaderLayout>
