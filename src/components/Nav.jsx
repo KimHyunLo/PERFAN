@@ -6,6 +6,10 @@ const StyledNav = styled.nav`
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 
 const StyledUl = styled.ul`
@@ -27,7 +31,6 @@ const StyledLink = styled(NavLink)`
   }
 
   .path {
-    font-weight: 500;
     margin-top: 8px;
     line-height: 1.2;
   }

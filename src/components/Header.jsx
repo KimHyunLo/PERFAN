@@ -29,18 +29,40 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 7px;
   font-size: 14px;
 
-  &.left-item::before {
-    content: '';
-    background-image: url(megaphone.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 34px;
-    height: 34px;
+  &.left-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &::before {
+      content: '';
+      background-image: url(megaphone.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    &.right-item {
+      font-size: 0;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: block;
+        background-image: url(menu.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 20px;
+      }
+    }
   }
 `
 
@@ -54,7 +76,7 @@ export default function Header() {
       </HeaderTitle>
       <HeaderSide>
         <HeaderItem className="left-item">Highflier Developer</HeaderItem>
-        <HeaderItem>portfolio</HeaderItem>
+        <HeaderItem className="right-item">portfolio</HeaderItem>
       </HeaderSide>
     </StyledHeaderLayout>
   )

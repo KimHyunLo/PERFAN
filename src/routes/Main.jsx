@@ -9,10 +9,17 @@ const StyledMain = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: start;
+
+  .avatar {
+    max-width: 350px;
+    width: 20vw;
+  }
 `
 
 const StyledParagraph = styled.p`
-  width: 255px;
+  max-width: 255px;
+  min-width: 200px;
+  width: 20vw;
   font-size: 14px;
   text-align: center;
   word-break: keep-all;
@@ -64,7 +71,7 @@ function Main() {
     <>
       <StyledMain>
         <StyledParagraph>Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라 만들어진 포트폴리오입니다.</StyledParagraph>
-        <img src="avatar.svg" alt="avatar" />
+        <img src="avatar.svg" alt="avatar" className="avatar" />
         <StyledParagraph>웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도 관심을 가지는 편입니다.</StyledParagraph>
       </StyledMain>
       <StyledFooter>

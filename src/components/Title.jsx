@@ -8,7 +8,7 @@ const StyledTitle = styled.div`
   text-align: center;
   width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: 280px;
+  font-size: 15vw;
 `
 
 const StyledEm = styled.em`
