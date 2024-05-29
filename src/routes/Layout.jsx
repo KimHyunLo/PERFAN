@@ -7,6 +7,10 @@ import Nav from '../components/Nav'
 
 const StyledMain = styled.main`
   margin-top: 50vh;
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 35vh;
+  }
 `
 
 function Layout() {
