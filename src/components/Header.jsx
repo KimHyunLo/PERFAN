@@ -3,7 +3,11 @@ import styled from 'styled-components'
 
 const StyledHeaderLayout = styled.div`
   position: relative;
-  margin: 26px 30px 0 30px;
+  margin: 26px 30px 0;
+
+  @media only screen and (max-width: 640px) {
+    margin: 18px 15px 0;
+  }
 `
 
 const HeaderTitle = styled.div`
@@ -13,6 +17,10 @@ const HeaderTitle = styled.div`
   transform: translate(-50%, -50%);
   font-size: 25px;
   font-weight: 500;
+
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
 `
 
 const HeaderEm = styled.em`

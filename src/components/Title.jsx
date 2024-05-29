@@ -9,17 +9,20 @@ const StyledTitle = styled.div`
   width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
   font-size: 15vw;
-`
 
-const StyledEm = styled.em`
-  font-style: normal;
-  color: var(--active);
+  em {
+    color: var(--active);
+  }
+
+  @media only screen and (max-width: 640px) {
+    top: 15%;
+  }
 `
 
 export default function Title() {
   return (
     <StyledTitle>
-      Perfect <StyledEm>Plan</StyledEm>
+      Perfect <em>Plan</em>
     </StyledTitle>
   )
 }

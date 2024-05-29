@@ -11,6 +11,10 @@ const StyledMain = styled.main`
   @media only screen and (max-width: 1024px) {
     margin-top: 35vh;
   }
+
+  @media only screen and (max-width: 640px) {
+    margin-top: 18vh;
+  }
 `
 
 function Layout() {

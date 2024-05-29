@@ -42,7 +42,8 @@ const MobileMain = styled.div`
       margin-bottom: 100px;
 
       p {
-        width: 400px;
+        max-width: 400px;
+        width: 80vw;
         font-size: 14px;
         text-align: center;
         word-break: keep-all;
@@ -50,7 +51,20 @@ const MobileMain = styled.div`
     }
 
     .avatar {
+      max-width: 400px;
+      width: 80vw;
       margin-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    &::before {
+      height: 25px;
+      margin: 0 auto 30px;
+    }
+
+    .middle-text {
+      margin-bottom: 70px;
     }
   }
 `
@@ -109,11 +123,19 @@ const StyledFooter = styled.footer`
     position: relative;
     bottom: auto;
   }
+
+  @media only screen and (max-width: 640px) {
+    padding: 0 15px;
+
+    .middle-text {
+      display: none;
+    }
+  }
 `
 
 const StyledUl = styled.ul`
   display: flex;
-  gap: 10px;
+  gap: 8px;
 
   li {
     position: relative;
