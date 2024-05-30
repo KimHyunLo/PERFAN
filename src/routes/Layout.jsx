@@ -9,11 +9,11 @@ const StyledMain = styled.main`
   margin-top: 50vh;
 
   @media only screen and (max-width: 1024px) {
-    margin-top: 35vh;
+    margin-top: 40vh;
   }
 
   @media only screen and (max-width: 640px) {
-    margin-top: 18vh;
+    margin-top: 24vh;
   }
 `
 

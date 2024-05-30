@@ -121,7 +121,6 @@ const StyledFooter = styled.footer`
 
   @media only screen and (max-width: 1024px) {
     position: relative;
-    bottom: auto;
   }
 
   @media only screen and (max-width: 640px) {

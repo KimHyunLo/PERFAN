@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import SideMenu from './SideMenu'
+import { SideMenuContext } from '../context/SideMenuContext'
+import { useCustomContext } from '../hooks/useCustomContext'
 
 const StyledHeaderLayout = styled.div`
   position: fixed;
@@ -80,11 +83,17 @@ const HeaderItem = styled.div`
         width: 30px;
         height: 20px;
       }
+
+      &.close-btn::before {
+        background-image: url(close.svg);
+      }
     }
   }
 `
 
 export default function Header() {
+  const { isMenuOpen, toggleSideMenu } = useCustomContext(SideMenuContext)
+
   return (
     <StyledHeaderLayout>
       <HeaderTitle>
@@ -94,8 +103,11 @@ export default function Header() {
       </HeaderTitle>
       <HeaderSide>
         <HeaderItem className="left-item">Highflier Developer</HeaderItem>
-        <HeaderItem className="right-item">portfolio</HeaderItem>
+        <HeaderItem className={`right-item ${isMenuOpen ? 'close-btn' : ''}`} onClick={toggleSideMenu}>
+          portfolio
+        </HeaderItem>
       </HeaderSide>
+      {isMenuOpen && <SideMenu />}
     </StyledHeaderLayout>
   )
 }
