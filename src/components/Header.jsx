@@ -2,11 +2,16 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledHeaderLayout = styled.div`
-  position: relative;
-  margin: 26px 30px 0;
+  position: fixed;
+  top: 26px;
+  padding: 0 30px;
+  width: 100%;
+  mix-blend-mode: difference;
+  z-index: 1;
 
   @media only screen and (max-width: 640px) {
-    margin: 18px 15px 0;
+    top: 18px;
+    padding: 0 15px;
   }
 `
 
@@ -18,6 +23,10 @@ const HeaderTitle = styled.div`
   font-size: 25px;
   font-weight: 500;
 
+  a {
+    color: var(--black-difference);
+  }
+
   @media only screen and (max-width: 640px) {
     display: none;
   }
@@ -25,7 +34,7 @@ const HeaderTitle = styled.div`
 
 const HeaderEm = styled.em`
   font-style: normal;
-  color: var(--active);
+  color: var(--active-difference);
   font-family: 'Now', sans-serif;
   font-weight: 700;
 `
@@ -38,6 +47,7 @@ const HeaderSide = styled.div`
 
 const HeaderItem = styled.div`
   font-size: 14px;
+  color: var(--black-difference);
 
   &.left-item {
     display: flex;

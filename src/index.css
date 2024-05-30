@@ -2,9 +2,11 @@
 
 :root {
   --active: #185644;
+  --active-difference: #e7a9bb;
   --background: #eeeae4;
   --gray: #a9a9a9;
   --black: #222;
+  --black-difference: #ddd;
 }
 
 html {

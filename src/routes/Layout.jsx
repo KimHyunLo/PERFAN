@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
@@ -18,10 +18,28 @@ const StyledMain = styled.main`
 `
 
 function Layout() {
+  const location = useLocation()
+  let title = []
+
+  switch (location.pathname) {
+    case '/':
+      title = ['Perfect', 'Plan']
+      break
+    case '/about':
+      title = ['About', 'Me']
+      break
+    case '/works':
+      title = ['My', 'Works']
+      break
+    case '/contact':
+      title = ['Contact', 'Me']
+      break
+  }
+
   return (
     <>
       <Header />
-      <Title />
+      <Title title={title} />
       <Nav />
       <StyledMain>
         <Outlet />

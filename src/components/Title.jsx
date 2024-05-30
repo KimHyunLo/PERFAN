@@ -19,10 +19,10 @@ const StyledTitle = styled.div`
   }
 `
 
-export default function Title() {
+export default function Title({ title }) {
   return (
     <StyledTitle>
-      Perfect <em>Plan</em>
+      {title[0]} <em>{title[1]}</em>
     </StyledTitle>
   )
 }
