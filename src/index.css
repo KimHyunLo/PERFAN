@@ -3,7 +3,7 @@
 :root {
   --active: #185644;
   --active-difference: #e7a9bb;
-  --background: #eeeae4;
+  --white: #eeeae4;
   --gray: #a9a9a9;
   --black: #222;
   --black-difference: #ddd;
@@ -22,7 +22,7 @@ body {
   font-family: 'SCoreDream', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
+  background-color: var(--white);
   margin: 0;
   padding: 0;
   color: var(--black);

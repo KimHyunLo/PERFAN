@@ -21,7 +21,7 @@ const StyledMenu = styled.ul`
 `
 
 const StyledItem = styled.div`
-  color: white;
+  color: var(--white);
   display: flex;
   align-items: center;
   gap: 30px;

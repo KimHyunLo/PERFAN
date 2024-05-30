@@ -6,7 +6,7 @@ import Title from '../components/Title'
 import Nav from '../components/Nav'
 
 const StyledMain = styled.main`
-  margin-top: 50vh;
+  margin-top: 55vh;
 
   @media only screen and (max-width: 1024px) {
     margin-top: 40vh;
