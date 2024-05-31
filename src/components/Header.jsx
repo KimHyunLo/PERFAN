@@ -23,6 +23,7 @@ const HeaderTitle = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Bodoni Moda', sans-serif;
   font-size: 25px;
   font-weight: 500;
 
@@ -39,7 +40,6 @@ const HeaderEm = styled.em`
   font-style: normal;
   color: var(--active-difference);
   font-family: 'Now', sans-serif;
-  font-weight: 700;
 `
 
 const HeaderSide = styled.div`
@@ -50,6 +50,7 @@ const HeaderSide = styled.div`
 
 const HeaderItem = styled.div`
   font-size: 14px;
+  font-weight: 300;
   color: var(--black-difference);
 
   &.left-item {
