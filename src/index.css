@@ -18,6 +18,21 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, var(--active));
+  border-radius: 10px;
+  border: 2px solid var(--white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, var(--active) 70%);
+}
+
 body {
   font-family: 'SCoreDream', sans-serif;
   -webkit-font-smoothing: antialiased;
