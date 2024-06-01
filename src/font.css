@@ -5,8 +5,8 @@
   font-display: swap;
   src:
     local('Now'),
-    url(src/fonts/subset-Now-Thin.woff2) format('woff2'),
-    url(src/fonts/subset-Now-Thin.woff) format('woff');
+    url(./fonts/subset-Now-Thin.woff2) format('woff2'),
+    url(./fonts/subset-Now-Thin.woff) format('woff');
 }
 
 @font-face {
