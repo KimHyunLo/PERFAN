@@ -26,7 +26,7 @@ const StyledLink = styled(NavLink)`
   }
 
   .number {
-    font-size: 10px;
+    font-size: 1rem;
     color: var(--gray);
   }
 

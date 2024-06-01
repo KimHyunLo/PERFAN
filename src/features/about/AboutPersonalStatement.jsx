@@ -9,7 +9,7 @@ const StatementTitle = styled.div`
   font-size: 8vw;
   font-family: 'Bodoni Moda', sans-serif;
   line-height: 1;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 
   .bottom-title {
     text-align: right;

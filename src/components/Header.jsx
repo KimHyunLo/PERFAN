@@ -10,7 +10,7 @@ const StyledHeaderLayout = styled.div`
   padding: 0 30px;
   width: 100%;
   mix-blend-mode: difference;
-  z-index: 1;
+  z-index: 2;
 
   @media only screen and (max-width: 640px) {
     top: 18px;
@@ -49,7 +49,7 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 300;
   color: var(--black-difference);
 

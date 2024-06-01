@@ -14,6 +14,7 @@ const StyledMenu = styled.ul`
   gap: 40px;
   background-color: var(--black);
   padding: 0 30px;
+  z-index: 1;
 
   @media only screen and (max-width: 640px) {
     padding: 0 15px;
