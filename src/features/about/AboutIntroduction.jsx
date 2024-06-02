@@ -3,13 +3,17 @@ import styled from 'styled-components'
 const Introduction = styled.div`
   position: relative;
   width: 85%;
-  margin: 100px auto 50px;
+  margin: 10rem auto 5rem;
+
+  @media only screen and (max-width: 768px) {
+    margin: 10vw auto 5rem;
+  }
 `
 
 const IntroHeader = styled.div`
   font-family: 'Bodoni Moda', sans-serif;
   line-height: 1;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 
   .header1 {
     font-size: 8vw;
@@ -38,11 +42,12 @@ const IntroTitle = styled.div`
   margin-bottom: 5rem;
 
   @media only screen and (max-width: 1280px) {
-    font-size: 3.5vw;
+    font-size: 3.5rem;
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 4.5vw;
+    font-size: max(4.5vw, 15px);
+    margin-bottom: 7vw;
   }
 `
 
@@ -52,12 +57,12 @@ const IntroContent = styled.p`
   font-size: 1.8rem;
 
   @media only screen and (max-width: 1280px) {
-    font-size: 2vw;
     width: 100%;
   }
 
   @media only screen and (max-width: 768px) {
-    font-size: 3vw;
+    max-width: none;
+    font-size: max(2.3vw, 12px);
   }
 `
 
@@ -88,7 +93,7 @@ const IntroMobileImage = styled.div`
   @media only screen and (max-width: 1280px) {
     position: relative;
     display: block;
-    height: 50vw;
+    height: 55vw;
 
     .signature,
     .portrait {
