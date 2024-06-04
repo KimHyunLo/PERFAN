@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledContactInfo = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 10% 10%;
   row-gap: 3.5vw;
   column-gap: 6.5vw;
@@ -10,7 +10,7 @@ const StyledContactInfo = styled.ul`
 
 const InfoList = styled.li`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 12vw 1fr;
 
   .social-list {
     display: flex;
