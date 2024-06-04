@@ -25,7 +25,6 @@ const HeaderTitle = styled.div`
   transform: translate(-50%, -50%);
   font-family: 'Bodoni Moda', sans-serif;
   font-size: 25px;
-  font-weight: 500;
 
   a {
     color: var(--black-difference);
@@ -38,8 +37,8 @@ const HeaderTitle = styled.div`
 
 const HeaderEm = styled.em`
   font-style: normal;
-  color: var(--active-difference);
   font-family: 'Now', sans-serif;
+  color: var(--active-difference);
 `
 
 const HeaderSide = styled.div`
