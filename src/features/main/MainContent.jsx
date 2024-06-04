@@ -44,7 +44,6 @@ const MobileMain = styled.div`
       p {
         max-width: 400px;
         width: 80vw;
-        font-size: 14px;
         text-align: center;
         word-break: keep-all;
       }
@@ -89,7 +88,7 @@ const StyledParagraph = styled.p`
   max-width: 255px;
   min-width: 200px;
   width: 20vw;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
   word-break: keep-all;
 
