@@ -11,6 +11,13 @@ const StyledContact = styled.div`
   width: 100%;
   padding: 0 30px;
 
+  @media only screen and (max-width: 1024px) {
+    bottom: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+  }
+
   @media only screen and (max-width: 640px) {
     padding: 0 15px;
   }

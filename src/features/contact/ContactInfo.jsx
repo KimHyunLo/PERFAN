@@ -2,20 +2,39 @@ import styled from 'styled-components'
 
 const StyledContactInfo = styled.ul`
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 10%;
+  grid-template-columns: 16vw 16vw;
+  grid-template-rows: 15% 15%;
+  align-items: center;
   row-gap: 3.5vw;
-  column-gap: 6.5vw;
+  column-gap: 6vw;
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 `
 
 const InfoList = styled.li`
   display: grid;
-  grid-template-columns: 12vw 1fr;
+  grid-template-columns: max(8vw, 10rem) 1fr;
 
   .social-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    li:first-child::after {
+      content: ',';
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: 15rem 1fr;
+
+    .social-list {
+      display: flex;
+      flex-direction: row;
+    }
   }
 `
 
