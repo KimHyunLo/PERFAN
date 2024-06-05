@@ -48,13 +48,18 @@ function MainFooter() {
     <StyledFooter>
       <StyledUl>
         <li>
+          <a href="https://github.com/KimHyunLo" target="blank">
+            <img src="github.svg" alt="github" />
+          </a>
+        </li>
+        <li>
           <a href="mailto:leeas016@gmail.com">
             <img src="email.svg" alt="email" />
           </a>
         </li>
         <li>
-          <a href="https://github.com/KimHyunLo" target="blank">
-            <img src="github.svg" alt="github" />
+          <a href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74" target="blank">
+            <img src="blog.svg" alt="blog" />
           </a>
         </li>
       </StyledUl>
