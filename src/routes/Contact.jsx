@@ -9,7 +9,7 @@ const StyledContact = styled.div`
   justify-content: space-between;
   align-items: end;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 3rem;
 
   @media only screen and (max-width: 1024px) {
     bottom: auto;
@@ -19,7 +19,7 @@ const StyledContact = styled.div`
   }
 
   @media only screen and (max-width: 640px) {
-    padding: 0 15px;
+    padding: 0 1.5rem;
   }
 `
 

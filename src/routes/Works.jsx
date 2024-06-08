@@ -1,5 +1,7 @@
+import ProjectList from '../features/works/ProjectList'
+
 function Works() {
-  return <div>Works</div>
+  return <ProjectList />
 }
 
 export default Works

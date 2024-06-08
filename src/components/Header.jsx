@@ -7,14 +7,14 @@ import { useCustomContext } from '../hooks/useCustomContext'
 const StyledHeaderLayout = styled.div`
   position: fixed;
   top: 26px;
-  padding: 0 30px;
+  padding: 0 3rem;
   width: 100%;
   mix-blend-mode: difference;
   z-index: 2;
 
   @media only screen and (max-width: 640px) {
     top: 18px;
-    padding: 0 15px;
+    padding: 0 1.5rem;
   }
 `
 

@@ -4,7 +4,7 @@ const StyledFooter = styled.footer`
   position: absolute;
   bottom: 10px;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 3rem;
 
   .middle-text {
     position: absolute;
@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
   }
 
   @media only screen and (max-width: 640px) {
-    padding: 0 15px;
+    padding: 0 1.5rem;
 
     .middle-text {
       display: none;

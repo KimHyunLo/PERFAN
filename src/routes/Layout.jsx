@@ -13,7 +13,7 @@ const StyledMain = styled.main`
   }
 
   @media only screen and (max-width: 640px) {
-    margin-top: 24vh;
+    margin-top: 27vh;
   }
 `
 

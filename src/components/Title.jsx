@@ -9,13 +9,20 @@ const StyledTitle = styled.div`
   width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
   font-size: 15vw;
+  letter-spacing: -1rem;
+  word-spacing: 2rem;
 
   em {
     color: var(--active);
   }
 
+  @media only screen and (max-width: 1024px) {
+    letter-spacing: -0.5rem;
+  }
+
   @media only screen and (max-width: 640px) {
-    top: 15%;
+    top: 18%;
+    letter-spacing: -0.2rem;
   }
 `
 

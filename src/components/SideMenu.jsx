@@ -13,11 +13,11 @@ const StyledMenu = styled.ul`
   justify-content: center;
   gap: 40px;
   background-color: var(--black);
-  padding: 0 30px;
+  padding: 0 3rem;
   z-index: 1;
 
   @media only screen and (max-width: 640px) {
-    padding: 0 15px;
+    padding: 0 1.5rem;
   }
 `
 
