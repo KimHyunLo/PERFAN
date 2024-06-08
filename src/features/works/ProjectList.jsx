@@ -2,10 +2,98 @@ import styled from 'styled-components'
 import ProjectItem from './ProjectItem'
 
 const projectList = [
-  { id: 0, title: 'Noljang Web' },
-  { id: 1, title: 'Noljang App' },
-  { id: 2, title: 'Noljang Web' },
-  { id: 3, title: 'Noljang App' },
+  {
+    id: 0,
+    title: 'Noljang Web',
+    period: '23/03~23/11',
+    taskList: [
+      {
+        id: 0,
+        task: 'UX&UI 개선',
+      },
+      {
+        id: 1,
+        task: 'API 호출 프로세스 간편화',
+      },
+      {
+        id: 2,
+        task: '서비스 인지도 개선',
+      },
+      {
+        id: 3,
+        task: '프로젝트 문서화',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Noljang App',
+    period: '23/03~23/11',
+    taskList: [
+      {
+        id: 0,
+        task: 'UX&UI 개선',
+      },
+      {
+        id: 1,
+        task: 'API 호출 프로세스 간편화',
+      },
+      {
+        id: 2,
+        task: '서비스 인지도 개선',
+      },
+      {
+        id: 3,
+        task: '프로젝트 문서화',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Noljang Web',
+    period: '23/03~23/11',
+    taskList: [
+      {
+        id: 0,
+        task: 'UX&UI 개선',
+      },
+      {
+        id: 1,
+        task: 'API 호출 프로세스 간편화',
+      },
+      {
+        id: 2,
+        task: '서비스 인지도 개선',
+      },
+      {
+        id: 3,
+        task: '프로젝트 문서화',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Noljang App',
+    period: '23/03~23/11',
+    taskList: [
+      {
+        id: 0,
+        task: 'UX&UI 개선',
+      },
+      {
+        id: 1,
+        task: 'API 호출 프로세스 간편화',
+      },
+      {
+        id: 2,
+        task: '서비스 인지도 개선',
+      },
+      {
+        id: 3,
+        task: '프로젝트 문서화',
+      },
+    ],
+  },
 ]
 
 const StyledProjectList = styled.div`

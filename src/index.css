@@ -90,6 +90,10 @@ p {
 button {
   border: none;
   padding: 0;
+  background: none;
+  font-family: 'SCoreDream', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 em {
