@@ -8,35 +8,22 @@ const StyledProjectItem = styled.div`
   justify-content: center;
   width: 24vw;
   height: 35vw;
+  max-width: 450px;
+  max-height: 650px;
   background-image: ${(props) => (props.theme === 'green' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)')};
-  border: 1px solid var(--active);
-  border-radius: 1rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
   margin-top: ${(props) => props.theme === 'white' && '5rem'};
   cursor: pointer;
 
   &::before {
     content: '';
     position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: ${(props) => (props.theme === 'white' ? 'url(greenBorder.png)' : 'url(whiteBorder.png)')};
-    background-repeat: no-repeat;
-    background-size: 26% 18%;
-    background-position: top 2% right 2%;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: ${(props) => (props.theme === 'white' ? 'url(greenBorder.png)' : 'url(whiteBorder.png)')};
-    background-repeat: no-repeat;
-    background-size: 26% 18%;
-    background-position: top 2% right 2%;
-    transform: rotate(180deg);
+    width: 95%;
+    height: 95%;
+    border: 1px solid ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
   }
 `
 
@@ -45,38 +32,31 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: 4.5rem;
-  line-height: 2;
-  width: 100%;
+  font-size: 3vw;
+  line-height: 1.7;
+  width: 80%;
   color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
-  border-top: 1px solid ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-  border-bottom: 1px solid ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-  background-image: ${(props) => (props.theme === 'white' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)')};
+  background-color: ${(props) => (props.theme === 'white' ? ' rgba(21, 71, 13, 0.3)' : 'rgba(238, 234, 228, 0.3)')};
+  z-index: 1;
 
   &::before {
     content: '';
     position: absolute;
-    display: block;
-    height: 24vw;
-    width: 35vw;
-    background-image: ${(props) => (props.theme === 'white' ? 'url(greenBorder.png)' : 'url(whiteBorder.png)')};
-    background-repeat: no-repeat;
-    background-size: 18% 26%;
-    background-position: top 2% right 2%;
-    transform: rotate(-90deg);
+    width: 85%;
+    height: 20%;
+    background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
+    opacity: 0.5;
+    z-index: -1;
   }
 
   &::after {
     content: '';
     position: absolute;
-    display: block;
-    height: 24vw;
-    width: 35vw;
-    background-image: ${(props) => (props.theme === 'white' ? 'url(greenBorder.png)' : 'url(whiteBorder.png)')};
-    background-repeat: no-repeat;
-    background-size: 18% 26%;
-    background-position: top 2% right 2%;
-    transform: rotate(90deg);
+    width: 90%;
+    height: 25%;
+    background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
+    opacity: 0.2;
+    z-index: -2;
   }
 `
 
