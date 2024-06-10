@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+
 import ProjectItem from './ProjectItem'
 
 const projectList = [
@@ -96,25 +99,19 @@ const projectList = [
   },
 ]
 
-const StyledProjectList = styled.div`
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  gap: 10rem;
+const StyledSwiper = styled(Swiper)`
   padding: 5rem 3rem;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 `
 
 function ProjectList() {
   return (
-    <StyledProjectList>
+    <StyledSwiper slidesPerView={3.3}>
       {projectList.map((project, index) => (
-        <ProjectItem key={project.id} project={project} theme={index % 2 === 0 ? 'green' : 'white'} />
+        <SwiperSlide key={project.id}>
+          <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} />
+        </SwiperSlide>
       ))}
-    </StyledProjectList>
+    </StyledSwiper>
   )
 }
 

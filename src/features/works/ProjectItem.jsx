@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 const StyledProjectItem = styled.div`
   position: relative;
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   width: 24vw;
   height: 35vw;
   max-width: 450px;
@@ -17,7 +16,7 @@ const StyledProjectItem = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
-  margin-top: ${(props) => props.theme === 'white' && '5rem'};
+  margin: ${(props) => (props.theme === 'white' ? '5rem' : '0')} auto 0;
 
   &::before {
     content: '';
@@ -123,7 +122,7 @@ function ProjectItem({ project, theme }) {
       </Title>
       <HiddenDetail className="hidden-detail" theme={theme}>
         <ul>
-          <li>({project.period})</li>
+          <li>-&nbsp;{project.period}&nbsp;-</li>
           {project.taskList.map((task) => (
             <Task key={task.id}>{task.task}</Task>
           ))}
