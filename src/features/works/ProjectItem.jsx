@@ -6,17 +6,15 @@ const StyledProjectItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  width: 24vw;
-  height: 35vw;
-  max-width: 450px;
-  max-height: 650px;
+  gap: max(2.5vw, 3rem);
+  height: calc(((100vw - 3rem) / 3.3) * 1.15);
+  width: 83%;
   background-image: ${(props) => (props.theme === 'green' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)')};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
-  margin: ${(props) => (props.theme === 'white' ? '5rem' : '0')} auto 0;
+  margin: ${(props) => (props.theme === 'white' ? 'max(5vw, 5rem)' : '0')} auto 0;
 
   &::before {
     content: '';
@@ -53,6 +51,14 @@ const StyledProjectItem = styled.div`
       display: block;
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    height: calc(((100vw - 3rem) / 2.3) * 1.15);
+  }
+
+  @media only screen and (max-width: 640px) {
+    height: calc(((100vw - 3rem) / 1.15) * 1.15);
+  }
 `
 
 const Title = styled.div`
@@ -60,7 +66,7 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: 3vw;
+  font-size: max(3vw, 30px);
   line-height: 1.7;
   width: 80%;
   color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
@@ -95,24 +101,24 @@ const HiddenDetail = styled.div`
   ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: max(0.5vw, 1rem);
 
     li {
       color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
+      font-size: max(0.85vw, 12px);
     }
   }
 
   button {
     height: 3rem;
     width: 10rem;
+    font-size: max(0.85vw, 12px);
     background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
     color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
     border-radius: 25px;
-    margin-top: 2rem;
+    margin-top: max(2vw, 2rem);
   }
 `
-
-const Task = styled.li``
 
 function ProjectItem({ project, theme }) {
   return (
@@ -124,7 +130,7 @@ function ProjectItem({ project, theme }) {
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
           {project.taskList.map((task) => (
-            <Task key={task.id}>{task.task}</Task>
+            <li key={task.id}>{task.task}</li>
           ))}
         </ul>
         <button>더보기</button>

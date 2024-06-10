@@ -101,11 +101,25 @@ const projectList = [
 
 const StyledSwiper = styled(Swiper)`
   padding: 5rem 3rem;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 3rem 3rem 5rem;
+  }
 `
 
 function ProjectList() {
   return (
-    <StyledSwiper slidesPerView={3.3}>
+    <StyledSwiper
+      slidesPerView={1.1}
+      breakpoints={{
+        1025: {
+          slidesPerView: 3.3,
+        },
+        641: {
+          slidesPerView: 2.3,
+        },
+      }}
+    >
       {projectList.map((project, index) => (
         <SwiperSlide key={project.id}>
           <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} />
