@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
 import ProjectItem from './ProjectItem'
+import Modal from '../../components/Modal'
+import { useToggleBodyScroll } from '../../hooks/useToggleBodyScroll'
 
 const projectList = [
   {
@@ -108,6 +111,14 @@ const StyledSwiper = styled(Swiper)`
 `
 
 function ProjectList() {
+  const [isModalOpen, setIsModalOpen] = useToggleBodyScroll()
+  const [openIndex, setOpenIndex] = useState(null)
+
+  function handleClick(index) {
+    setOpenIndex(openIndex === index ? null : index)
+    setIsModalOpen(openIndex !== index)
+  }
+
   return (
     <StyledSwiper
       slidesPerView={1.1}
@@ -122,9 +133,10 @@ function ProjectList() {
     >
       {projectList.map((project, index) => (
         <SwiperSlide key={project.id}>
-          <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} />
+          <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} onMoreClick={() => handleClick(index)} />
         </SwiperSlide>
       ))}
+      {isModalOpen && <Modal project={projectList[openIndex]} />}
     </StyledSwiper>
   )
 }

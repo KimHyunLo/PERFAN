@@ -1,30 +1,16 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext } from 'react'
+import { useToggleBodyScroll } from '../hooks/useToggleBodyScroll'
 
 const SideMenuContext = createContext()
 
 function SideMenuProvider({ children }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useToggleBodyScroll()
 
   function toggleSideMenu() {
     setIsMenuOpen((isOpen) => !isOpen)
   }
 
-  useEffect(
-    function () {
-      if (isMenuOpen) {
-        document.querySelector('body').style.overflow = 'hidden'
-      } else {
-        document.querySelector('body').style.overflow = 'auto'
-      }
-
-      return () => {
-        document.querySelector('body').style.overflow = 'auto'
-      }
-    },
-    [isMenuOpen],
-  )
-
-  return <SideMenuContext.Provider value={{ isMenuOpen, setIsMenuOpen, toggleSideMenu }}>{children}</SideMenuContext.Provider>
+  return <SideMenuContext.Provider value={{ isMenuOpen, toggleSideMenu }}>{children}</SideMenuContext.Provider>
 }
 
 export { SideMenuProvider, SideMenuContext }

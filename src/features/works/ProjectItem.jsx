@@ -66,11 +66,11 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: max(3vw, 30px);
+  font-size: max(3vw, 25px);
   line-height: 1.7;
   width: 80%;
   color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
-  background-color: ${(props) => (props.theme === 'white' ? ' rgba(21, 71, 13, 0.3)' : 'rgba(238, 234, 228, 0.3)')};
+  background-color: ${(props) => (props.theme === 'white' ? ' rgba(21, 71, 13, 0.4)' : 'rgba(238, 234, 228, 0.4)')};
   z-index: 1;
 
   &::before {
@@ -120,7 +120,7 @@ const HiddenDetail = styled.div`
   }
 `
 
-function ProjectItem({ project, theme }) {
+function ProjectItem({ project, theme, onMoreClick }) {
   return (
     <StyledProjectItem theme={theme}>
       <Title className="title" theme={theme}>
@@ -133,7 +133,7 @@ function ProjectItem({ project, theme }) {
             <li key={task.id}>{task.task}</li>
           ))}
         </ul>
-        <button>더보기</button>
+        <button onClick={onMoreClick}>더보기</button>
       </HiddenDetail>
     </StyledProjectItem>
   )
