@@ -14,14 +14,18 @@ const ModalBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 70%;
+  height: 80%;
   background-color: var(--white);
 `
 
-function Modal({ project }) {
+function Modal({ project, modalRef }) {
+  console.log(project)
   return createPortal(
     <StyledModalLayout>
-      <ModalBox>{project.id + project.title}</ModalBox>
+      <ModalBox ref={modalRef}>
+        <div>content</div>
+        <div>preview</div>
+      </ModalBox>
     </StyledModalLayout>,
     document.body,
   )

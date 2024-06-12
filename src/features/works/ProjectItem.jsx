@@ -16,14 +16,6 @@ const StyledProjectItem = styled.div`
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
   margin: ${(props) => (props.theme === 'white' ? 'max(5vw, 5rem)' : '0')} auto 0;
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 95%;
-    height: 95%;
-    border: 1px solid ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-  }
-
   &:hover {
     background-image: ${(props) => (props.theme === 'green' ? 'url(greenHoverBackground.png)' : 'url(whiteHoverBackground.png)')};
 

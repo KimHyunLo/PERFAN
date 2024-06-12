@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -113,11 +113,24 @@ const StyledSwiper = styled(Swiper)`
 function ProjectList() {
   const [isModalOpen, setIsModalOpen] = useToggleBodyScroll()
   const [openIndex, setOpenIndex] = useState(null)
+  const modalRef = useRef(null)
 
   function handleClick(index) {
     setOpenIndex(openIndex === index ? null : index)
     setIsModalOpen(openIndex !== index)
   }
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (modalRef.current && !modalRef.current.contains(e.target)) {
+        setIsModalOpen(false)
+        setOpenIndex(null)
+      }
+    }
+
+    window.addEventListener('mousedown', handleClick, true)
+    return () => window.removeEventListener('mousedown', handleClick, true)
+  }, [modalRef, setIsModalOpen])
 
   return (
     <StyledSwiper
@@ -136,7 +149,7 @@ function ProjectList() {
           <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} onMoreClick={() => handleClick(index)} />
         </SwiperSlide>
       ))}
-      {isModalOpen && <Modal project={projectList[openIndex]} />}
+      {isModalOpen && <Modal project={projectList[openIndex]} modalRef={modalRef} />}
     </StyledSwiper>
   )
 }
