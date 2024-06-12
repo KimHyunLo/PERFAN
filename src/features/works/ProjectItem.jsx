@@ -97,14 +97,14 @@ const HiddenDetail = styled.div`
 
     li {
       color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-      font-size: max(0.85vw, 12px);
+      font-size: clamp(12px, 1vw, 16px);
     }
   }
 
   button {
     height: 3rem;
     width: 10rem;
-    font-size: max(0.85vw, 12px);
+    font-size: clamp(12px, 1vw, 16px);
     background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
     color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
     border-radius: 25px;
@@ -121,9 +121,7 @@ function ProjectItem({ project, theme, onMoreClick }) {
       <HiddenDetail className="hidden-detail" theme={theme}>
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
-          {project.taskList.map((task) => (
-            <li key={task.id}>{task.task}</li>
-          ))}
+          {project.chargeList.map((charge, index) => index < 4 && <li key={charge.mainCharge}>{charge.mainCharge}</li>)}
         </ul>
         <button onClick={onMoreClick}>더보기</button>
       </HiddenDetail>
