@@ -15,9 +15,12 @@ const ModalBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  height: 80%;
+  height: 85%;
   background-color: var(--white);
-  overflow: hidden;
+
+  @media only screen and (max-width: 640px) {
+    width: 90%;
+  }
 `
 
 const HeaderBox = styled.div`
@@ -26,42 +29,55 @@ const HeaderBox = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 15vw;
+  height: max(15vw, 10rem);
   background-image: url(modalBackground.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-size: 5vw;
+  font-size: max(5vw, 20px);
   font-family: 'Bodoni Moda', sans-serif;
   color: var(--white);
 
   .close-button {
     position: absolute;
-    bottom: -10%;
+    bottom: calc(max(3vw, 35px) * -0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4rem;
-    height: 4rem;
+    width: max(3vw, 35px);
+    height: max(3vw, 35px);
     background-color: var(--active-difference);
-    border-radius: 25px;
+    border-radius: 50px;
     z-index: 1;
 
     img {
-      width: 50%;
+      width: 40%;
       mix-blend-mode: difference;
     }
+  }
+
+  @media only screen and (max-width: 640px) {
+    height: 30vw;
+    font-size: 8vw;
   }
 `
 
 const ContentBox = styled.div`
-  height: calc(100% - 15vw);
-  padding: 3vw 7vw;
+  height: calc(100% - max(15vw, 10rem));
+  padding: max(3vw, 3rem) 7vw;
   overflow: auto;
 
   .introduction {
-    font-size: 1.8rem;
+    font-size: clamp(12px, 1vw, 18px);
     margin-bottom: 1.5vw;
+  }
+
+  @media only screen and (max-width: 640px) {
+    height: calc(100% - 30vw);
+
+    .introduction {
+      margin-bottom: 3vw;
+    }
   }
 `
 
@@ -69,15 +85,25 @@ const GridBox = styled.div`
   display: grid;
   grid-template-columns: 30% 1fr;
   row-gap: 1.5vw;
-  font-size: 1.8rem;
+  font-size: clamp(12px, 1vw, 18px);
 
   .title-item {
     color: var(--active);
+  }
+
+  @media only screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+
+    .title-item:not(&:first-child) {
+      margin-top: 1.5rem;
+    }
   }
 `
 
 const TechList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
 
   li:not(li:last-child) {
     border-right: 1px solid var(--gray);

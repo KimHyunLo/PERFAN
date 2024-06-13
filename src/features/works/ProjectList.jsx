@@ -12,7 +12,8 @@ const projectList = [
     id: 0,
     title: 'Noljang Web',
     period: '2023. 03 ~ 2023. 11',
-    introduction: '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
+    introduction:
+      '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
     techStack: ['Javascript', 'Vue', 'VueX', 'Nuxt', 'Dart', 'Flutter', 'Riverpod'],
     chargeList: [
       {
@@ -27,7 +28,11 @@ const projectList = [
       },
       {
         mainCharge: '전체 서비스 유지 보수',
-        subList: ['B2C 및 B2B 앱에서 나오는 운영 이슈를 관리', 'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)', '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발'],
+        subList: [
+          'B2C 및 B2B 앱에서 나오는 운영 이슈를 관리',
+          'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)',
+          '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발',
+        ],
       },
       {
         mainCharge: 'B2C 사이트 개발',
@@ -51,7 +56,8 @@ const projectList = [
     id: 1,
     title: 'Noljang App',
     period: '2023. 03 ~ 2023. 11',
-    introduction: '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
+    introduction:
+      '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
     techStack: ['Javascript', 'Vue', 'VueX', 'Nuxt', 'Dart', 'Flutter', 'Riverpod'],
     chargeList: [
       {
@@ -66,7 +72,11 @@ const projectList = [
       },
       {
         mainCharge: '전체 서비스 유지 보수',
-        subList: ['B2C 및 B2B 앱에서 나오는 운영 이슈를 관리', 'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)', '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발'],
+        subList: [
+          'B2C 및 B2B 앱에서 나오는 운영 이슈를 관리',
+          'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)',
+          '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발',
+        ],
       },
       {
         mainCharge: 'B2C 사이트 개발',
@@ -90,7 +100,8 @@ const projectList = [
     id: 2,
     title: 'Noljang Web',
     period: '2023. 03 ~ 2023. 11',
-    introduction: '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
+    introduction:
+      '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
     techStack: ['Javascript', 'Vue', 'VueX', 'Nuxt', 'Dart', 'Flutter', 'Riverpod'],
     chargeList: [
       {
@@ -105,7 +116,11 @@ const projectList = [
       },
       {
         mainCharge: '전체 서비스 유지 보수',
-        subList: ['B2C 및 B2B 앱에서 나오는 운영 이슈를 관리', 'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)', '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발'],
+        subList: [
+          'B2C 및 B2B 앱에서 나오는 운영 이슈를 관리',
+          'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)',
+          '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발',
+        ],
       },
       {
         mainCharge: 'B2C 사이트 개발',
@@ -129,7 +144,8 @@ const projectList = [
     id: 3,
     title: 'Noljang App',
     period: '23/03~23/11',
-    introduction: '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
+    introduction:
+      '네이티브 언어로 개발된 앱을 플러터로 리뉴얼하는 개발을 진행. 신규 앱은 서비스 만족도를 높이고, 유지 보수성 개선을 목표.',
     techStack: ['Javascript', 'Vue', 'VueX', 'Nuxt', 'Dart', 'Flutter', 'Riverpod'],
     chargeList: [
       {
@@ -144,7 +160,11 @@ const projectList = [
       },
       {
         mainCharge: '전체 서비스 유지 보수',
-        subList: ['B2C 및 B2B 앱에서 나오는 운영 이슈를 관리', 'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)', '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발'],
+        subList: [
+          'B2C 및 B2B 앱에서 나오는 운영 이슈를 관리',
+          'OS 또는 브라우저에 따라 출력이 다른 UI를 수정(크로스 브라우징)',
+          '폰트, 이미지, 색깔 등 사용자 편의성을 위한 UI 개발',
+        ],
       },
       {
         mainCharge: 'B2C 사이트 개발',
@@ -167,11 +187,7 @@ const projectList = [
 ]
 
 const StyledSwiper = styled(Swiper)`
-  padding: 5rem 3rem;
-
-  @media only screen and (max-width: 1024px) {
-    padding: 3rem 3rem 5rem;
-  }
+  padding: 3rem 3rem 5rem;
 `
 
 function ProjectList() {
@@ -197,10 +213,16 @@ function ProjectList() {
     >
       {projectList.map((project, index) => (
         <SwiperSlide key={project.id}>
-          <ProjectItem project={project} theme={index % 2 === 0 ? 'green' : 'white'} onMoreClick={() => handleClick(index)} />
+          <ProjectItem
+            project={project}
+            theme={index % 2 === 0 ? 'green' : 'white'}
+            onMoreClick={() => handleClick(index)}
+          />
         </SwiperSlide>
       ))}
-      {isModalOpen && <Modal project={projectList[openIndex]} onCloseClick={() => handleClick(openIndex)} />}
+      {isModalOpen && (
+        <Modal project={projectList[openIndex]} onCloseClick={() => handleClick(openIndex)} />
+      )}
     </StyledSwiper>
   )
 }

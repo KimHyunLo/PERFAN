@@ -9,15 +9,17 @@ const StyledProjectItem = styled.div`
   gap: max(2.5vw, 3rem);
   height: calc(((100vw - 3rem) / 3.3) * 1.15);
   width: 83%;
-  background-image: ${(props) => (props.theme === 'green' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)')};
+  background-image: ${(props) =>
+    props.theme === 'green' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)'};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
-  margin: ${(props) => (props.theme === 'white' ? 'max(5vw, 5rem)' : '0')} auto 0;
+  margin: ${(props) => (props.theme === 'white' ? 'max(3vw, 5rem)' : '0')} auto 0;
 
   &:hover {
-    background-image: ${(props) => (props.theme === 'green' ? 'url(greenHoverBackground.png)' : 'url(whiteHoverBackground.png)')};
+    background-image: ${(props) =>
+      props.theme === 'green' ? 'url(greenHoverBackground.png)' : 'url(whiteHoverBackground.png)'};
 
     &::before {
       display: none;
@@ -30,7 +32,8 @@ const StyledProjectItem = styled.div`
       &::before {
         width: 60%;
         height: 15%;
-        border-bottom: 1px solid ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
+        border-bottom: 1px solid
+          ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
       }
 
       &::before,
@@ -62,7 +65,8 @@ const Title = styled.div`
   line-height: 1.7;
   width: 80%;
   color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
-  background-color: ${(props) => (props.theme === 'white' ? ' rgba(21, 71, 13, 0.4)' : 'rgba(238, 234, 228, 0.4)')};
+  background-color: ${(props) =>
+    props.theme === 'white' ? ' rgba(21, 71, 13, 0.4)' : 'rgba(238, 234, 228, 0.4)'};
   z-index: 1;
 
   &::before {
@@ -121,7 +125,9 @@ function ProjectItem({ project, theme, onMoreClick }) {
       <HiddenDetail className="hidden-detail" theme={theme}>
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
-          {project.chargeList.map((charge, index) => index < 4 && <li key={charge.mainCharge}>{charge.mainCharge}</li>)}
+          {project.chargeList.map(
+            (charge, index) => index < 4 && <li key={charge.mainCharge}>{charge.mainCharge}</li>,
+          )}
         </ul>
         <button onClick={onMoreClick}>더보기</button>
       </HiddenDetail>
