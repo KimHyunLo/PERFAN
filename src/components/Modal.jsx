@@ -110,6 +110,11 @@ const TechList = styled.ul`
     padding-right: 0.7rem;
     margin-right: 0.7rem;
   }
+
+  .top-priority {
+    color: var(--active);
+    font-weight: 500;
+  }
 `
 
 const ChargeList = styled.ul`
@@ -170,8 +175,10 @@ function Modal({ project, onCloseClick }) {
             <div>{project.period}</div>
             <div className="title-item">기술 스텍</div>
             <TechList>
-              {project.techStack.map((tech) => (
-                <li key={tech}>{tech}</li>
+              {project.techList.map((tech) => (
+                <li key={tech.id} className={tech.priority === 1 ? 'top-priority' : ''}>
+                  {tech.name}
+                </li>
               ))}
             </TechList>
             <div className="title-item">담당 업무</div>
@@ -180,7 +187,7 @@ function Modal({ project, onCloseClick }) {
                 <ChargeItem key={charge.mainCharge}>
                   {charge.mainCharge}
                   <ul>
-                    {charge.subList.map((subCharge) => (
+                    {charge.subCharge.map((subCharge) => (
                       <li key={subCharge}>{subCharge}</li>
                     ))}
                   </ul>

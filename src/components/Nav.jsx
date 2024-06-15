@@ -53,9 +53,9 @@ export default function Nav() {
           </StyledLink>
         </li>
         <li>
-          <StyledLink to="/works">
+          <StyledLink to="/projects">
             <div className="number">03</div>
-            <div className="path">works</div>
+            <div className="path">projects</div>
           </StyledLink>
         </li>
         <li>

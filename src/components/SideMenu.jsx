@@ -63,25 +63,37 @@ function SideMenu() {
   return createPortal(
     <StyledMenu>
       <li>
-        <StyledItem className={`${pathname === '/' ? 'active' : ''}`} onClick={() => handleClick('/')}>
+        <StyledItem
+          className={`${pathname === '/' ? 'active' : ''}`}
+          onClick={() => handleClick('/')}
+        >
           <div className="number">01</div>
           <div className="path">main</div>
         </StyledItem>
       </li>
       <li>
-        <StyledItem className={`${pathname === '/about' ? 'active' : ''}`} onClick={() => handleClick('/about')}>
+        <StyledItem
+          className={`${pathname === '/about' ? 'active' : ''}`}
+          onClick={() => handleClick('/about')}
+        >
           <div className="number">02</div>
           <div className="path">about</div>
         </StyledItem>
       </li>
       <li>
-        <StyledItem className={`${pathname === '/works' ? 'active' : ''}`} onClick={() => handleClick('/works')}>
+        <StyledItem
+          className={`${pathname === '/projects' ? 'active' : ''}`}
+          onClick={() => handleClick('/projects')}
+        >
           <div className="number">03</div>
-          <div className="path">works</div>
+          <div className="path">projects</div>
         </StyledItem>
       </li>
       <li>
-        <StyledItem className={`${pathname === '/contact' ? 'active' : ''}`} onClick={() => handleClick('/contact')}>
+        <StyledItem
+          className={`${pathname === '/contact' ? 'active' : ''}`}
+          onClick={() => handleClick('/contact')}
+        >
           <div className="number">04</div>
           <div className="path">contact</div>
         </StyledItem>

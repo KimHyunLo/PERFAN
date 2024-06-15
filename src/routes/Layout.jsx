@@ -28,8 +28,8 @@ function Layout() {
     case '/about':
       title = ['About', 'Me']
       break
-    case '/works':
-      title = ['My', 'Works']
+    case '/projects':
+      title = ['My', 'Projects']
       break
     case '/contact':
       title = ['Contact', 'Me']
