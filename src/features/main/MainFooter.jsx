@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LazyImage from '../../components/LazyImage'
 
 const StyledFooter = styled.footer`
   position: absolute;
@@ -49,17 +50,20 @@ function MainFooter() {
       <StyledUl>
         <li>
           <a href="https://github.com/KimHyunLo" target="blank">
-            <img src="github.svg" alt="github" />
+            <LazyImage src="github.svg" alt="github" loading="eager" />
           </a>
         </li>
         <li>
           <a href="mailto:leeas016@gmail.com">
-            <img src="email.svg" alt="email" />
+            <LazyImage src="email.svg" alt="email" loading="eager" />
           </a>
         </li>
         <li>
-          <a href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74" target="blank">
-            <img src="blog.svg" alt="blog" />
+          <a
+            href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74"
+            target="blank"
+          >
+            <LazyImage src="blog.svg" alt="blog" loading="eager" />
           </a>
         </li>
       </StyledUl>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LazyImage from '../../components/LazyImage'
 
 const Introduction = styled.div`
   position: relative;
@@ -110,6 +111,7 @@ const IntroMobileImage = styled.div`
 
     .portrait {
       width: 25vw;
+      height: 38vw;
     }
   }
 `
@@ -124,8 +126,8 @@ function AboutIntroduction() {
         </IntroHeader>
 
         <IntroMobileImage>
-          <img src="signature.svg" alt="signature" className="signature" loading="lazy" />
-          <img src="portrait.png" alt="portrait" className="portrait" loading="lazy" />
+          <LazyImage src="signature.svg" alt="signature" className="signature" loading="eager" />
+          <LazyImage src="portrait.png" alt="portrait" className="portrait" />
         </IntroMobileImage>
 
         <IntroTitle>
@@ -135,13 +137,16 @@ function AboutIntroduction() {
         </IntroTitle>
 
         <IntroContent>
-          목표지향적이고 섬세한 성격으로 준비성이 다분하며 시간 관리를 철저히 하고 단계별 계획한 절차대로 코딩을 한다. 효율적인 코딩을 선호 하는 편이며 프로젝트의 보완할 부분을 생각하고 웹사이트의
-          발전성을 주기적으로 고민한다. 자신의 부족함을 인지하고 공부를 게을리 하지 않으며 꾸준한 자기주도적학습을 가진다. 작은 디테일도 대충하지 않으며 맡은 일에 최선을 다하기 위해 노력한다.
+          목표지향적이고 섬세한 성격으로 준비성이 다분하며 시간 관리를 철저히 하고 단계별 계획한
+          절차대로 코딩을 한다. 효율적인 코딩을 선호 하는 편이며 프로젝트의 보완할 부분을 생각하고
+          웹사이트의 발전성을 주기적으로 고민한다. 자신의 부족함을 인지하고 공부를 게을리 하지
+          않으며 꾸준한 자기주도적학습을 가진다. 작은 디테일도 대충하지 않으며 맡은 일에 최선을
+          다하기 위해 노력한다.
         </IntroContent>
       </div>
       <IntroImage>
-        <img src="signature.svg" alt="signature" className="signature" loading="lazy" />
-        <img src="portrait.png" alt="portrait" className="portrait" loading="lazy" />
+        <LazyImage src="signature.svg" alt="signature" className="signature" />
+        <LazyImage src="portrait.png" alt="portrait" className="portrait" />
       </IntroImage>
     </Introduction>
   )

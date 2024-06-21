@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
+import LazyImage from './LazyImage'
 
 const StyledModalLayout = styled.div`
   position: fixed;
@@ -165,7 +166,7 @@ function Modal({ project, onCloseClick }) {
         <HeaderBox>
           <div>{project.title}</div>
           <button className="close-button" onClick={onCloseClick}>
-            <img src="close.svg" alt="close" />
+            <LazyImage src="close.svg" alt="close" />
           </button>
         </HeaderBox>
         <ContentBox>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LazyImage from '../../components/LazyImage'
 
 const StyledMainContent = styled.div`
   position: absolute;
@@ -109,15 +110,27 @@ function MainContent() {
     <StyledMainContent>
       <MobileMain>
         <div className="middle-text">
-          <p>Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라 만들어진 포트폴리오입니다.</p>
-          <p>웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도 관심을 가지는 편입니다.</p>
+          <p>
+            Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라
+            만들어진 포트폴리오입니다.
+          </p>
+          <p>
+            웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도
+            관심을 가지는 편입니다.
+          </p>
         </div>
-        <img src="avatar.svg" alt="avatar" className="avatar" />
+        <LazyImage src="avatar.svg" alt="avatar" className="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
-        <StyledParagraph>Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라 만들어진 포트폴리오입니다.</StyledParagraph>
-        <img src="avatar.svg" alt="avatar" className="avatar" />
-        <StyledParagraph>웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도 관심을 가지는 편입니다.</StyledParagraph>
+        <StyledParagraph>
+          Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라
+          만들어진 포트폴리오입니다.
+        </StyledParagraph>
+        <LazyImage src="avatar.svg" alt="avatar" className="avatar" loading="eager" />
+        <StyledParagraph>
+          웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도
+          관심을 가지는 편입니다.
+        </StyledParagraph>
       </PcMain>
     </StyledMainContent>
   )
