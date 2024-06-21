@@ -75,11 +75,13 @@ const IntroImage = styled.div`
   margin-top: -350px;
 
   .signature {
+    height: auto;
     width: 25vw;
     padding-bottom: 70px;
   }
 
   .portrait {
+    height: auto;
     width: 27vw;
   }
 
@@ -102,6 +104,7 @@ const IntroMobileImage = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      height: auto;
     }
 
     .signature {
@@ -111,7 +114,6 @@ const IntroMobileImage = styled.div`
 
     .portrait {
       width: 25vw;
-      height: 38vw;
     }
   }
 `
