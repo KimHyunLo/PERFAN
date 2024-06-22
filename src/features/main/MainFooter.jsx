@@ -40,6 +40,11 @@ const StyledUl = styled.ul`
     a {
       position: absolute;
       height: 100%;
+
+      img {
+        height: auto;
+        width: auto;
+      }
     }
   }
 `
