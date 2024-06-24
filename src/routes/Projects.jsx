@@ -1,4 +1,4 @@
-import ProjectList from '../features/projetcs/ProjectList'
+import ProjectList from '../features/projects/ProjectList'
 
 function Projects() {
   return <ProjectList />

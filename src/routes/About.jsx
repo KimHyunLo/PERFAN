@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import AboutIntroduction from '../features/about/AboutIntroduction'
-import AboutPersonalStatement from '../features/about/AboutPersonalStatement'
+import { AboutIntroduction, AboutPersonalStatement } from '../features/Features'
 
 const StyledAbout = styled.div`
   background-color: var(--black);

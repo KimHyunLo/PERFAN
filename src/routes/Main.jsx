@@ -1,5 +1,4 @@
-import MainContent from '../features/main/MainContent'
-import MainFooter from '../features/main/MainFooter'
+import { MainContent, MainFooter } from '../features/Features'
 
 function Main() {
   return (

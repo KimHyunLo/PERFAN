@@ -1,9 +1,9 @@
+import { Suspense } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
-import Header from '../components/Header'
-import Title from '../components/Title'
-import Nav from '../components/Nav'
+import { Header, Title, Nav } from '../components/Components'
+import ErrorPage from './ErrorPage'
 
 const StyledMain = styled.main`
   margin-top: 55vh;
@@ -37,14 +37,14 @@ function Layout() {
   }
 
   return (
-    <>
+    <Suspense fallback={<ErrorPage />}>
       <Header />
       <Title title={title} />
       <Nav />
       <StyledMain>
         <Outlet />
       </StyledMain>
-    </>
+    </Suspense>
   )
 }
 

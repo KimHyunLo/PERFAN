@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import ContactInfo from '../features/contact/ContactInfo'
-import ContactImage from '../features/contact/ContactImage'
+import { ContactInfo, ContactImage } from '../features/Features'
 
 const StyledContact = styled.div`
   position: absolute;

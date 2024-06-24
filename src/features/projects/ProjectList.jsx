@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
-import ProjectItem from './ProjectItem'
-import Modal from '../../components/Modal'
 import { useToggleBodyScroll } from '../../hooks/useToggleBodyScroll'
 import { useProjects } from './useProjects'
+import { Modal } from '../../components/Components'
+import ProjectItem from './ProjectItem'
 
 const StyledSwiper = styled(Swiper)`
   padding: 3rem 3rem 5rem;

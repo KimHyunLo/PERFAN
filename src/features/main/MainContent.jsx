@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LazyImage from '../../components/LazyImage'
+import { LazyImage } from '../../components/Components'
 
 const StyledMainContent = styled.div`
   position: absolute;
