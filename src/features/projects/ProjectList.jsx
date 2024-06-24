@@ -9,7 +9,7 @@ import { Modal } from '../../components/Components'
 import ProjectItem from './ProjectItem'
 
 const StyledSwiper = styled(Swiper)`
-  padding: 3rem 3rem 5rem;
+  padding: 3rem 3rem 5rem !important;
 `
 
 function ProjectList() {
