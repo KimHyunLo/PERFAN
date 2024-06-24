@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'Now';
-  font-weight: 100;
   font-style: normal;
   font-display: swap;
   src:
@@ -10,56 +9,31 @@
 }
 
 @font-face {
-  font-family: 'SCoreDream';
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src:
-    local('SCoreDream'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2) format('woff2'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'SCoreDream';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src:
-    local('SCoreDream'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format('woff2'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'SCoreDream';
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src:
-    local('SCoreDream'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format('woff2'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'SCoreDream';
+  font-family: 'Pretendard';
   font-weight: 600;
-  font-style: normal;
   font-display: swap;
   src:
-    local('SCoreDream'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format('woff2'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format('woff');
+    local('Pretendard SemiBold'),
+    url(./fonts/Pretendard-SemiBold.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard-SemiBold.subset.woff) format('woff');
 }
 
 @font-face {
-  font-family: 'SCoreDream';
-  font-weight: 700;
-  font-style: normal;
+  font-family: 'Pretendard';
+  font-weight: 400;
   font-display: swap;
   src:
-    local('SCoreDream'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2) format('woff2'),
-    url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff) format('woff');
+    local('Pretendard Regular'),
+    url(./fonts/Pretendard-Regular.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard-Regular.subset.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 100;
+  font-display: swap;
+  src:
+    local('Pretendard Thin'),
+    url(./fonts/Pretendard-Thin.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard-Thin.subset.woff) format('woff');
 }

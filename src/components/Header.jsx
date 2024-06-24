@@ -49,7 +49,7 @@ const HeaderSide = styled.div`
 
 const HeaderItem = styled.div`
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 100;
   color: var(--black-difference);
 
   &.left-item {
@@ -103,7 +103,10 @@ export default function Header() {
       </HeaderTitle>
       <HeaderSide>
         <HeaderItem className="left-item">Highflier Developer</HeaderItem>
-        <HeaderItem className={`right-item ${isMenuOpen ? 'close-btn' : ''}`} onClick={toggleSideMenu}>
+        <HeaderItem
+          className={`right-item ${isMenuOpen ? 'close-btn' : ''}`}
+          onClick={toggleSideMenu}
+        >
           portfolio
         </HeaderItem>
       </HeaderSide>

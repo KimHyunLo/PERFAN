@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  font-family: 'SCoreDream', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--white);
@@ -91,7 +91,7 @@ button {
   border: none;
   padding: 0;
   background: none;
-  font-family: 'SCoreDream', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   font-size: 1.6rem;
   cursor: pointer;
 }
