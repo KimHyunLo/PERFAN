@@ -10,7 +10,7 @@ const StyledProjectItem = styled.div`
   height: calc(((100vw - 3rem) / 3.3) * 1.15);
   width: 83%;
   background-image: ${(props) =>
-    props.theme === 'green' ? 'url(greenBackground.png)' : 'url(whiteBackground.png)'};
+    props.theme === 'green' ? 'url(greenBackground.jpeg)' : 'url(whiteBackground.jpeg)'};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,9 @@ const StyledProjectItem = styled.div`
 
   &:hover {
     background-image: ${(props) =>
-      props.theme === 'green' ? 'url(greenHoverBackground.png)' : 'url(whiteHoverBackground.png)'};
+      props.theme === 'green'
+        ? 'url(greenHoverBackground.jpeg)'
+        : 'url(whiteHoverBackground.jpeg)'};
 
     &::before {
       display: none;

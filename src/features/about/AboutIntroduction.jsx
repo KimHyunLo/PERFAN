@@ -128,7 +128,7 @@ function AboutIntroduction() {
         </IntroHeader>
 
         <IntroMobileImage>
-          <LazyImage src="signature.svg" alt="signature" className="signature" loading="eager" />
+          <LazyImage src="signature.png" alt="signature" className="signature" loading="eager" />
           <LazyImage src="portrait.png" alt="portrait" className="portrait" />
         </IntroMobileImage>
 
@@ -147,7 +147,7 @@ function AboutIntroduction() {
         </IntroContent>
       </div>
       <IntroImage>
-        <LazyImage src="signature.svg" alt="signature" className="signature" />
+        <LazyImage src="signature.png" alt="signature" className="signature" />
         <LazyImage src="portrait.png" alt="portrait" className="portrait" />
       </IntroImage>
     </Introduction>

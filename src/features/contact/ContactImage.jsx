@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import LazyImage from '../../components/LazyImage'
 
 const StyledContactImage = styled(LazyImage)`
+  height: auto;
   width: 25vw;
   max-width: 40vh;
 
@@ -14,7 +15,7 @@ const StyledContactImage = styled(LazyImage)`
 `
 
 function ContactImage() {
-  return <StyledContactImage src="avatar.svg" alt="avatar" className="avatar" loading="eager" />
+  return <StyledContactImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
 }
 
 export default ContactImage

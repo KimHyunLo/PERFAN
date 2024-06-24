@@ -55,12 +55,12 @@ function MainFooter() {
       <StyledUl>
         <li>
           <a href="https://github.com/KimHyunLo" target="blank">
-            <LazyImage src="github.svg" alt="github" loading="eager" />
+            <LazyImage src="icons/github.svg" alt="github" loading="eager" />
           </a>
         </li>
         <li>
           <a href="mailto:leeas016@gmail.com">
-            <LazyImage src="email.svg" alt="email" loading="eager" />
+            <LazyImage src="icons/email.svg" alt="email" loading="eager" />
           </a>
         </li>
         <li>
@@ -68,7 +68,7 @@ function MainFooter() {
             href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74"
             target="blank"
           >
-            <LazyImage src="blog.svg" alt="blog" loading="eager" />
+            <LazyImage src="icons/blog.svg" alt="blog" loading="eager" />
           </a>
         </li>
       </StyledUl>

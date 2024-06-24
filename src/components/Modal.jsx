@@ -31,7 +31,7 @@ const HeaderBox = styled.div`
   justify-content: center;
   width: 100%;
   height: max(15vw, 10rem);
-  background-image: url(modalBackground.png);
+  background-image: url(modalBackground.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -166,7 +166,7 @@ function Modal({ project, onCloseClick }) {
         <HeaderBox>
           <div>{project.title}</div>
           <button className="close-button" onClick={onCloseClick}>
-            <LazyImage src="close.svg" alt="close" />
+            <LazyImage src="/icons/close.svg" alt="close" />
           </button>
         </HeaderBox>
         <ContentBox>

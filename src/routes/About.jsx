@@ -17,11 +17,11 @@ const StyledAbout = styled.div`
   }
 
   &::before {
-    background-image: url(paperBackground1.png);
+    background-image: url(paperBackground1.jpeg);
   }
 
   &::after {
-    background-image: url(paperBackground2.png);
+    background-image: url(paperBackground2.jpeg);
   }
 `
 

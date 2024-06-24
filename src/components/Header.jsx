@@ -59,7 +59,7 @@ const HeaderItem = styled.div`
 
     &::before {
       content: '';
-      background-image: url(megaphone.svg);
+      background-image: url(/icons/megaphone.svg);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -76,7 +76,7 @@ const HeaderItem = styled.div`
       &::before {
         content: '';
         display: block;
-        background-image: url(menu.svg);
+        background-image: url(/icons/menu.svg);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -85,7 +85,7 @@ const HeaderItem = styled.div`
       }
 
       &.close-btn::before {
-        background-image: url(close.svg);
+        background-image: url(/icons/close.svg);
       }
     }
   }

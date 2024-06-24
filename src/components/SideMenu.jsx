@@ -25,7 +25,7 @@ const StyledItem = styled.div`
   color: var(--white);
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 3rem;
   cursor: pointer;
 
   &.active {

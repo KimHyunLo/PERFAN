@@ -27,7 +27,7 @@ const MobileMain = styled.div`
     &::before {
       content: '';
       display: block;
-      background-image: url(star.svg);
+      background-image: url(/icons/star.svg);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -53,14 +53,15 @@ const MobileMain = styled.div`
     .avatar {
       max-width: 400px;
       width: 80vw;
-      margin-bottom: 30px;
+      margin-bottom: 3rem;
+      height: auto;
     }
   }
 
   @media only screen and (max-width: 640px) {
     &::before {
       height: 25px;
-      margin: 0 auto 30px;
+      margin: 0 auto 3rem;
     }
 
     .middle-text {
@@ -78,6 +79,7 @@ const PcMain = styled.div`
     max-width: 350px;
     min-width: 300px;
     width: 20vw;
+    height: auto;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -96,7 +98,7 @@ const StyledParagraph = styled.p`
   &::before {
     content: '';
     display: block;
-    background-image: url(star.svg);
+    background-image: url(/icons/star.svg);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -119,14 +121,14 @@ function MainContent() {
             관심을 가지는 편입니다.
           </p>
         </div>
-        <LazyImage src="avatar.svg" alt="avatar" className="avatar" loading="eager" />
+        <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
         <StyledParagraph>
           Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라
           만들어진 포트폴리오입니다.
         </StyledParagraph>
-        <LazyImage src="avatar.svg" alt="avatar" className="avatar" loading="eager" />
+        <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
         <StyledParagraph>
           웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도
           관심을 가지는 편입니다.
