@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { SideMenuProvider } from './context/SideMenuContext'
@@ -8,12 +8,13 @@ import './index.css'
 
 import { Layout, Main, About, Projects, Contact, ErrorPage } from './routes/Routes'
 import { getProjects } from './services/apiProjects'
+import { Loader } from './components/Components'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    errorElement: { ErrorPage },
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -50,7 +51,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <SideMenuProvider>
-        <RouterProvider router={router} />
+        <Suspense fallback={<Loader />}>
+          <RouterProvider router={router} />
+        </Suspense>
       </SideMenuProvider>
     </QueryClientProvider>
   </React.StrictMode>,

@@ -1,8 +1,7 @@
-import { Suspense } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Header, Title, Nav, Loader } from '../components/Components'
+import { Header, Title, Nav } from '../components/Components'
 
 const StyledMain = styled.main`
   margin-top: 55vh;
@@ -36,14 +35,14 @@ function Layout() {
   }
 
   return (
-    <Suspense fallback={<Loader />}>
+    <>
       <Header />
       <Title title={title} />
       <Nav />
       <StyledMain>
         <Outlet />
       </StyledMain>
-    </Suspense>
+    </>
   )
 }
 

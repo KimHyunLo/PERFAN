@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import SideMenu from './SideMenu'
 import { SideMenuContext } from '../context/SideMenuContext'
 import { useCustomContext } from '../hooks/useCustomContext'
+
+import { SideMenu } from './Components'
 
 const StyledHeaderLayout = styled.div`
   position: fixed;
@@ -36,7 +37,6 @@ const HeaderTitle = styled.div`
 `
 
 const HeaderEm = styled.em`
-  font-style: normal;
   font-family: 'Now', sans-serif;
   color: var(--active-difference);
 `
@@ -48,8 +48,8 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  font-size: 1.4rem;
-  font-weight: 100;
+  font-size: max(1.4rem, 12px);
+  font-weight: 200;
   color: var(--black-difference);
 
   &.left-item {
