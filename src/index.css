@@ -99,3 +99,7 @@ button {
 em {
   font-style: normal;
 }
+
+h1 {
+  margin: 0;
+}
