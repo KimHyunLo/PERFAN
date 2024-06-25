@@ -1,10 +1,10 @@
 import { useState } from 'react'
+import { useLoaderData } from 'react-router-dom'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
 import { useToggleBodyScroll } from '../../hooks/useToggleBodyScroll'
-import { useProjects } from './useProjects'
 import { Modal } from '../../components/Components'
 import ProjectItem from './ProjectItem'
 
@@ -13,7 +13,7 @@ const StyledSwiper = styled(Swiper)`
 `
 
 function ProjectList() {
-  const { isLoading, projects } = useProjects()
+  const projects = useLoaderData()
   const [isModalOpen, setIsModalOpen] = useToggleBodyScroll()
   const [openIndex, setOpenIndex] = useState(null)
 
@@ -21,8 +21,6 @@ function ProjectList() {
     setOpenIndex(openIndex === index ? null : index)
     setIsModalOpen(openIndex !== index)
   }
-
-  if (isLoading) return null
 
   return (
     <StyledSwiper

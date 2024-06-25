@@ -22,7 +22,6 @@ const StyledUl = styled.ul`
 const StyledLink = styled(NavLink)`
   &.active .path {
     color: var(--active);
-    border-bottom: 1px solid var(--active);
   }
 
   .number {
@@ -31,8 +30,7 @@ const StyledLink = styled(NavLink)`
   }
 
   .path {
-    margin-top: 8px;
-    line-height: 1.2;
+    margin-top: 10px;
   }
 `
 
