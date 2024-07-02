@@ -2,12 +2,19 @@ import { Link, useRouteError } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledErrorPage = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+`
+
+const StyledWrap = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
 `
 
 const StyledTitle = styled.h1`
@@ -39,9 +46,11 @@ function ErrorPage() {
   console.log(error.data || error.message)
   return (
     <StyledErrorPage>
-      <StyledTitle>404 ERROR</StyledTitle>
-      <StyledParagraph>요청하신 페이지를 찾을 수 없습니다.</StyledParagraph>
-      <StyledLink to="/">홈으로 이동</StyledLink>
+      <StyledWrap>
+        <StyledTitle>404 ERROR</StyledTitle>
+        <StyledParagraph>요청하신 페이지를 찾을 수 없습니다.</StyledParagraph>
+        <StyledLink to="/">홈으로 이동</StyledLink>
+      </StyledWrap>
     </StyledErrorPage>
   )
 }
