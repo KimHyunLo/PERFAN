@@ -28,8 +28,13 @@ const HeaderBox = styled.div`
     border-radius: 50px;
     z-index: 1;
 
-    img {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-47%, -50%);
       width: 40%;
+      height: auto;
       mix-blend-mode: difference;
     }
   }
@@ -67,6 +72,10 @@ const GridBox = styled.div`
 
   .title-item {
     color: var(--active);
+  }
+
+  .link {
+    width: fit-content;
   }
 
   @media only screen and (max-width: 640px) {
@@ -129,12 +138,16 @@ function ProjectModal({ project, onCloseClick }) {
       <HeaderBox>
         <div>{project.title}</div>
         <button className="close-button" onClick={onCloseClick}>
-          <LazyImage src="/icons/close.svg" alt="close" />
+          <LazyImage src="/icons/close.svg" alt="close" className="icon" />
         </button>
       </HeaderBox>
       <ContentBox>
         <p className="introduction">{project.introduction}</p>
         <GridBox>
+          <div className="title-item">서비스 링크</div>
+          <a href={project.link} target="_blank" className="link">
+            🔗 {project.link}
+          </a>
           <div className="title-item">개발 기간</div>
           <div>{project.period}</div>
           <div className="title-item">기술 스텍</div>
