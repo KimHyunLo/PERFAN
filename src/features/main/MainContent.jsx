@@ -90,7 +90,6 @@ const PcMain = styled.div`
 const StyledParagraph = styled.p`
   max-width: 255px;
   min-width: 200px;
-  width: 20vw;
   font-size: 1.4rem;
   text-align: center;
   word-break: keep-all;

@@ -6,7 +6,7 @@ import 'swiper/css'
 
 import { useToggleBodyScroll } from '../../hooks/useToggleBodyScroll'
 import { Modal } from '../../components/Components'
-import ProjectItem from './ProjectItem'
+import { ProjectItem, ProjectModal } from '../Features'
 
 const StyledSwiper = styled(Swiper)`
   padding: 3rem 3rem 5rem !important;
@@ -44,7 +44,9 @@ function ProjectList() {
         </SwiperSlide>
       ))}
       {isModalOpen && (
-        <Modal project={projects[openIndex]} onCloseClick={() => handleClick(openIndex)} />
+        <Modal onCloseClick={() => handleClick(openIndex)}>
+          <ProjectModal project={projects[openIndex]} onCloseClick={() => handleClick(openIndex)} />
+        </Modal>
       )}
     </StyledSwiper>
   )
