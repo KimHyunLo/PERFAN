@@ -12,7 +12,7 @@ export async function getProjects() {
 
   // 1. 프로젝트에 사용된 기술 스텍을 연결
   const projectsWithTechList = projects.map((project) => {
-    const techList = techs.filter((tech) => tech.projectId.includes(project.id))
+    const techList = techs.filter((tech) => tech.projectId?.includes(project.id))
 
     project.techList = techList.length
       ? techList.map((tech) => ({ id: tech.id, name: tech.name, priority: tech.priority }))
