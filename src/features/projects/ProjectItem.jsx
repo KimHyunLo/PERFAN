@@ -65,6 +65,7 @@ const Title = styled.div`
   font-family: 'Bodoni Moda', sans-serif;
   font-size: max(3vw, 25px);
   line-height: 1.7;
+  text-align: center;
   width: 80%;
   color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
   background-color: ${(props) =>

@@ -23,7 +23,7 @@ export async function getProjects() {
 
   // 2. 프로젝트에서 맡은 업무 역할을 연결
   const projectWithCharges = projectsWithTechList.map((project) => {
-    const chargeList = charges.filter((charge) => charge.projectId.includes(project.id))
+    const chargeList = charges.filter((charge) => charge.projectId?.includes(project.id))
 
     project.chargeList = chargeList.length
       ? chargeList.map((charge) => ({ mainCharge: charge.mainCharge, subCharge: charge.subCharge }))
