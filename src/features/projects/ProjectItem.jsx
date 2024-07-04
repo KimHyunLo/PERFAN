@@ -63,7 +63,7 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: max(3vw, 25px);
+  font-size: 3vw;
   line-height: 1.7;
   text-align: center;
   width: 80%;
@@ -90,6 +90,14 @@ const Title = styled.div`
     background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
     opacity: 0.2;
     z-index: -2;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 4vw;
+  }
+
+  @media only screen and (max-width: 640px) {
+    font-size: 8vw;
   }
 `
 

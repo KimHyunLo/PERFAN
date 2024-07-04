@@ -69,20 +69,33 @@ const GridBox = styled.div`
   grid-template-columns: 30% 1fr;
   row-gap: 1.5vw;
   font-size: clamp(12px, 1vw, 18px);
-
-  .title-item {
-    color: var(--active);
-  }
-
-  .link {
-    width: fit-content;
-  }
+  min-width: 0;
+  min-height: 0;
 
   @media only screen and (max-width: 640px) {
     grid-template-columns: 1fr;
     row-gap: 0;
+  }
+`
 
-    .title-item:not(&:first-child) {
+const GridItem = styled.div`
+  min-width: 0;
+
+  &.title-item {
+    color: var(--active);
+  }
+
+  &.project-link {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+      white-space: nowrap;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    &.title-item:not(&:first-child) {
       margin-top: 1.5rem;
     }
   }
@@ -133,6 +146,14 @@ const ChargeItem = styled.li`
 `
 
 function ProjectModal({ project, onCloseClick }) {
+  function cutLinkShort(link) {
+    if (link.includes('.com')) {
+      return link.split('.com')[0] + '.com'
+    } else if (link.includes('.co.kr')) {
+      return link.split('.co.kr')[0] + '.co.kr'
+    }
+  }
+
   return (
     <>
       <HeaderBox>
@@ -144,13 +165,17 @@ function ProjectModal({ project, onCloseClick }) {
       <ContentBox>
         <p className="introduction">{project.introduction}</p>
         <GridBox>
-          <div className="title-item">서비스 링크</div>
-          <a href={project.link} target="_blank" className="link">
-            🔗 {project.link}
-          </a>
-          <div className="title-item">개발 기간</div>
-          <div>{project.period}</div>
-          <div className="title-item">기술 스텍</div>
+          <GridItem className="title-item">서비스 링크</GridItem>
+          <GridItem className="project-link">
+            {project.links.map((link) => (
+              <a href={link} target="_blank" key={link} className="link">
+                🔗 {cutLinkShort(link)}
+              </a>
+            ))}
+          </GridItem>
+          <GridItem className="title-item">개발 기간</GridItem>
+          <GridItem>{project.period}</GridItem>
+          <GridItem className="title-item">기술 스텍</GridItem>
           <TechList>
             {project.techList.map((tech) => (
               <li key={tech.id} className={tech.priority === 1 ? 'top-priority' : ''}>
@@ -158,7 +183,7 @@ function ProjectModal({ project, onCloseClick }) {
               </li>
             ))}
           </TechList>
-          <div className="title-item">담당 업무</div>
+          <GridItem className="title-item">담당 업무</GridItem>
           <ChargeList>
             {project.chargeList.map((charge) => (
               <ChargeItem key={charge.mainCharge}>
