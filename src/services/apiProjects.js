@@ -1,3 +1,4 @@
+import { defer } from 'react-router-dom'
 import supabase from './supabase'
 
 export async function getProjects() {
@@ -32,5 +33,7 @@ export async function getProjects() {
     return project
   })
 
-  return projectWithCharges
+  return defer({
+    projects: projectWithCharges,
+  })
 }
