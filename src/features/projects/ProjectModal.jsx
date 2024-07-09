@@ -50,17 +50,8 @@ const ContentBox = styled.div`
   padding: max(3vw, 3rem) 7vw;
   overflow: auto;
 
-  .introduction {
-    font-size: clamp(12px, 1vw, 18px);
-    margin-bottom: 1.5vw;
-  }
-
   @media only screen and (max-width: 640px) {
     height: calc(100% - 30vw);
-
-    .introduction {
-      margin-bottom: 3vw;
-    }
   }
 `
 
@@ -117,6 +108,13 @@ const TechList = styled.ul`
   }
 `
 
+const TechItem = styled.li`
+  span:not(span:last-child)::after {
+    content: ',';
+    margin-right: 4px;
+  }
+`
+
 const ChargeList = styled.ul`
   line-height: 1.5;
 
@@ -140,8 +138,36 @@ const ChargeList = styled.ul`
 const ChargeItem = styled.li`
   margin-bottom: 1.5vw;
 
+  .main-charge {
+    background-color: rgba(21, 71, 13, 0.2);
+    font-weight: bold;
+  }
+
   ul {
     padding-left: 1.5rem;
+
+    li {
+      word-break: keep-all;
+      white-space: pre-wrap;
+
+      &::before {
+        background-color: var(--white);
+        border: 1px solid var(--active);
+      }
+
+      &:not(&:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+`
+
+const OrderItem = styled.li`
+  &::before {
+    content: ${(props) => '"' + props.number + '."'}!important;
+    top: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
   }
 `
 
@@ -163,8 +189,13 @@ function ProjectModal({ project, onCloseClick }) {
         </button>
       </HeaderBox>
       <ContentBox>
-        <p className="introduction">{project.introduction}</p>
         <GridBox>
+          <GridItem className="title-item">개발 기간</GridItem>
+          <GridItem>{project.period}</GridItem>
+          <GridItem className="title-item">역할</GridItem>
+          <GridItem>{project.role}</GridItem>
+          <GridItem className="title-item">프로젝트 소개</GridItem>
+          <GridItem>{project.introduction}</GridItem>
           <GridItem className="title-item">서비스 링크</GridItem>
           <GridItem className="project-link">
             {project.links.map((link) => (
@@ -173,25 +204,56 @@ function ProjectModal({ project, onCloseClick }) {
               </a>
             ))}
           </GridItem>
-          <GridItem className="title-item">개발 기간</GridItem>
-          <GridItem>{project.period}</GridItem>
-          <GridItem className="title-item">기술 스텍</GridItem>
+          <GridItem className="title-item">기술 스택</GridItem>
           <TechList>
-            {project.techList.map((tech) => (
-              <li key={tech.id} className={tech.priority === 1 ? 'top-priority' : ''}>
-                {tech.name}
-              </li>
-            ))}
+            <TechItem>
+              {project.languages.map((language) => (
+                <span key={language.name} className={language.isMostUsed ? 'top-priority' : ''}>
+                  {language.name}
+                </span>
+              ))}
+            </TechItem>
+            <TechItem>
+              {project.libraries.map((library) => (
+                <span key={library.name} className={library.isMostUsed ? 'top-priority' : ''}>
+                  {library.name}
+                </span>
+              ))}
+            </TechItem>
+            <TechItem>
+              {project.frameworks.map((framework) => (
+                <span key={framework.name} className={framework.isMostUsed ? 'top-priority' : ''}>
+                  {framework.name}
+                </span>
+              ))}
+            </TechItem>
           </TechList>
           <GridItem className="title-item">담당 업무</GridItem>
           <ChargeList>
             {project.chargeList.map((charge) => (
               <ChargeItem key={charge.mainCharge}>
-                {charge.mainCharge}
+                <span className="main-charge">{charge.mainCharge}</span>
                 <ul>
-                  {charge.subCharge.map((subCharge) => (
-                    <li key={subCharge}>{subCharge}</li>
-                  ))}
+                  {charge.subCharge.map((subCharge) => {
+                    if (subCharge.includes('\n')) {
+                      const charges = subCharge.split('\n')
+
+                      return (
+                        <li key={subCharge}>
+                          {charges.shift()}
+                          <ul>
+                            {charges.map((orderCharge, index) => (
+                              <OrderItem key={orderCharge} number={index + 1}>
+                                {orderCharge}
+                              </OrderItem>
+                            ))}
+                          </ul>
+                        </li>
+                      )
+                    } else {
+                      return <li key={subCharge}>{subCharge}</li>
+                    }
+                  })}
                 </ul>
               </ChargeItem>
             ))}

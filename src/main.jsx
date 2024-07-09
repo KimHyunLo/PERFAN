@@ -7,7 +7,6 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import './index.css'
 
 import { Layout, Main, About, Projects, Contact, ErrorPage } from './routes/Routes'
-import { getProjects } from './services/apiProjects'
 import { Loader } from './components/Components'
 
 const router = createBrowserRouter([
@@ -27,8 +26,6 @@ const router = createBrowserRouter([
       {
         path: '/projects',
         element: <Projects />,
-        loader: getProjects,
-        errorElement: <ErrorPage />,
       },
       {
         path: '/contact',

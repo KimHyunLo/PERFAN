@@ -136,9 +136,9 @@ function ProjectItem({ project, theme, onMoreClick }) {
       <HiddenDetail className="hidden-detail" theme={theme}>
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
-          {project.chargeList.map(
-            (charge, index) => index < 4 && <li key={charge.mainCharge}>{charge.mainCharge}</li>,
-          )}
+          {project.chargeList.map((charge) => (
+            <li key={charge.mainCharge}>{charge.mainCharge}</li>
+          ))}
         </ul>
         <button onClick={onMoreClick}>더보기</button>
       </HiddenDetail>
