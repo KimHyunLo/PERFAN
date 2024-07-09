@@ -112,25 +112,33 @@ function MainContent() {
       <MobileMain>
         <div className="middle-text">
           <p>
-            Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라
-            만들어진 포트폴리오입니다.
+            의외로 감성적이라 놀라셨나요?
+            <br />
+            단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의
+            매력이 당신에게 닿았으면 좋겠네요.
           </p>
           <p>
-            웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도
-            관심을 가지는 편입니다.
+            제 인생 테마는 &quot;중립적으로 살자&quot;입니다.
+            <br />
+            남들에게 휘둘리지 않고, 나의 시선으로 판단을 내리는 것이 제가 중립을 택하는 방법입니다.
+            편견없는 모습이 가장 나답다고 할 수 있겠네요.
           </p>
         </div>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
         <StyledParagraph>
-          Perfect Plan은 기획, 설계부터 레이아웃, 디자인, 구성요소 설정까지 디테일한 계획을 따라
-          만들어진 포트폴리오입니다.
+          의외로 감성적이라 놀라셨나요?
+          <br />
+          단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의 매력이
+          당신에게 닿았으면 좋겠네요.
         </StyledParagraph>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
         <StyledParagraph>
-          웹 디자인/설계 등의 요소에 흥미가 많으며 프로젝트를 할 때 개발 뿐만 아니라 다른 분야에도
-          관심을 가지는 편입니다.
+          제 인생 테마는 &quot;중립적으로 살자&quot;입니다.
+          <br />
+          남들에게 휘둘리지 않고, 나의 시선으로 판단을 내리는 것이 제가 중립을 택하는 방법입니다.
+          편견없는 모습이 가장 나답다고 할 수 있겠네요.
         </StyledParagraph>
       </PcMain>
     </StyledMainContent>
