@@ -10,42 +10,27 @@ const StyledProjectItem = styled.div`
   height: calc(((100vw - 3rem) / 3.3) * 1.15);
   width: 83%;
   background-image: ${(props) =>
-    props.theme === 'green' ? 'url(greenBackground.jpeg)' : 'url(whiteBackground.jpeg)'};
+    props.theme === 'green' ? 'url(greenHoverBackground.jpeg)' : 'url(whiteHoverBackground.jpeg)'};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
   margin: ${(props) => (props.theme === 'white' ? 'max(3vw, 5rem)' : '0')} auto 0;
 
-  &:hover {
-    background-image: ${(props) =>
-      props.theme === 'green'
-        ? 'url(greenHoverBackground.jpeg)'
-        : 'url(whiteHoverBackground.jpeg)'};
+  .title {
+    background-color: transparent;
+    color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
 
     &::before {
-      display: none;
+      width: 60%;
+      height: 15%;
+      border-bottom: 1px solid
+        ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
     }
 
-    .title {
+    &::before,
+    &::after {
       background-color: transparent;
-      color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-
-      &::before {
-        width: 60%;
-        height: 15%;
-        border-bottom: 1px solid
-          ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-      }
-
-      &::before,
-      &::after {
-        background-color: transparent;
-      }
-    }
-
-    .hidden-detail {
-      display: block;
     }
   }
 
@@ -101,8 +86,7 @@ const Title = styled.div`
   }
 `
 
-const HiddenDetail = styled.div`
-  display: none;
+const ProjectDetail = styled.div`
   text-align: center;
 
   ul {
@@ -133,7 +117,7 @@ function ProjectItem({ project, theme, onMoreClick }) {
       <Title className="title" theme={theme}>
         {project.title}
       </Title>
-      <HiddenDetail className="hidden-detail" theme={theme}>
+      <ProjectDetail theme={theme}>
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
           {project.chargeList.map((charge) => (
@@ -141,7 +125,7 @@ function ProjectItem({ project, theme, onMoreClick }) {
           ))}
         </ul>
         <button onClick={onMoreClick}>더보기</button>
-      </HiddenDetail>
+      </ProjectDetail>
     </StyledProjectItem>
   )
 }

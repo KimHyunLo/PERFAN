@@ -47,15 +47,15 @@ function ContactInfo() {
   return (
     <StyledContactInfo>
       <InfoList>
-        <InfoTitle>designer:</InfoTitle>
+        <InfoTitle>designer</InfoTitle>
         <div>Henry</div>
       </InfoList>
       <InfoList>
-        <InfoTitle>developer:</InfoTitle>
+        <InfoTitle>developer</InfoTitle>
         <div>Henry</div>
       </InfoList>
       <InfoList>
-        <InfoTitle>social:</InfoTitle>
+        <InfoTitle>social</InfoTitle>
         <ul className="social-list">
           <li>
             <a href="https://github.com/KimHyunLo" target="blank">
@@ -63,14 +63,17 @@ function ContactInfo() {
             </a>
           </li>
           <li>
-            <a href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74" target="blank">
+            <a
+              href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74"
+              target="blank"
+            >
               Blog
             </a>
           </li>
         </ul>
       </InfoList>
       <InfoList>
-        <InfoTitle>email:</InfoTitle>
+        <InfoTitle>email</InfoTitle>
         <div>
           <a href="mailto:leeas016@gmail.com" target="blank">
             leeas016@gmail.com
