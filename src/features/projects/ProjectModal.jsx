@@ -5,10 +5,6 @@ const ContentBox = styled.div`
   height: 100%;
   padding: max(3vw, 3rem) 7vw;
   overflow: auto;
-
-  @media only screen and (max-width: 640px) {
-    height: calc(100% - 30vw);
-  }
 `
 
 const HeaderBox = styled.div`
