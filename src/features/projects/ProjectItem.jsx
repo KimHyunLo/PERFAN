@@ -17,23 +17,6 @@ const StyledProjectItem = styled.div`
   box-shadow: 10px 10px 10px rgba(34, 34, 34, 0.5);
   margin: ${(props) => (props.theme === 'white' ? 'max(3vw, 5rem)' : '0')} auto 0;
 
-  .title {
-    background-color: transparent;
-    color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-
-    &::before {
-      width: 60%;
-      height: 15%;
-      border-bottom: 1px solid
-        ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-    }
-
-    &::before,
-    &::after {
-      background-color: transparent;
-    }
-  }
-
   @media only screen and (max-width: 1024px) {
     height: calc(((100vw - 3rem) / 2.3) * 1.15);
   }
@@ -52,29 +35,15 @@ const Title = styled.div`
   line-height: 1.7;
   text-align: center;
   width: 80%;
-  color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
-  background-color: ${(props) =>
-    props.theme === 'white' ? ' rgba(21, 71, 13, 0.4)' : 'rgba(238, 234, 228, 0.4)'};
-  z-index: 1;
+  color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
 
   &::before {
     content: '';
     position: absolute;
-    width: 85%;
-    height: 20%;
-    background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 90%;
-    height: 25%;
-    background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-    opacity: 0.2;
-    z-index: -2;
+    width: 60%;
+    height: 15%;
+    border-bottom: 1px solid
+      ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
   }
 
   @media only screen and (max-width: 1024px) {

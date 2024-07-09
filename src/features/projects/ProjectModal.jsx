@@ -1,57 +1,73 @@
 import styled from 'styled-components'
 import { LazyImage } from '../../components/Components'
 
+const ContentBox = styled.div`
+  height: 100%;
+  padding: max(3vw, 3rem) 7vw;
+  overflow: auto;
+
+  @media only screen and (max-width: 640px) {
+    height: calc(100% - 30vw);
+  }
+`
+
 const HeaderBox = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: max(15vw, 10rem);
-  background-image: url(modalBackground.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-size: max(5vw, 20px);
   font-family: 'Bodoni Moda', sans-serif;
-  color: var(--white);
+  color: var(--active);
+  margin-bottom: max(5vw, 30px);
+  line-height: 1;
 
-  .close-button {
+  &::before {
+    content: '';
     position: absolute;
-    bottom: calc(max(3vw, 35px) * -0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: max(3vw, 35px);
-    height: max(3vw, 35px);
-    background-color: var(--active-difference);
-    border-radius: 50px;
-    z-index: 1;
-
-    .icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-47%, -50%);
-      width: 40%;
-      height: auto;
-      mix-blend-mode: difference;
-    }
+    width: 90%;
+    height: 160%;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(
+      to right,
+      transparent 0%,
+      var(--active) 10%,
+      var(--active) 90%,
+      transparent 100%
+    );
+    border-image-slice: 1;
   }
 
   @media only screen and (max-width: 640px) {
-    height: 30vw;
     font-size: 8vw;
   }
 `
 
-const ContentBox = styled.div`
-  height: calc(100% - max(15vw, 10rem));
-  padding: max(3vw, 3rem) 7vw;
-  overflow: auto;
+const CloseButton = styled.button`
+  position: absolute;
+  bottom: calc(max(3vw, 35px) * -0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max(3vw, 35px);
+  height: max(3vw, 35px);
+  background-color: var(--active);
+  border-radius: 50px;
+  z-index: 1;
 
-  @media only screen and (max-width: 640px) {
-    height: calc(100% - 30vw);
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -50%);
+    width: 40%;
+    height: auto;
   }
 `
 
@@ -136,7 +152,9 @@ const ChargeList = styled.ul`
 `
 
 const ChargeItem = styled.li`
-  margin-bottom: 1.5vw;
+  &:not(&:last-child) {
+    margin-bottom: 1.5vw;
+  }
 
   .main-charge {
     background-color: rgba(21, 71, 13, 0.2);
@@ -181,86 +199,84 @@ function ProjectModal({ project, onCloseClick }) {
   }
 
   return (
-    <>
+    <ContentBox>
+      <CloseButton onClick={onCloseClick}>
+        <LazyImage src="/icons/close.svg" alt="close" className="icon" />
+      </CloseButton>
       <HeaderBox>
         <div>{project.title}</div>
-        <button className="close-button" onClick={onCloseClick}>
-          <LazyImage src="/icons/close.svg" alt="close" className="icon" />
-        </button>
       </HeaderBox>
-      <ContentBox>
-        <GridBox>
-          <GridItem className="title-item">개발 기간</GridItem>
-          <GridItem>{project.period}</GridItem>
-          <GridItem className="title-item">역할</GridItem>
-          <GridItem>{project.role}</GridItem>
-          <GridItem className="title-item">프로젝트 소개</GridItem>
-          <GridItem>{project.introduction}</GridItem>
-          <GridItem className="title-item">서비스 링크</GridItem>
-          <GridItem className="project-link">
-            {project.links.map((link) => (
-              <a href={link} target="_blank" key={link} className="link">
-                🔗 {cutLinkShort(link)}
-              </a>
+      <GridBox>
+        <GridItem className="title-item">개발 기간</GridItem>
+        <GridItem>{project.period}</GridItem>
+        <GridItem className="title-item">역할</GridItem>
+        <GridItem>{project.role}</GridItem>
+        <GridItem className="title-item">프로젝트 소개</GridItem>
+        <GridItem>{project.introduction}</GridItem>
+        <GridItem className="title-item">서비스 링크</GridItem>
+        <GridItem className="project-link">
+          {project.links.map((link) => (
+            <a href={link} target="_blank" key={link} className="link">
+              🔗 {cutLinkShort(link)}
+            </a>
+          ))}
+        </GridItem>
+        <GridItem className="title-item">기술 스택</GridItem>
+        <TechList>
+          <TechItem>
+            {project.languages.map((language) => (
+              <span key={language.name} className={language.isMostUsed ? 'top-priority' : ''}>
+                {language.name}
+              </span>
             ))}
-          </GridItem>
-          <GridItem className="title-item">기술 스택</GridItem>
-          <TechList>
-            <TechItem>
-              {project.languages.map((language) => (
-                <span key={language.name} className={language.isMostUsed ? 'top-priority' : ''}>
-                  {language.name}
-                </span>
-              ))}
-            </TechItem>
-            <TechItem>
-              {project.libraries.map((library) => (
-                <span key={library.name} className={library.isMostUsed ? 'top-priority' : ''}>
-                  {library.name}
-                </span>
-              ))}
-            </TechItem>
-            <TechItem>
-              {project.frameworks.map((framework) => (
-                <span key={framework.name} className={framework.isMostUsed ? 'top-priority' : ''}>
-                  {framework.name}
-                </span>
-              ))}
-            </TechItem>
-          </TechList>
-          <GridItem className="title-item">담당 업무</GridItem>
-          <ChargeList>
-            {project.chargeList.map((charge) => (
-              <ChargeItem key={charge.mainCharge}>
-                <span className="main-charge">{charge.mainCharge}</span>
-                <ul>
-                  {charge.subCharge.map((subCharge) => {
-                    if (subCharge.includes('\n')) {
-                      const charges = subCharge.split('\n')
+          </TechItem>
+          <TechItem>
+            {project.libraries.map((library) => (
+              <span key={library.name} className={library.isMostUsed ? 'top-priority' : ''}>
+                {library.name}
+              </span>
+            ))}
+          </TechItem>
+          <TechItem>
+            {project.frameworks.map((framework) => (
+              <span key={framework.name} className={framework.isMostUsed ? 'top-priority' : ''}>
+                {framework.name}
+              </span>
+            ))}
+          </TechItem>
+        </TechList>
+        <GridItem className="title-item">담당 업무</GridItem>
+        <ChargeList>
+          {project.chargeList.map((charge) => (
+            <ChargeItem key={charge.mainCharge}>
+              <span className="main-charge">{charge.mainCharge}</span>
+              <ul>
+                {charge.subCharge.map((subCharge) => {
+                  if (subCharge.includes('\n')) {
+                    const charges = subCharge.split('\n')
 
-                      return (
-                        <li key={subCharge}>
-                          {charges.shift()}
-                          <ul>
-                            {charges.map((orderCharge, index) => (
-                              <OrderItem key={orderCharge} number={index + 1}>
-                                {orderCharge}
-                              </OrderItem>
-                            ))}
-                          </ul>
-                        </li>
-                      )
-                    } else {
-                      return <li key={subCharge}>{subCharge}</li>
-                    }
-                  })}
-                </ul>
-              </ChargeItem>
-            ))}
-          </ChargeList>
-        </GridBox>
-      </ContentBox>
-    </>
+                    return (
+                      <li key={subCharge}>
+                        {charges.shift()}
+                        <ul>
+                          {charges.map((orderCharge, index) => (
+                            <OrderItem key={orderCharge} number={index + 1}>
+                              {orderCharge}
+                            </OrderItem>
+                          ))}
+                        </ul>
+                      </li>
+                    )
+                  } else {
+                    return <li key={subCharge}>{subCharge}</li>
+                  }
+                })}
+              </ul>
+            </ChargeItem>
+          ))}
+        </ChargeList>
+      </GridBox>
+    </ContentBox>
   )
 }
 
