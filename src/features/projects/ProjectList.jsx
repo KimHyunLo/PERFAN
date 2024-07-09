@@ -106,12 +106,12 @@ const projects = [
 ]
 
 function ProjectList() {
-  const [isModalOpen, setIsModalOpen] = useToggleBodyScroll()
   const [openIndex, setOpenIndex] = useState(null)
+  const { setIsScrollable } = useToggleBodyScroll()
 
   function handleClick(index) {
-    setOpenIndex(openIndex === index ? null : index)
-    setIsModalOpen(openIndex !== index)
+    setOpenIndex((curr) => (curr === index ? null : index))
+    setIsScrollable((is) => !is)
   }
 
   return (
@@ -135,7 +135,7 @@ function ProjectList() {
           />
         </SwiperSlide>
       ))}
-      {isModalOpen && (
+      {openIndex !== null && (
         <Modal onCloseClick={() => handleClick(openIndex)}>
           <ProjectModal project={projects[openIndex]} onCloseClick={() => handleClick(openIndex)} />
         </Modal>

@@ -4,13 +4,17 @@ import { useToggleBodyScroll } from '../hooks/useToggleBodyScroll'
 const SideMenuContext = createContext()
 
 function SideMenuProvider({ children }) {
-  const [isMenuOpen, setIsMenuOpen] = useToggleBodyScroll()
+  const { isScrollable, setIsScrollable } = useToggleBodyScroll()
 
   function toggleSideMenu() {
-    setIsMenuOpen((isOpen) => !isOpen)
+    setIsScrollable((is) => !is)
   }
 
-  return <SideMenuContext.Provider value={{ isMenuOpen, toggleSideMenu }}>{children}</SideMenuContext.Provider>
+  return (
+    <SideMenuContext.Provider value={{ isScrollable, toggleSideMenu }}>
+      {children}
+    </SideMenuContext.Provider>
+  )
 }
 
 export { SideMenuProvider, SideMenuContext }

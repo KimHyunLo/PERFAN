@@ -178,7 +178,7 @@ const ChargeItem = styled.li`
 
 const OrderItem = styled.li`
   &::before {
-    content: ${(props) => '"' + props.number + '."'}!important;
+    content: ${(props) => '"' + props.$number + '."'}!important;
     top: 0 !important;
     background-color: transparent !important;
     border: none !important;
@@ -256,7 +256,7 @@ function ProjectModal({ project, onCloseClick }) {
                         {charges.shift()}
                         <ul>
                           {charges.map((orderCharge, index) => (
-                            <OrderItem key={orderCharge} number={index + 1}>
+                            <OrderItem key={orderCharge} $number={index + 1}>
                               {orderCharge}
                             </OrderItem>
                           ))}

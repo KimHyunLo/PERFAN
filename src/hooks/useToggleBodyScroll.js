@@ -16,5 +16,5 @@ export function useToggleBodyScroll() {
     [isScrollable],
   )
 
-  return [isScrollable, setIsScrollable]
+  return { isScrollable, setIsScrollable }
 }
