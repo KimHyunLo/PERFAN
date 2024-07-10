@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { AboutIntroduction, AboutPersonalStatement, AboutSkills } from '../features/Features'
+import { AboutIntroduction, AboutSkills } from '../features/Features'
 
 const StyledAbout = styled.div`
   background-color: var(--black);
@@ -29,7 +29,6 @@ function About() {
     <StyledAbout>
       <AboutIntroduction />
       <AboutSkills />
-      <AboutPersonalStatement />
     </StyledAbout>
   )
 }
