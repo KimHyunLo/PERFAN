@@ -3,7 +3,7 @@ import { LazyImage } from '../../components/Components'
 
 const Introduction = styled.div`
   position: relative;
-  width: 85%;
+  width: 80%;
   margin: 10rem auto 5rem;
 
   @media only screen and (max-width: 768px) {
@@ -63,7 +63,7 @@ const IntroContent = styled.p`
 
   @media only screen and (max-width: 768px) {
     max-width: none;
-    font-size: max(2.3vw, 12px);
+    font-size: max(2.3vw, 14px);
   }
 `
 
@@ -72,17 +72,16 @@ const IntroImage = styled.div`
   justify-content: end;
   align-items: end;
   gap: 50px;
-  margin-top: -350px;
+  margin-top: -250px;
 
   .signature {
     height: auto;
-    width: 25vw;
-    padding-bottom: 70px;
+    width: 20vw;
   }
 
   .portrait {
     height: auto;
-    width: 27vw;
+    width: 20vw;
   }
 
   @media only screen and (max-width: 1280px) {
@@ -96,7 +95,7 @@ const IntroMobileImage = styled.div`
   @media only screen and (max-width: 1280px) {
     position: relative;
     display: block;
-    height: 55vw;
+    height: 50vw;
 
     .signature,
     .portrait {
