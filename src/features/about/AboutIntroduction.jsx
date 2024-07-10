@@ -4,11 +4,7 @@ import { LazyImage } from '../../components/Components'
 const Introduction = styled.div`
   position: relative;
   width: 80%;
-  margin: 10rem auto 5rem;
-
-  @media only screen and (max-width: 768px) {
-    margin: 10vw auto 5rem;
-  }
+  margin: 0 auto;
 `
 
 const IntroHeader = styled.div`

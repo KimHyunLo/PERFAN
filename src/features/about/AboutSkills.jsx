@@ -4,7 +4,7 @@ import { appProgramming, cooperation, languages, webProgramming } from '../../da
 
 const StyledLayout = styled.div`
   width: 85%;
-  margin: 20rem auto;
+  margin: 20rem auto 0;
 
   @media only screen and (max-width: 1280px) {
     margin: 15vw auto 0;
