@@ -8,11 +8,6 @@ const StyledButton = styled.button`
   height: 4.5rem;
   background-color: var(--active-difference);
   border-radius: 50px;
-
-  @media only screen and (max-width: 640px) {
-    width: 4rem;
-    height: 4rem;
-  }
 `
 
 const StyledImage = styled.img`
