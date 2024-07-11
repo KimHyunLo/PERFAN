@@ -1,17 +1,17 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Header, Title, Nav } from '../components/Components'
+import { Header, Title, Nav, Scrollbar } from '../components/Components'
 
 const StyledMain = styled.main`
-  margin-top: 55vh;
+  padding-top: 55vh;
 
   @media only screen and (max-width: 1024px) {
-    margin-top: 40vh;
+    padding-top: 40vh;
   }
 
   @media only screen and (max-width: 640px) {
-    margin-top: 27vh;
+    padding-top: 27vh;
   }
 `
 
@@ -39,6 +39,7 @@ function Layout() {
       <Header />
       <Title title={title} />
       <Nav />
+      <Scrollbar target={document.body} />
       <StyledMain>
         <Outlet />
       </StyledMain>

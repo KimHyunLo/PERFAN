@@ -15,7 +15,11 @@
   box-sizing: inherit;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:not(body)::-webkit-scrollbar {
   width: 10px;
   background-color: var(--white);
 }

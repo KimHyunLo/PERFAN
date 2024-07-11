@@ -9,5 +9,17 @@ const Title = React.lazy(() => import('./Title'))
 const Loader = React.lazy(() => import('./Loader'))
 const HorizontalList = React.lazy(() => import('./HorizontalList'))
 const ScrollButton = React.lazy(() => import('./ScrollButton'))
+const Scrollbar = React.lazy(() => import('./Scrollbar'))
 
-export { Header, LazyImage, Modal, Nav, SideMenu, Title, Loader, HorizontalList, ScrollButton }
+export {
+  Header,
+  LazyImage,
+  Modal,
+  Nav,
+  SideMenu,
+  Title,
+  Loader,
+  HorizontalList,
+  ScrollButton,
+  Scrollbar,
+}
