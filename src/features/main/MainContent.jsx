@@ -112,7 +112,7 @@ function MainContent() {
       <MobileMain>
         <div className="middle-text">
           <p>
-            의외로 감성적이라 놀라셨나요?
+            어서오세요! 제 포트폴리오에 온 걸 환영합니다.
             <br />
             단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의
             매력이 당신에게 닿았으면 좋겠네요.
@@ -128,7 +128,7 @@ function MainContent() {
       </MobileMain>
       <PcMain>
         <StyledParagraph>
-          의외로 감성적이라 놀라셨나요?
+          어서오세요! 제 포트폴리오에 온 걸 환영합니다.
           <br />
           단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의 매력이
           당신에게 닿았으면 좋겠네요.

@@ -8,5 +8,6 @@ const SideMenu = React.lazy(() => import('./SideMenu'))
 const Title = React.lazy(() => import('./Title'))
 const Loader = React.lazy(() => import('./Loader'))
 const HorizontalList = React.lazy(() => import('./HorizontalList'))
+const ScrollButton = React.lazy(() => import('./ScrollButton'))
 
-export { Header, LazyImage, Modal, Nav, SideMenu, Title, Loader, HorizontalList }
+export { Header, LazyImage, Modal, Nav, SideMenu, Title, Loader, HorizontalList, ScrollButton }

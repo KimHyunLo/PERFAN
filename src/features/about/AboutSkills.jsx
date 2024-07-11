@@ -25,7 +25,7 @@ const StyledTitle = styled.h2`
 const StyledListBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 7rem;
 
   @media only screen and (max-width: 1280px) {
     gap: 5rem;

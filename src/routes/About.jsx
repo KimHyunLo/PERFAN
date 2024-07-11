@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { AboutIntroduction, AboutSkills } from '../features/Features'
+import { ScrollButton } from '../components/Components'
 
 const StyledAbout = styled.div`
   position: relative;
@@ -29,9 +30,20 @@ const StyledAbout = styled.div`
   }
 `
 
+const StyledButtonBox = styled.div`
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  mix-blend-mode: difference;
+  z-index: 1;
+`
+
 function About() {
   return (
     <StyledAbout>
+      <StyledButtonBox>
+        <ScrollButton />
+      </StyledButtonBox>
       <AboutIntroduction />
       <AboutSkills />
     </StyledAbout>
