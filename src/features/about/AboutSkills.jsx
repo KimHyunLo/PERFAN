@@ -6,9 +6,12 @@ const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 7rem;
+  width: 85%;
+  margin: 0 auto;
 
   @media only screen and (max-width: 1280px) {
     gap: 3.5rem;
+    width: auto;
   }
 `
 
