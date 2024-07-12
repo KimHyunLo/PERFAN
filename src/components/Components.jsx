@@ -10,6 +10,7 @@ const Loader = React.lazy(() => import('./Loader'))
 const HorizontalList = React.lazy(() => import('./HorizontalList'))
 const ScrollButton = React.lazy(() => import('./ScrollButton'))
 const Scrollbar = React.lazy(() => import('./Scrollbar'))
+const CareerItem = React.lazy(() => import('./CareerItem'))
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   HorizontalList,
   ScrollButton,
   Scrollbar,
+  CareerItem,
 }
