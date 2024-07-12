@@ -4,8 +4,8 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: max(3vw, 40px);
+  height: max(3vw, 40px);
   background-color: var(--active-difference);
   border-radius: 50px;
 `

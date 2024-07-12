@@ -148,7 +148,7 @@ export const cooperation = [
 export const projects = [
   {
     title: 'Noljang Web',
-    period: '2023. 11 ~ 2024. 02 (4개월)',
+    period: '2023. 11 ~ 2024. 02',
     role: 'Front-End',
     introduction: '"놀장" 어플 홍보 목적으로 웹뷰에서 웹버전으로 리뉴얼 프로젝트입니다.',
     links: ['https://www.noljang.co.kr/#/'],
@@ -181,7 +181,7 @@ export const projects = [
   },
   {
     title: 'Noljang App',
-    period: '2023. 04 ~ 2023. 10 (7개월)',
+    period: '2023. 04 ~ 2023. 10',
     role: 'Front-End',
     introduction: 'E-커머스 플랫폼 네이티브 앱을 플러터 앱으로 리뉴얼한 프로젝트입니다.',
     links: [

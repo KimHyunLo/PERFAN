@@ -38,7 +38,6 @@ const StyledButtonBox = styled.div`
   position: fixed;
   bottom: 5%;
   right: 5%;
-  mix-blend-mode: difference;
   z-index: 1;
 `
 

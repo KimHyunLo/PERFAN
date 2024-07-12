@@ -62,21 +62,29 @@ const ProjectDetail = styled.div`
     display: flex;
     flex-direction: column;
     gap: max(0.5vw, 1rem);
+    font-size: 1.8rem;
 
     li {
       color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
-      font-size: clamp(12px, 1vw, 16px);
+    }
+
+    @media only screen and (max-width: 1280px) {
+      font-size: max(1.8vw, 14px);
     }
   }
 
   button {
-    height: 3rem;
-    width: 10rem;
-    font-size: clamp(12px, 1vw, 16px);
+    height: 3.5rem;
+    width: 12rem;
+    font-size: 1.8rem;
     background-color: ${(props) => (props.theme === 'white' ? 'var(--active)' : 'var(--white)')};
     color: ${(props) => (props.theme === 'green' ? 'var(--active)' : 'var(--white)')};
     border-radius: 25px;
     margin-top: max(2vw, 2rem);
+
+    @media only screen and (max-width: 1280px) {
+      font-size: max(1.8vw, 14px);
+    }
   }
 `
 

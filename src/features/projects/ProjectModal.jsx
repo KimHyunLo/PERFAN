@@ -16,7 +16,7 @@ const HeaderBox = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-size: max(5vw, 20px);
+  font-size: max(5vw, 23px);
   font-family: 'Bodoni Moda', sans-serif;
   color: var(--active);
   margin-bottom: max(5vw, 30px);
@@ -25,21 +25,21 @@ const HeaderBox = styled.div`
   &::before {
     content: '';
     position: absolute;
-    width: 90%;
+    width: 100%;
     height: 160%;
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(
       to right,
       transparent 0%,
-      var(--active) 10%,
-      var(--active) 90%,
+      var(--active) 20%,
+      var(--active) 80%,
       transparent 100%
     );
     border-image-slice: 1;
   }
 
   @media only screen and (max-width: 640px) {
-    font-size: 8vw;
+    font-size: max(9vw, 32px);
   }
 `
 
@@ -51,8 +51,8 @@ const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: max(3vw, 35px);
-  height: max(3vw, 35px);
+  width: max(3vw, 40px);
+  height: max(3vw, 40px);
   background-color: var(--active);
   border-radius: 50px;
   z-index: 1;
@@ -83,6 +83,7 @@ const GridBox = styled.div`
 
 const GridItem = styled.div`
   min-width: 0;
+  font-size: 1.8rem;
 
   &.title-item {
     color: var(--active);
@@ -97,9 +98,17 @@ const GridItem = styled.div`
     }
   }
 
+  @media only screen and (max-width: 1280px) {
+    font-size: max(1.8vw, 14px);
+  }
+
   @media only screen and (max-width: 640px) {
+    &.title-item {
+      margin-bottom: 0.5rem;
+    }
+
     &.title-item:not(&:first-child) {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
   }
 `
@@ -121,9 +130,15 @@ const TechList = styled.ul`
 `
 
 const TechItem = styled.li`
+  font-size: 1.8rem;
+
   span:not(span:last-child)::after {
     content: ',';
     margin-right: 4px;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    font-size: max(1.8vw, 14px);
   }
 `
 
@@ -148,8 +163,10 @@ const ChargeList = styled.ul`
 `
 
 const ChargeItem = styled.li`
+  font-size: 1.8rem;
+
   &:not(&:last-child) {
-    margin-bottom: 1.5vw;
+    margin-bottom: 2rem;
   }
 
   .main-charge {
@@ -173,6 +190,10 @@ const ChargeItem = styled.li`
         margin-bottom: 5px;
       }
     }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    font-size: max(1.8vw, 14px);
   }
 `
 
