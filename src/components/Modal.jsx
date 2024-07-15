@@ -14,13 +14,9 @@ const ModalBox = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: min(90%, 1200px);
   height: 85%;
   background-color: var(--white);
-
-  @media only screen and (max-width: 640px) {
-    width: 90%;
-  }
 `
 
 function Modal({ children, onCloseClick }) {

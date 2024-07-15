@@ -30,7 +30,6 @@ function Scrollbar({ target }) {
 
   useEffect(
     function () {
-      console.log(target.scrollHeight)
       function handleScroll() {
         const totalPageHeight = target.scrollHeight - window.innerHeight
         const newProgressHeight = window.scrollY / totalPageHeight

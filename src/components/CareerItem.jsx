@@ -70,28 +70,7 @@ const StyledParagraph = styled.p`
   }
 `
 
-const StyledLsit = styled.ul`
-  display: grid;
-  grid-template-columns: 12% 1fr;
-  grid-template-rows: repeat(${(props) => props.$row}, min-content);
-  font-size: 1.8rem;
-  row-gap: 1rem;
-
-  :first-child {
-    grid-row: 1 / -1;
-  }
-
-  &.margin-bottom {
-    margin-bottom: 2rem;
-  }
-
-  @media only screen and (max-width: 1280px) {
-    grid-template-columns: max(10vw, 80px) 1fr;
-    font-size: max(1.8vw, 14px);
-  }
-`
-
-function CareerItem({ career }) {
+function CareerItem({ career, children }) {
   return (
     <StyledLayout>
       <StyledPeriod>
@@ -111,7 +90,8 @@ function CareerItem({ career }) {
         <StyledParagraph>
           {career.introduce} 등의 <em>{career.charge}</em> 업무를 진행했습니다.
         </StyledParagraph>
-        <StyledLsit $row={career.techList.length} className="margin-bottom">
+        {children}
+        {/* <StyledLsit $row={career.techList.length} className="margin-bottom">
           <li>기술 스택:</li>
           {career.techList.map((tech) => (
             <li key={tech}>- {tech}</li>
@@ -122,7 +102,7 @@ function CareerItem({ career }) {
           {career.chargeList.map((charge) => (
             <li key={charge}>- {charge}</li>
           ))}
-        </StyledLsit>
+        </StyledLsit> */}
       </StyledFlexBox>
     </StyledLayout>
   )

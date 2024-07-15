@@ -98,7 +98,7 @@ function ProjectItem({ project, theme, onMoreClick }) {
         <ul>
           <li>-&nbsp;{project.period}&nbsp;-</li>
           {project.chargeList.map((charge) => (
-            <li key={charge.mainCharge}>{charge.mainCharge}</li>
+            <li key={charge}>{charge}</li>
           ))}
         </ul>
         <button onClick={onMoreClick}>더보기</button>

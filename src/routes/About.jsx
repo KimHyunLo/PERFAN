@@ -92,8 +92,8 @@ function About() {
       <StyledContentBox>
         <AboutIntroduction>
           <StyledHeader className="no-margin">
-            <div className="header1">Not Letting Go,</div>
-            <div className="header2">Delicate Developer</div>
+            <div className="header1">One of a Kind,</div>
+            <div className="header2">Highflier Developer</div>
           </StyledHeader>
         </AboutIntroduction>
         <AboutExperience>
