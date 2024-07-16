@@ -69,7 +69,7 @@ const ProjectDetail = styled.div`
     }
 
     @media only screen and (max-width: 1280px) {
-      font-size: max(1.8vw, 14px);
+      font-size: max(1.4vw, 14px);
     }
   }
 
@@ -83,7 +83,7 @@ const ProjectDetail = styled.div`
     margin-top: max(2vw, 2rem);
 
     @media only screen and (max-width: 1280px) {
-      font-size: max(1.8vw, 14px);
+      font-size: max(1.4vw, 14px);
     }
   }
 `
