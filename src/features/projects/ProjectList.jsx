@@ -80,16 +80,20 @@ function NoljangWeb() {
         <StyledDate>
           2023. 11 ~ <div>2024. 03</div>
         </StyledDate>
-        <HighlightList main="프로젝트 인원 :">
+        <HighlightList main="프로젝트 인원">
           <li>프론트엔드 1명, 백엔드 1명, 기획자 1명 (총 3명)</li>
         </HighlightList>
-        <HighlightList main="프로젝트 역할 :">
+        <HighlightList main="프로젝트 역할">
           <li>프론트엔드</li>
         </HighlightList>
-        <HighlightList main="서비스 링크 :">
-          <li>🔗 https://www.noljang.co.kr</li>
+        <HighlightList main="서비스 링크">
+          <li>
+            <a href="https://www.noljang.co.kr" target="_blank">
+              🔗 https://www.noljang.co.kr
+            </a>
+          </li>
         </HighlightList>
-        <KeywordList main="기술 스택 :">
+        <KeywordList main="기술 스택">
           <li>JavaScript</li>
           <li>Vue</li>
           <li>VueX</li>
@@ -149,17 +153,25 @@ function NoljangApp() {
         <StyledDate>
           2023. 04 ~ <div>2023. 10</div>
         </StyledDate>
-        <HighlightList main="프로젝트 인원 :">
+        <HighlightList main="프로젝트 인원">
           <li>프론트엔드 2명, 앱 개발자 1명, 백엔드 2명, 기획자 1명 (총 6명)</li>
         </HighlightList>
-        <HighlightList main="프로젝트 역할 :">
+        <HighlightList main="프로젝트 역할">
           <li>프론트엔드 및 앱 개발 동시 참여</li>
         </HighlightList>
-        <HighlightList main="서비스 링크 :">
-          <li>🔗 Google Play</li>
-          <li>🔗 App Store</li>
+        <HighlightList main="서비스 링크">
+          <li>
+            <a href="https://play.google.com/store/apps/details?id=kr.wiju.noljang" target="_blank">
+              🔗 Google Play
+            </a>
+          </li>
+          <li>
+            <a href="https://apps.apple.com/kr/app/%EB%86%80%EC%9E%A5/id1169889915" target="_blank">
+              🔗 App Store
+            </a>
+          </li>
         </HighlightList>
-        <KeywordList main="기술 스택 :">
+        <KeywordList main="기술 스택">
           <li>JavaScript</li>
           <li>Vue</li>
           <li>VueX</li>
