@@ -9,7 +9,7 @@ const StyledHeaderLayout = styled.div`
   position: fixed;
   top: 26px;
   padding: 0 3rem;
-  width: calc(100% - 6rem);
+  width: calc(100vw - 6rem);
   mix-blend-mode: difference;
   z-index: 2;
 

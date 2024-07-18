@@ -7,7 +7,7 @@ const StyledContact = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: end;
-  width: 100%;
+  width: calc(100vw - 6rem);
   padding: 0 3rem;
 
   @media only screen and (max-width: 1024px) {
@@ -18,6 +18,7 @@ const StyledContact = styled.div`
   }
 
   @media only screen and (max-width: 640px) {
+    width: 100vw;
     padding: 0;
   }
 `

@@ -6,7 +6,7 @@ const StyledMainContent = styled.div`
   left: 50%;
   top: 75%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: max(80%, 1000px);
 
   @media only screen and (max-width: 1024px) {
     position: relative;
@@ -88,7 +88,7 @@ const PcMain = styled.div`
 `
 
 const StyledParagraph = styled.p`
-  max-width: 255px;
+  max-width: 280px;
   min-width: 200px;
   font-size: 1.4rem;
   text-align: center;
@@ -112,33 +112,33 @@ function MainContent() {
       <MobileMain>
         <div className="middle-text">
           <p>
-            어서오세요! 제 포트폴리오에 온 걸 환영합니다.
+            안녕하세요! 제 포트폴리오에 오신 것을 환영합니다.
             <br />
-            단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의
-            매력이 당신에게 닿았으면 좋겠네요.
+            저는 단아하지만 우아하고, 무색이지만 특색있으며, 소심하지만 소신있는 사람입니다. 제
+            매력이 당신에게 전달되었으면 좋겠습니다.
           </p>
           <p>
-            제 인생 테마는 &quot;중립적으로 살자&quot;입니다.
+            제 인생 테마는 &quot;중립적으로 살아가기&quot;입니다.
             <br />
-            남들에게 휘둘리지 않고, 나의 시선으로 판단을 내리는 것이 제가 중립을 택하는 방법입니다.
-            편견없는 모습이 가장 나답다고 할 수 있겠네요.
+            남들의 의견에 휘둘리지 않고, 오로지 나만의 시각으로 판단을 내리는 것이 제가 중립을
+            지키는 방법입니다. 편견 없이 바라보는 모습이 가장 나다운 모습이라고 할 수 있겠습니다.
           </p>
         </div>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
         <StyledParagraph>
-          어서오세요! 제 포트폴리오에 온 걸 환영합니다.
+          안녕하세요! 제 포트폴리오에 오신 것을 환영합니다.
           <br />
-          단아하지만 우아하고, 무색이지만 특색있는, 소심하지만 소신있는 그것이 저입니다. 저의 매력이
-          당신에게 닿았으면 좋겠네요.
+          저는 단아하지만 우아하고, 무색이지만 특색있으며, 소심하지만 소신있는 사람입니다. 제 매력이
+          당신에게 전달되었으면 좋겠습니다.
         </StyledParagraph>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
         <StyledParagraph>
-          제 인생 테마는 &quot;중립적으로 살자&quot;입니다.
+          제 인생 테마는 &quot;중립적으로 살아가기&quot;입니다.
           <br />
-          남들에게 휘둘리지 않고, 나의 시선으로 판단을 내리는 것이 제가 중립을 택하는 방법입니다.
-          편견없는 모습이 가장 나답다고 할 수 있겠네요.
+          남들의 의견에 휘둘리지 않고, 오로지 나만의 시각으로 판단을 내리는 것이 제가 중립을 지키는
+          방법입니다. 편견 없이 바라보는 모습이 가장 나다운 모습이라고 할 수 있겠습니다.
         </StyledParagraph>
       </PcMain>
     </StyledMainContent>

@@ -4,7 +4,7 @@ import { LazyImage } from '../../components/Components'
 const StyledFooter = styled.footer`
   position: absolute;
   bottom: 10px;
-  width: 100%;
+  width: calc(100vw - 6rem);
   padding: 0 3rem;
 
   .middle-text {
@@ -20,6 +20,7 @@ const StyledFooter = styled.footer`
   }
 
   @media only screen and (max-width: 640px) {
+    width: calc(100vw - 3rem);
     padding: 0 1.5rem;
 
     .middle-text {
