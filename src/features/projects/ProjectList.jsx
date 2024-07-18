@@ -4,6 +4,10 @@ import { HighlightList, KeywordList } from '../../components/Components'
 const StyledLayout = styled.div`
   width: 80%;
   margin: 10rem auto;
+
+  @media only screen and (max-width: 1024px) {
+    margin: 5rem auto;
+  }
 `
 
 const StyledProjectList = styled.ul`
@@ -17,6 +21,12 @@ const StyledProjectItem = styled.li`
   display: grid;
   grid-template-columns: 25% 1fr;
   column-gap: 10rem;
+
+  @media only screen and (max-width: 1024px) {
+    grid-template-columns: none;
+    column-gap: 0;
+    row-gap: 5rem;
+  }
 `
 
 const StyledLeftSide = styled.aside`
@@ -27,6 +37,10 @@ const StyledLeftSide = styled.aside`
   gap: 2rem;
   height: fit-content;
   font-size: 1.8rem;
+
+  @media only screen and (max-width: 1024px) {
+    position: static;
+  }
 `
 
 const StyledRightSide = styled.section`
@@ -36,9 +50,10 @@ const StyledRightSide = styled.section`
 `
 
 const StyledDate = styled.h4`
-  em {
-    font-size: 2rem;
-    font-weight: 300;
+  white-space: pre-wrap;
+
+  div {
+    display: inline-block;
   }
 `
 
@@ -63,8 +78,7 @@ function NoljangWeb() {
     <StyledProjectItem>
       <StyledLeftSide>
         <StyledDate>
-          2023. 11 <br />
-          &nbsp;~ 2024. 03 <em>(5 개월)</em>
+          2023. 11 ~ <div>2024. 03</div>
         </StyledDate>
         <HighlightList main="프로젝트 인원 :">
           <li>프론트엔드 1명, 백엔드 1명, 기획자 1명 (총 3명)</li>
@@ -133,8 +147,7 @@ function NoljangApp() {
     <StyledProjectItem>
       <StyledLeftSide>
         <StyledDate>
-          2023. 04 <br />
-          &nbsp;~ 2023. 10 <em>(6 개월)</em>
+          2023. 04 ~ <div>2023. 10</div>
         </StyledDate>
         <HighlightList main="프로젝트 인원 :">
           <li>프론트엔드 2명, 앱 개발자 1명, 백엔드 2명, 기획자 1명 (총 6명)</li>
