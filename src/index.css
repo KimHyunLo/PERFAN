@@ -3,16 +3,21 @@
 :root {
   --active: #15470d;
   --active-difference: #e7a9bb;
+  --highlight: #d3486f;
   --white: #eeeae4;
   --gray: #a9a9a9;
   --black: #222;
   --black-difference: #ddd;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 body::-webkit-scrollbar {
@@ -67,14 +72,6 @@ body {
   background-color: var(--white);
   color: var(--black);
   font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -88,14 +85,11 @@ li {
 }
 
 p {
-  margin: 0;
   line-height: 1.5;
   word-break: keep-all;
 }
 
 button {
-  border: none;
-  padding: 0;
   background: none;
   font-family: 'Pretendard', sans-serif;
   font-size: 1.6rem;
@@ -108,7 +102,35 @@ em {
 
 h1,
 h2,
+h3,
+h4 {
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 7vw;
+}
+
 h3 {
-  font-weight: normal;
-  margin: 0;
+  font-size: 3.5vw;
+}
+
+h4 {
+  font-size: 2.5vw;
+}
+
+@media only screen and (max-width: 1280px) {
+  h2 {
+    font-size: max(9vw, 32px);
+  }
+
+  h3 {
+    font-size: max(4.5vw, 22px);
+  }
+
+  h4 {
+    font-size: max(3.5vw, 18px);
+  }
 }

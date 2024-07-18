@@ -34,13 +34,6 @@ const StyledAbout = styled.div`
   }
 `
 
-const StyledButtonBox = styled.div`
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  z-index: 1;
-`
-
 const StyledContentBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,9 +79,7 @@ const StyledHeader = styled.div`
 function About() {
   return (
     <StyledAbout>
-      <StyledButtonBox>
-        <ScrollButton />
-      </StyledButtonBox>
+      <ScrollButton />
       <StyledContentBox>
         <AboutIntroduction>
           <StyledHeader className="no-margin">

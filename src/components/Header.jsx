@@ -9,13 +9,14 @@ const StyledHeaderLayout = styled.div`
   position: fixed;
   top: 26px;
   padding: 0 3rem;
-  width: 100%;
+  width: calc(100% - 6rem);
   mix-blend-mode: difference;
   z-index: 2;
 
   @media only screen and (max-width: 640px) {
     top: 18px;
     padding: 0 1.5rem;
+    width: calc(100% - 3rem);
   }
 `
 

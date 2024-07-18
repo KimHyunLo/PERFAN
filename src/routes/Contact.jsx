@@ -18,7 +18,7 @@ const StyledContact = styled.div`
   }
 
   @media only screen and (max-width: 640px) {
-    padding: 0 1.5rem;
+    padding: 0;
   }
 `
 

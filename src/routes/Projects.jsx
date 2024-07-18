@@ -1,7 +1,13 @@
+import { ScrollButton } from '../components/Components'
 import ProjectList from '../features/projects/ProjectList'
 
 function Projects() {
-  return <ProjectList />
+  return (
+    <>
+      <ScrollButton />
+      <ProjectList />
+    </>
+  )
 }
 
 export default Projects
