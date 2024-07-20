@@ -7,7 +7,6 @@ const Nav = React.lazy(() => import('./Nav'))
 const SideMenu = React.lazy(() => import('./SideMenu'))
 const Title = React.lazy(() => import('./Title'))
 const Loader = React.lazy(() => import('./Loader'))
-const HorizontalList = React.lazy(() => import('./HorizontalList'))
 const ScrollButton = React.lazy(() => import('./ScrollButton'))
 const Scrollbar = React.lazy(() => import('./Scrollbar'))
 const CareerItem = React.lazy(() => import('./CareerItem'))
@@ -22,7 +21,6 @@ export {
   SideMenu,
   Title,
   Loader,
-  HorizontalList,
   ScrollButton,
   Scrollbar,
   CareerItem,

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { AboutExperience, AboutIntroduction, AboutSkills } from '../features/Features'
+import { AboutExperience, AboutIntroduction } from '../features/Features'
 import { ScrollButton } from '../components/Components'
 
 const StyledAbout = styled.div`
@@ -82,12 +82,6 @@ function About() {
             <h3>Work-Life</h3>
           </StyledHeader>
         </AboutExperience>
-        <AboutSkills>
-          <StyledHeader>
-            <h2>Certified Quality,</h2>
-            <h3>Being Skilled</h3>
-          </StyledHeader>
-        </AboutSkills>
       </StyledContentBox>
     </StyledAbout>
   )
