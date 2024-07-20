@@ -116,7 +116,7 @@ function MainContent() {
             전달되었으면 좋겠습니다.
           </p>
           <p>
-            저는 완벽한 계획을 세우는 것을 좋아합니다.
+            완벽한 계획을 세우는 것을 좋아합니다.
             <br />
             계획을 세우면서 완벽에 가까워져도 완전히 완벽해질 수는 없기 때문에 불완벽한 저와
             어울린다고 생각합니다.
@@ -133,9 +133,9 @@ function MainContent() {
         </StyledParagraph>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
         <StyledParagraph>
-          저는 완벽한 계획을 세우는 것을 좋아합니다.
+          완벽한 계획을 세우는 것을 좋아합니다.
           <br />
-          계획을 세우면서 완벽에 가까워져도 완전히 완벽해질 수는 없기 때문에 불완벽한 저와
+          계획을 세우면서 완벽에 가까워져도 완전히 완벽해질 수는 없다는 점이 불완벽한 저와
           어울린다고 생각합니다.
         </StyledParagraph>
       </PcMain>

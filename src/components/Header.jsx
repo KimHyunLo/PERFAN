@@ -49,7 +49,7 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  font-size: max(12px, 0.8vw);
+  font-size: 1.6rem;
   font-weight: 200;
   color: var(--black-difference);
 
@@ -70,6 +70,8 @@ const HeaderItem = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
+    font-size: clamp(12px, 1.8vw, 16px);
+
     &.right-item {
       font-size: 0;
       cursor: pointer;
