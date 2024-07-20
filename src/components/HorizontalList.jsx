@@ -40,14 +40,9 @@ const StyledItem = styled.li`
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.8rem;
 
   em {
     color: var(--active-difference);
-  }
-
-  @media only screen and (max-width: 1280px) {
-    font-size: max(1.8vw, 14px);
   }
 `
 

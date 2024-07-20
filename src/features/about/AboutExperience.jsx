@@ -16,7 +16,6 @@ const StyledChargeList = styled.ul`
   display: grid;
   grid-template-columns: 12% 1fr;
   grid-template-rows: repeat(${(props) => props.$row}, min-content);
-  font-size: 1.8rem;
   row-gap: 1rem;
 
   :first-child {
@@ -39,7 +38,6 @@ const StyledChargeList = styled.ul`
 
   @media only screen and (max-width: 1280px) {
     grid-template-columns: max(10vw, 80px) 1fr;
-    font-size: max(1.8vw, 14px);
   }
 `
 

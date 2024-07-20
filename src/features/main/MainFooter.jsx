@@ -12,7 +12,7 @@ const StyledFooter = styled.footer`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 12px;
+    font-size: max(14px, 0.8vw);
   }
 
   @media only screen and (max-width: 1024px) {

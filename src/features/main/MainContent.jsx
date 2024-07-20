@@ -6,7 +6,7 @@ const StyledMainContent = styled.div`
   left: 50%;
   top: 75%;
   transform: translate(-50%, -50%);
-  width: max(80%, 1000px);
+  width: max(80%, 950px);
 
   @media only screen and (max-width: 1024px) {
     position: relative;
@@ -76,9 +76,8 @@ const PcMain = styled.div`
   align-items: start;
 
   .avatar {
-    max-width: 350px;
     min-width: 300px;
-    width: 20vw;
+    width: max(350px, 20vw);
     height: auto;
   }
 
@@ -88,9 +87,8 @@ const PcMain = styled.div`
 `
 
 const StyledParagraph = styled.p`
-  max-width: 280px;
+  max-width: max(280px, 18vw);
   min-width: 200px;
-  font-size: 1.4rem;
   text-align: center;
   word-break: keep-all;
 
@@ -101,8 +99,8 @@ const StyledParagraph = styled.p`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 35px;
-    margin: 0 auto 35px;
+    height: max(35px, 2.5vw);
+    margin: 0 auto 3.5rem;
   }
 `
 
@@ -112,33 +110,33 @@ function MainContent() {
       <MobileMain>
         <div className="middle-text">
           <p>
-            안녕하세요! 제 포트폴리오에 오신 것을 환영합니다.
+            제 포트폴리오에 오신 것을 환영합니다.
             <br />
-            저는 단아하지만 우아하고, 무색이지만 특색있으며, 소심하지만 소신있는 사람입니다. 제
-            매력이 당신에게 전달되었으면 좋겠습니다.
+            저는 무색이지만 특색있고, 소심하지만 소신있는 사람입니다. 제 매력이 당신에게
+            전달되었으면 좋겠습니다.
           </p>
           <p>
-            제 인생 테마는 &quot;중립적으로 살아가기&quot;입니다.
+            저는 완벽한 계획을 세우는 것을 좋아합니다.
             <br />
-            남들의 의견에 휘둘리지 않고, 오로지 나만의 시각으로 판단을 내리는 것이 제가 중립을
-            지키는 방법입니다. 편견 없이 바라보는 모습이 가장 나다운 모습이라고 할 수 있겠습니다.
+            계획을 세우면서 완벽에 가까워져도 완전히 완벽해질 수는 없기 때문에 불완벽한 저와
+            어울린다고 생각합니다.
           </p>
         </div>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
         <StyledParagraph>
-          안녕하세요! 제 포트폴리오에 오신 것을 환영합니다.
+          제 포트폴리오에 오신 것을 환영합니다.
           <br />
-          저는 단아하지만 우아하고, 무색이지만 특색있으며, 소심하지만 소신있는 사람입니다. 제 매력이
-          당신에게 전달되었으면 좋겠습니다.
+          저는 무색이지만 특색있고, 소심하지만 소신있는 사람입니다. 제 매력이 당신에게 전달되었으면
+          좋겠습니다.
         </StyledParagraph>
         <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
         <StyledParagraph>
-          제 인생 테마는 &quot;중립적으로 살아가기&quot;입니다.
+          저는 완벽한 계획을 세우는 것을 좋아합니다.
           <br />
-          남들의 의견에 휘둘리지 않고, 오로지 나만의 시각으로 판단을 내리는 것이 제가 중립을 지키는
-          방법입니다. 편견 없이 바라보는 모습이 가장 나다운 모습이라고 할 수 있겠습니다.
+          계획을 세우면서 완벽에 가까워져도 완전히 완벽해질 수는 없기 때문에 불완벽한 저와
+          어울린다고 생각합니다.
         </StyledParagraph>
       </PcMain>
     </StyledMainContent>

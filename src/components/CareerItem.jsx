@@ -58,15 +58,10 @@ const StyledTitle = styled.div`
 `
 
 const StyledParagraph = styled.p`
-  font-size: 1.8rem;
   margin-bottom: 2rem;
 
   em {
     color: var(--active-difference);
-  }
-
-  @media only screen and (max-width: 1280px) {
-    font-size: max(1.8vw, 14px);
   }
 `
 

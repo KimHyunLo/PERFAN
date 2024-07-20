@@ -26,7 +26,7 @@ const HeaderTitle = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: 25px;
+  font-size: max(25px, 1.3vw);
 
   a {
     color: var(--black-difference);
@@ -49,7 +49,7 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  font-size: max(1.4rem, 12px);
+  font-size: max(14px, 0.8vw);
   font-weight: 200;
   color: var(--black-difference);
 
@@ -64,8 +64,8 @@ const HeaderItem = styled.div`
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
-      width: 30px;
-      height: 30px;
+      width: max(30px, 1.5vw);
+      height: max(30px, 1.5vw);
     }
   }
 

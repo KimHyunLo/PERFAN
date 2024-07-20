@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-const StyledItem = styled.li`
-  font-size: 1.8rem;
-
-  @media only screen and (max-width: 1280px) {
-    font-size: max(1.8vw, 14px);
-  }
-`
-
 const StyledMain = styled.div`
   background-color: rgba(21, 71, 13, 0.15);
   width: fit-content;
@@ -39,10 +31,10 @@ const StyledSubList = styled.ul`
 function HighlightList({ main, children }) {
   return (
     <ul>
-      <StyledItem>
+      <li>
         <StyledMain>{main}</StyledMain>
         <StyledSubList>{children}</StyledSubList>
-      </StyledItem>
+      </li>
     </ul>
   )
 }

@@ -1,31 +1,28 @@
 import styled from 'styled-components'
 import { LazyImage } from '../../components/Components'
 
-const IntroTitle = styled.div`
-  font-size: 2.5vw;
-  line-height: 1.2;
+const IntroTitle = styled.h4`
   margin-bottom: 5rem;
-
-  @media only screen and (max-width: 1280px) {
-    font-size: max(3.5vw, 18px);
-  }
 
   @media only screen and (max-width: 768px) {
     margin-bottom: 7vw;
   }
 `
 
-const IntroContent = styled.p`
-  max-width: 70vw;
-  width: 650px;
-  font-size: 1.8rem;
+const StyledParagraphBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`
+
+const StyledParagraph = styled.p`
+  width: 60%;
 
   em {
     color: var(--active-difference);
   }
 
   @media only screen and (max-width: 1280px) {
-    font-size: max(1.8vw, 14px);
     width: 100%;
   }
 
@@ -89,22 +86,29 @@ function AboutIntroduction({ children }) {
     <div>
       <div>
         {children}
-
         <IntroMobileImage>
           <LazyImage src="signature.png" alt="signature" className="signature" loading="eager" />
           <LazyImage src="portrait.png" alt="portrait" className="portrait" />
         </IntroMobileImage>
-
-        <IntroTitle>앞으로가 기대 되는 남다른 개발자</IntroTitle>
-
-        <IntroContent>
-          개발에 대한 <em>열정</em>으로 몽골에서 한국까지 왔습니다. 고등학교 때부터 개발자란 직업을
-          갖기 위해 꿈을 키우던 중, 몽골이 개발적 역량이 떨어지기 때문에 제 꿈을 이어 나가기엔
-          어렵다고 결론을 내리게 되었습니다. 한국으로 유학 오기 위해서 혼자 방과후에 C언어 공부를
-          하거나, CS 책을 독학하는 등의 <em>자기개발</em>을 꾸준히 했었습니다. 이런 저의 노력을 높이
-          산 결과 한국으로 유학을 올 수 있었고, 그 시절을 추억하면서 지금까지도 퇴근 후 개인학습으로
-          배운 내용을 실무에 적용하는 등 <em>팀 코드에 기여</em>하고 있습니다.
-        </IntroContent>
+        <IntroTitle>개발자의 꿈을 찾아, 몽골에서 한국으로</IntroTitle>
+        <StyledParagraphBox>
+          <StyledParagraph>
+            개발에 대한 <em>열정</em>으로 몽골에서 한국까지 오게 되었습니다. 고등학교 때부터
+            개발자가 되겠다는 꿈을 키워왔지만, 몽골에서는 개발 역량이 충분하지 않다는 결론에
+            이르렀습니다. 그래서 혼자 방과 후에 C언어를 공부하고, CS 관련 책을 독학하며{' '}
+            <em>자기개발</em>에 힘썼습니다.
+          </StyledParagraph>
+          <StyledParagraph>
+            이러한 노력의 결과로 한국으로 유학을 올 수 있었고, 개발자의 꿈에 한 걸음 더 다가설 수
+            있었습니다. 부족한 개발 지식을 미리 공부한 덕분에 학교 프로젝트를 진행하면서 뒤처지지
+            않을 수 있었고, 4년간 장학금을 유지하며 학업에 전념할 수 있었습니다.
+          </StyledParagraph>
+          <StyledParagraph>
+            그 시절을 돌이켜보며, 지금까지도 퇴근 후 개인 학습으로 배운 내용을 실무에 적용하는 등의
+            방법으로 <em>팀 코드 향상에 기여</em>하고 있습니다. 앞으로 더욱 실력을 쌓아 자랑스러운
+            프론트엔드 팀의 리더가 되고 싶습니다.
+          </StyledParagraph>
+        </StyledParagraphBox>
       </div>
       <IntroImage>
         <LazyImage src="signature.png" alt="signature" className="signature" />

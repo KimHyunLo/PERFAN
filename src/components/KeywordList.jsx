@@ -18,13 +18,12 @@ const StyledList = styled.ul`
   li {
     display: flex;
     align-items: center;
-    height: 30px;
     width: fit-content;
     background-color: var(--active);
     color: var(--white);
     border-radius: 25px;
     font-weight: 300;
-    padding: 0 1rem;
+    padding: 0.5rem 1.5rem;
   }
 `
 

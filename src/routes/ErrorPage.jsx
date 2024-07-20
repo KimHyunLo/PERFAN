@@ -22,7 +22,6 @@ const StyledTitle = styled.h1`
 `
 
 const StyledParagraph = styled.p`
-  font-size: 1.8rem;
   margin-bottom: 5rem;
 `
 

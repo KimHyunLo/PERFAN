@@ -37,7 +37,6 @@ const StyledLeftSide = styled.aside`
   flex-direction: column;
   gap: 2rem;
   height: fit-content;
-  font-size: 1.8rem;
 
   @media only screen and (max-width: 1024px) {
     position: static;
@@ -59,7 +58,6 @@ const StyledDate = styled.h4`
 `
 
 const StyledParagraph = styled.p`
-  font-size: 1.8rem;
   margin-top: 20px;
 
   em {
