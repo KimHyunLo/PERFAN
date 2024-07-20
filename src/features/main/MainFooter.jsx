@@ -56,7 +56,7 @@ function MainFooter() {
       <StyledUl>
         <li>
           <a href="https://github.com/KimHyunLo" target="blank">
-            <LazyImage src="icons/smallGithub.svg" alt="github" loading="eager" />
+            <LazyImage src="icons/github.svg" alt="github" loading="eager" />
           </a>
         </li>
         <li>
