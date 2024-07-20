@@ -43,16 +43,12 @@ const StyledLeftSide = styled.aside`
   height: fit-content;
 
   h3 {
-    display: none;
+    color: var(--active);
+    font-weight: 600;
   }
 
   @media only screen and (max-width: 1024px) {
     position: static;
-
-    h3 {
-      display: block;
-      background-color: var(--active-blur);
-    }
   }
 `
 
@@ -61,16 +57,8 @@ const StyledRightSide = styled.section`
   flex-direction: column;
   gap: 2rem;
 
-  h3 {
-    background-color: var(--active-blur);
-  }
-
   @media only screen and (max-width: 1024px) {
     position: static;
-
-    h3 {
-      display: none;
-    }
   }
 `
 
@@ -118,7 +106,6 @@ function NoljangWeb() {
         </KeywordList>
       </StyledLeftSide>
       <StyledRightSide>
-        <h3>놀장 웹 버전 리뉴얼</h3>
         <p>
           웹에서 검색될 수 있도록 <StyledEm>검색 최적화</StyledEm> 작업을 수행했으며, 웹에서
           디버깅이 가능하도록 <StyledEm>디버깅 환경 개선</StyledEm> 작업에 중점을 두고
@@ -186,9 +173,7 @@ function NoljangApp() {
           <li>Riverpod</li>
         </KeywordList>
       </StyledLeftSide>
-
       <StyledRightSide>
-        <h3>놀장 레거시 앱 리메이크</h3>
         <p>
           API 관련 <StyledEm>레거시 코드를 리팩토링</StyledEm>하는 작업을 수행했으며, 기존에 문제
           제기가 많았던 <StyledEm>버그 리포트를 해결</StyledEm>하는 등의 작업에 중점을 두고

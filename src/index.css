@@ -108,6 +108,7 @@ h2,
 h3,
 h4 {
   font-weight: normal;
+  word-break: keep-all;
 }
 
 h1 {

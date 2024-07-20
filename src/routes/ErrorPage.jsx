@@ -17,12 +17,14 @@ const StyledWrap = styled.div`
   transform: translate(-50%, -50%);
 `
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.h2`
   font-size: max(4vw, 50px);
+  text-align: center;
 `
 
 const StyledParagraph = styled.p`
   margin-bottom: 5rem;
+  text-align: center;
 `
 
 const StyledLink = styled(Link)`
