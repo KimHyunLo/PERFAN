@@ -6,7 +6,7 @@ const StyledMain = styled.div`
   font-weight: bold;
 `
 
-const StyledSubList = styled.ul`
+const StyledList = styled.ul`
   li {
     position: relative;
     word-break: keep-all;
@@ -28,15 +28,13 @@ const StyledSubList = styled.ul`
   }
 `
 
-function HighlightList({ main, children }) {
+function HighlightItem({ main, children }) {
   return (
-    <ul>
-      <li>
-        <StyledMain>{main}</StyledMain>
-        <StyledSubList>{children}</StyledSubList>
-      </li>
-    </ul>
+    <li>
+      <StyledMain>{main}</StyledMain>
+      <StyledList>{children}</StyledList>
+    </li>
   )
 }
 
-export default HighlightList
+export default HighlightItem
