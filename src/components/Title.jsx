@@ -11,10 +11,6 @@ const StyledTitle = styled.h1`
   letter-spacing: -1rem;
   word-spacing: 2rem;
 
-  em {
-    color: var(--active);
-  }
-
   @media only screen and (max-width: 1024px) {
     letter-spacing: -0.5rem;
   }
@@ -25,10 +21,14 @@ const StyledTitle = styled.h1`
   }
 `
 
+const StyledHighlightTitle = styled.span`
+  color: var(--active);
+`
+
 export default function Title({ title }) {
   return (
     <StyledTitle>
-      {title[0]} <em>{title[1]}</em>
+      {title[0]} <StyledHighlightTitle>{title[1]}</StyledHighlightTitle>
     </StyledTitle>
   )
 }

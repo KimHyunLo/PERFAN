@@ -109,7 +109,7 @@ export default function Header() {
           className={`right-item ${isMenuOpen ? 'close-btn' : ''}`}
           onClick={toggleSideMenu}
         >
-          portfolio
+          Henry
         </HeaderItem>
       </HeaderSide>
       {isMenuOpen && <SideMenu />}

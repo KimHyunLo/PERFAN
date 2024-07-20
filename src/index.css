@@ -100,6 +100,8 @@ button {
 }
 
 em {
+  color: var(--highlight);
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -107,20 +109,23 @@ h1,
 h2,
 h3,
 h4 {
+  line-height: 1;
   font-weight: normal;
   word-break: keep-all;
 }
 
 h1 {
-  font-size: max(45px, 12vw);
+  font-size: max(45px, 13vw);
 }
 
 h2 {
-  font-size: max(92px, 6vw);
+  font-size: min(80px, 6vw);
 }
 
 h3 {
-  font-size: max(40px, 2.5vw);
+  font-size: min(40px, 3vw);
+  font-weight: 600;
+  color: var(--active);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -130,10 +135,10 @@ h3 {
   }
 
   h2 {
-    font-size: max(32px, 9vw);
+    font-size: max(32px, 6.1vw);
   }
 
   h3 {
-    font-size: max(20px, 3.9vw);
+    font-size: max(20px, 3.1vw);
   }
 }

@@ -1,56 +1,28 @@
 import styled from 'styled-components'
 import ScrollButton from '../components/ScrollButton'
-import AboutIntroduction from '../features/about/AboutIntroduction'
-import AboutExperience from '../features/about/AboutExperience'
+import AboutIntroduce from '../features/about/AboutIntroduce'
+import AboutCareer from '../features/about/AboutCareer'
 
 const StyledAbout = styled.div`
   position: relative;
-  background-color: var(--black);
-  color: var(--white);
-  padding: 25vw 0;
+  width: 80%;
+  margin: 10rem auto;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 20vw;
-    width: 100%;
-  }
-
-  &::before {
-    top: 0;
-    background-image: url(paperBackground1.jpeg);
-  }
-
-  &::after {
-    bottom: 0;
-    background-image: url(paperBackground2.jpeg);
-  }
-
-  @media only screen and (max-width: 640px) {
-    padding: 30vw 0;
+  @media only screen and (max-width: 1024px) {
+    width: 85%;
+    margin: 3rem auto 5rem;
   }
 `
 
 const StyledContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 85%;
-  gap: 20rem;
-  margin: 0 auto;
-
-  @media only screen and (max-width: 1024px) {
-    gap: 20vw;
-  }
+  gap: min(15rem, 15vw);
 `
 
 const StyledHeader = styled.h2`
   font-family: 'Bodoni Moda', sans-serif;
-  line-height: 1.2;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 
   &::after {
     content: '.';
@@ -70,12 +42,12 @@ function About() {
     <StyledAbout>
       <ScrollButton />
       <StyledContentBox>
-        <AboutIntroduction>
+        <AboutIntroduce>
           <StyledHeader className="no-margin">Introduce</StyledHeader>
-        </AboutIntroduction>
-        <AboutExperience>
+        </AboutIntroduce>
+        <AboutCareer>
           <StyledHeader>Career</StyledHeader>
-        </AboutExperience>
+        </AboutCareer>
       </StyledContentBox>
     </StyledAbout>
   )

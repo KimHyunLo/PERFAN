@@ -7,7 +7,6 @@ const StyledLayout = styled.div`
   right: 0;
   bottom: 0;
   width: 10px;
-  mix-blend-mode: difference;
   z-index: 2;
 `
 
@@ -20,7 +19,7 @@ const StyledScrollbar = styled.div.attrs((props) => ({
   will-change: transform, opacity;
   height: 100%;
   width: 100%;
-  background: linear-gradient(transparent, var(--active-difference));
+  background: linear-gradient(transparent, var(--active));
   transform-origin: top center;
 `
 
