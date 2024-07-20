@@ -11,7 +11,7 @@ const StyledMenu = styled.ul`
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  gap: 40px;
+  gap: 4rem;
   background-color: var(--black);
   padding: 0 3rem;
   z-index: 1;
@@ -21,11 +21,11 @@ const StyledMenu = styled.ul`
   }
 `
 
-const StyledItem = styled.div`
+const StyledLink = styled.div`
   color: var(--white);
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   cursor: pointer;
 
   &.active {
@@ -35,17 +35,12 @@ const StyledItem = styled.div`
   .path {
     font-family: 'Bodoni Moda', sans-serif;
     text-transform: capitalize;
-    font-size: 70px;
     line-height: 1;
   }
 
   @media only screen and (max-width: 640px) {
     .number {
       font-size: 12px;
-    }
-
-    .path {
-      font-size: 40px;
     }
   }
 `
@@ -63,40 +58,40 @@ function SideMenu() {
   return createPortal(
     <StyledMenu>
       <li>
-        <StyledItem
+        <StyledLink
           className={`${pathname === '/' ? 'active' : ''}`}
           onClick={() => handleClick('/')}
         >
           <div className="number">01</div>
-          <div className="path">main</div>
-        </StyledItem>
+          <h2 className="path">main</h2>
+        </StyledLink>
       </li>
       <li>
-        <StyledItem
+        <StyledLink
           className={`${pathname === '/about' ? 'active' : ''}`}
           onClick={() => handleClick('/about')}
         >
           <div className="number">02</div>
-          <div className="path">about</div>
-        </StyledItem>
+          <h2 className="path">about</h2>
+        </StyledLink>
       </li>
       <li>
-        <StyledItem
+        <StyledLink
           className={`${pathname === '/projects' ? 'active' : ''}`}
           onClick={() => handleClick('/projects')}
         >
           <div className="number">03</div>
-          <div className="path">projects</div>
-        </StyledItem>
+          <h2 className="path">projects</h2>
+        </StyledLink>
       </li>
       <li>
-        <StyledItem
+        <StyledLink
           className={`${pathname === '/contact' ? 'active' : ''}`}
           onClick={() => handleClick('/contact')}
         >
           <div className="number">04</div>
-          <div className="path">contact</div>
-        </StyledItem>
+          <h2 className="path">contact</h2>
+        </StyledLink>
       </li>
     </StyledMenu>,
     document.body,

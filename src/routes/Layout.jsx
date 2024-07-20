@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { Header, Title, Nav, Scrollbar } from '../components/Components'
+import { useEffect } from 'react'
 
 const StyledMain = styled.main`
   padding-top: 55vh;
@@ -17,8 +18,12 @@ const StyledMain = styled.main`
 
 function Layout() {
   const location = useLocation()
-  let title = []
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
+  let title = []
   switch (location.pathname) {
     case '/':
       title = ['Perfect', 'Plan']

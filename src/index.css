@@ -125,7 +125,7 @@ h3 {
 @media only screen and (max-width: 1024px) {
   body,
   li {
-    font-size: max(14px, 1.7vw);
+    font-size: clamp(14px, 2vw, 18px);
   }
 
   h2 {
