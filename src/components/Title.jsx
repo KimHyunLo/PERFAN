@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledTitle = styled.div`
+const StyledTitle = styled.h1`
   position: absolute;
   left: 50%;
   top: 25%;
@@ -8,7 +8,6 @@ const StyledTitle = styled.div`
   text-align: center;
   width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
-  font-size: 15vw;
   letter-spacing: -1rem;
   word-spacing: 2rem;
 

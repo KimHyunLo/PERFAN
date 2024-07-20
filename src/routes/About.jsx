@@ -51,12 +51,9 @@ const StyledHeader = styled.div`
   line-height: 1.2;
   margin-bottom: 10rem;
 
-  .header1 {
-    font-size: 7vw;
-  }
-
-  .header2 {
-    font-size: 3.5vw;
+  h3 {
+    margin-top: max(10px, 1.5vw);
+    letter-spacing: 1px;
   }
 
   @media only screen and (max-width: 1280px) {
@@ -64,14 +61,6 @@ const StyledHeader = styled.div`
 
     &.no-margin {
       margin: 0;
-    }
-
-    .header1 {
-      font-size: max(9vw, 32px);
-    }
-
-    .header2 {
-      font-size: max(4.5vw, 22px);
     }
   }
 `
@@ -83,20 +72,20 @@ function About() {
       <StyledContentBox>
         <AboutIntroduction>
           <StyledHeader className="no-margin">
-            <div className="header1">One of a Kind,</div>
-            <div className="header2">Highflier Developer</div>
+            <h2>One of a Kind,</h2>
+            <h3>Henry. K</h3>
           </StyledHeader>
         </AboutIntroduction>
         <AboutExperience>
           <StyledHeader>
-            <div className="header1">Busy But Happy,</div>
-            <div className="header2">Work-Life</div>
+            <h2>Busy But Happy,</h2>
+            <h3>Work-Life</h3>
           </StyledHeader>
         </AboutExperience>
         <AboutSkills>
           <StyledHeader>
-            <div className="header1">Certified Quality,</div>
-            <div className="header2">Being Skilled</div>
+            <h2>Certified Quality,</h2>
+            <h3>Being Skilled</h3>
           </StyledHeader>
         </AboutSkills>
       </StyledContentBox>

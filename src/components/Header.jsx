@@ -49,7 +49,7 @@ const HeaderSide = styled.div`
 `
 
 const HeaderItem = styled.div`
-  font-size: max(14px, 0.8vw);
+  font-size: max(12px, 0.8vw);
   font-weight: 200;
   color: var(--black-difference);
 

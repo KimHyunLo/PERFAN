@@ -108,18 +108,21 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 500;
+  font-weight: normal;
   line-height: 1;
   white-space: nowrap;
 }
 
+h1 {
+  font-size: 15vw;
+}
+
 h2 {
-  font-size: 7vw;
-  /* font-size: clamp(14px, 1.6vw, 18px); */
+  font-size: max(92px, 7vw);
 }
 
 h3 {
-  font-size: 3.5vw;
+  font-size: max(45px, 3.5vw);
 }
 
 h4 {
