@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
-
-import { Header, Title, Nav, Scrollbar } from '../components/Components'
-import { useEffect } from 'react'
+import Header from '../components/Header'
+import Title from '../components/Title'
+import Nav from '../components/Nav'
+import Scrollbar from '../components/Scrollbar'
 
 const StyledMain = styled.main`
   padding-top: 55vh;

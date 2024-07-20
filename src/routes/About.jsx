@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { AboutExperience, AboutIntroduction } from '../features/Features'
-import { ScrollButton } from '../components/Components'
+import ScrollButton from '../components/ScrollButton'
+import AboutIntroduction from '../features/about/AboutIntroduction'
+import AboutExperience from '../features/about/AboutExperience'
 
 const StyledAbout = styled.div`
   position: relative;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LazyImage } from '../../components/Components'
+import LazyImage from '../../components/LazyImage'
 
 const IntroTitle = styled.h3`
   margin-bottom: 5rem;

@@ -1,4 +1,4 @@
-import { ScrollButton } from '../components/Components'
+import ScrollButton from '../components/ScrollButton'
 import ProjectList from '../features/projects/ProjectList'
 
 function Projects() {

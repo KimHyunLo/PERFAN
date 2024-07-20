@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { CareerItem } from '../../components/Components'
 import { careerList } from '../../data/contants'
+import CareerItem from '../../components/CareerItem'
 
 const StyledList = styled.ul`
   display: flex;

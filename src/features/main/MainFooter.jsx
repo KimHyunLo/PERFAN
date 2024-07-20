@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { LazyImage } from '../../components/Components'
+import LazyImage from '../../components/LazyImage'
 
 const StyledFooter = styled.footer`
   position: absolute;

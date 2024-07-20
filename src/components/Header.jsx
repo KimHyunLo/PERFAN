@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { SideMenuContext } from '../context/SideMenuContext'
 import { useCustomContext } from '../hooks/useCustomContext'
-
-import { SideMenu } from './Components'
+import SideMenu from './SideMenu'
 
 const StyledHeaderLayout = styled.div`
   position: fixed;

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { HighlightItem, KeywordList } from '../../components/Components'
+import HighlightItem from '../../components/HighlightItem'
+import KeywordList from '../../components/KeywordList'
 
 const StyledLayout = styled.div`
   width: 80%;
