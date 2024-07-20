@@ -6,6 +6,7 @@ const StyledLayout = styled.div`
   margin: 10rem auto;
 
   @media only screen and (max-width: 1024px) {
+    width: 85%;
     margin: 5rem auto;
   }
 `
@@ -44,7 +45,7 @@ const StyledLeftSide = styled.aside`
 `
 
 const StyledRightSide = styled.section`
-  ul {
+  & > ul {
     margin-top: 20px;
   }
 `
