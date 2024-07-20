@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { LazyImage } from '../../components/Components'
 
-const IntroTitle = styled.h4`
+const IntroTitle = styled.h3`
   margin-bottom: 5rem;
 
   @media only screen and (max-width: 768px) {
@@ -13,21 +13,16 @@ const StyledParagraphBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: max(550px, 45vw);
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 const StyledParagraph = styled.p`
-  width: 60%;
-
   em {
     color: var(--active-difference);
-  }
-
-  @media only screen and (max-width: 1280px) {
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 768px) {
-    max-width: none;
   }
 `
 
@@ -35,7 +30,7 @@ const IntroImage = styled.div`
   display: flex;
   justify-content: end;
   align-items: end;
-  gap: 50px;
+  gap: 3vw;
   margin-top: -250px;
 
   .signature {
@@ -45,10 +40,10 @@ const IntroImage = styled.div`
 
   .portrait {
     height: auto;
-    width: 20vw;
+    width: min(350px, 22vw);
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 `
@@ -56,7 +51,7 @@ const IntroImage = styled.div`
 const IntroMobileImage = styled.div`
   display: none;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1024px) {
     position: relative;
     display: block;
     height: 50vw;

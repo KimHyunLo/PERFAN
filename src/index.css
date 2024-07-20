@@ -8,8 +8,7 @@
   --gray: #a9a9a9;
   --black: #222;
   --black-difference: #ddd;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  --active-blur: rgba(21, 71, 13, 0.15);
 }
 
 *,
@@ -75,7 +74,7 @@ body {
 
 body,
 li {
-  font-size: max(16px, 1vw);
+  font-size: 1.8rem;
 }
 
 a {
@@ -109,41 +108,31 @@ h2,
 h3,
 h4 {
   font-weight: normal;
-  line-height: 1;
-  white-space: nowrap;
 }
 
 h1 {
-  font-size: 15vw;
+  font-size: max(45px, 12vw);
 }
 
 h2 {
-  font-size: max(92px, 7vw);
+  font-size: max(92px, 6vw);
 }
 
 h3 {
-  font-size: max(45px, 3.5vw);
-}
-
-h4 {
-  font-size: 2.5vw;
+  font-size: max(40px, 2.5vw);
 }
 
 @media only screen and (max-width: 1024px) {
   body,
   li {
-    font-size: max(14px, 1.6vw);
+    font-size: max(14px, 1.7vw);
   }
 
   h2 {
-    font-size: max(9vw, 32px);
+    font-size: max(32px, 9vw);
   }
 
   h3 {
-    font-size: max(4.5vw, 22px);
-  }
-
-  h4 {
-    font-size: max(3.5vw, 18px);
+    font-size: max(20px, 3.9vw);
   }
 }

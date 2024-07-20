@@ -5,16 +5,20 @@ const StyledLayout = styled.div`
   width: 80%;
   margin: 10rem auto;
 
+  h3 {
+    font-weight: 500;
+  }
+
   @media only screen and (max-width: 1024px) {
     width: 85%;
-    margin: 5rem auto;
+    margin: 3rem auto 5rem;
   }
 `
 
 const StyledProjectList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10rem;
+  gap: 7rem;
 `
 
 const StyledProjectItem = styled.li`
@@ -26,7 +30,7 @@ const StyledProjectItem = styled.li`
   @media only screen and (max-width: 1024px) {
     grid-template-columns: none;
     column-gap: 0;
-    row-gap: 5rem;
+    row-gap: 3rem;
   }
 `
 
@@ -38,8 +42,17 @@ const StyledLeftSide = styled.aside`
   gap: 2rem;
   height: fit-content;
 
+  h3 {
+    display: none;
+  }
+
   @media only screen and (max-width: 1024px) {
     position: static;
+
+    h3 {
+      display: block;
+      background-color: var(--active-blur);
+    }
   }
 `
 
@@ -47,13 +60,17 @@ const StyledRightSide = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`
 
-const StyledDate = styled.h4`
-  white-space: pre-wrap;
+  h3 {
+    background-color: var(--active-blur);
+  }
 
-  div {
-    display: inline-block;
+  @media only screen and (max-width: 1024px) {
+    position: static;
+
+    h3 {
+      display: none;
+    }
   }
 `
 
@@ -77,9 +94,10 @@ function NoljangWeb() {
   return (
     <StyledProjectItem>
       <StyledLeftSide>
-        <StyledDate>
-          2023. 11 ~ <div>2024. 03</div>
-        </StyledDate>
+        <h3>놀장 웹 버전 리뉴얼</h3>
+        <HighlightItem main="프로젝트 기간">
+          <li>2023. 11 ~ 2024. 03 (5 개월)</li>
+        </HighlightItem>
         <HighlightItem main="프로젝트 인원">
           <li>프론트엔드 1명, 백엔드 1명, 기획자 1명 (총 3명)</li>
         </HighlightItem>
@@ -100,7 +118,7 @@ function NoljangWeb() {
         </KeywordList>
       </StyledLeftSide>
       <StyledRightSide>
-        <h4>놀장 웹 버전 리뉴얼</h4>
+        <h3>놀장 웹 버전 리뉴얼</h3>
         <p>
           웹에서 검색될 수 있도록 <StyledEm>검색 최적화</StyledEm> 작업을 수행했으며, 웹에서
           디버깅이 가능하도록 <StyledEm>디버깅 환경 개선</StyledEm> 작업에 중점을 두고
@@ -137,9 +155,10 @@ function NoljangApp() {
   return (
     <StyledProjectItem>
       <StyledLeftSide>
-        <StyledDate>
-          2023. 04 ~ <div>2023. 10</div>
-        </StyledDate>
+        <h3>놀장 레거시 앱 리메이크</h3>
+        <HighlightItem main="프로젝트 기간">
+          <li>2023. 04 ~ 2023. 10 (6 개월)</li>
+        </HighlightItem>
         <HighlightItem main="프로젝트 인원">
           <li>프론트엔드 2명, 앱 개발자 1명, 백엔드 2명, 기획자 1명 (총 6명)</li>
         </HighlightItem>
@@ -169,7 +188,7 @@ function NoljangApp() {
       </StyledLeftSide>
 
       <StyledRightSide>
-        <h4>놀장 레거시 앱 리메이크</h4>
+        <h3>놀장 레거시 앱 리메이크</h3>
         <p>
           API 관련 <StyledEm>레거시 코드를 리팩토링</StyledEm>하는 작업을 수행했으며, 기존에 문제
           제기가 많았던 <StyledEm>버그 리포트를 해결</StyledEm>하는 등의 작업에 중점을 두고

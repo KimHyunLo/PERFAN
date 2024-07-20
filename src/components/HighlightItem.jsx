@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledMain = styled.div`
-  background-color: rgba(21, 71, 13, 0.15);
+  background-color: var(--active-blur);
   width: fit-content;
   font-weight: bold;
 `

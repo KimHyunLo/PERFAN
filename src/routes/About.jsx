@@ -41,26 +41,25 @@ const StyledContentBox = styled.div`
   gap: 20rem;
   margin: 0 auto;
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1024px) {
     gap: 20vw;
   }
 `
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.h2`
   font-family: 'Bodoni Moda', sans-serif;
   line-height: 1.2;
   margin-bottom: 10rem;
 
-  h3 {
-    margin-top: max(10px, 1.5vw);
-    letter-spacing: 1px;
+  &::after {
+    content: '.';
   }
 
-  @media only screen and (max-width: 1280px) {
-    margin-bottom: 5rem;
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 0;
 
-    &.no-margin {
-      margin: 0;
+    &:not(.no-margin) {
+      margin-bottom: 3rem;
     }
   }
 `
@@ -71,16 +70,10 @@ function About() {
       <ScrollButton />
       <StyledContentBox>
         <AboutIntroduction>
-          <StyledHeader className="no-margin">
-            <h2>One of a Kind,</h2>
-            <h3>Henry. K</h3>
-          </StyledHeader>
+          <StyledHeader className="no-margin">Introduce</StyledHeader>
         </AboutIntroduction>
         <AboutExperience>
-          <StyledHeader>
-            <h2>Busy But Happy,</h2>
-            <h3>Work-Life</h3>
-          </StyledHeader>
+          <StyledHeader>Career</StyledHeader>
         </AboutExperience>
       </StyledContentBox>
     </StyledAbout>

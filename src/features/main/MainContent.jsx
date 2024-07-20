@@ -99,7 +99,7 @@ const StyledParagraph = styled.p`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: max(35px, 2.5vw);
+    height: max(35px, 2vw);
     margin: 0 auto 3.5rem;
   }
 `
