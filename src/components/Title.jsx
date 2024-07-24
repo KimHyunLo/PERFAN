@@ -1,23 +1,17 @@
 import styled from 'styled-components'
 
 const StyledTitle = styled.h1`
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
   font-family: 'Bodoni Moda', sans-serif;
-  letter-spacing: -1rem;
   word-spacing: 2rem;
+  margin-bottom: 15vh;
 
   @media only screen and (max-width: 1024px) {
-    letter-spacing: -0.5rem;
+    margin-bottom: 10vh;
   }
 
   @media only screen and (max-width: 640px) {
-    top: 18%;
-    letter-spacing: -0.2rem;
+    margin-bottom: 5vh;
   }
 `
 

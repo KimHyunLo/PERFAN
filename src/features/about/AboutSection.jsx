@@ -1,23 +1,13 @@
+import AboutIntroduce from './AboutIntroduce'
+import AboutCareer from './AboutCareer'
 import styled from 'styled-components'
-import ScrollButton from '../components/ScrollButton'
-import AboutIntroduce from '../features/about/AboutIntroduce'
-import AboutCareer from '../features/about/AboutCareer'
 
-const StyledAbout = styled.div`
-  position: relative;
-  width: 80%;
-  margin: 10rem auto;
-
-  @media only screen and (max-width: 1024px) {
-    width: 85%;
-    margin: 3rem auto 5rem;
-  }
-`
-
-const StyledContentBox = styled.div`
+const StyledBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: min(15rem, 15vw);
+  width: 80%;
+  margin: 0 auto;
 `
 
 const StyledHeader = styled.h2`
@@ -37,20 +27,20 @@ const StyledHeader = styled.h2`
   }
 `
 
-function About() {
+function AboutSection({ children }) {
   return (
-    <StyledAbout>
-      <ScrollButton />
-      <StyledContentBox>
+    <section>
+      {children}
+      <StyledBox>
         <AboutIntroduce>
           <StyledHeader className="no-margin">Introduce</StyledHeader>
         </AboutIntroduce>
         <AboutCareer>
           <StyledHeader>Career</StyledHeader>
         </AboutCareer>
-      </StyledContentBox>
-    </StyledAbout>
+      </StyledBox>
+    </section>
   )
 }
 
-export default About
+export default AboutSection

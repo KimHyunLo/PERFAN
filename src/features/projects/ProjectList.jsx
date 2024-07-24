@@ -4,11 +4,10 @@ import NoljangApp from './NoljangApp'
 
 const StyledLayout = styled.div`
   width: 80%;
-  margin: 10rem auto;
+  margin: 0 auto;
 
   @media only screen and (max-width: 1024px) {
     width: 85%;
-    margin: 3rem auto 5rem;
   }
 `
 

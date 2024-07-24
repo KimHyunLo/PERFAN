@@ -2,17 +2,10 @@ import styled from 'styled-components'
 import LazyImage from '../../components/LazyImage'
 
 const StyledMainContent = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -50%);
   width: max(80%, 950px);
+  margin: 0 auto;
 
   @media only screen and (max-width: 1024px) {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
     width: 100%;
   }
 `

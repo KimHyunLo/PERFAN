@@ -1,25 +1,19 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { SideMenuContext } from '../context/SideMenuContext'
-import { useCustomContext } from '../hooks/useCustomContext'
-import SideMenu from './SideMenu'
 
-const StyledHeaderLayout = styled.div`
+const StyledHeader = styled.header`
   position: fixed;
   top: 26px;
-  padding: 0 3rem;
-  width: calc(100vw - 6rem);
-  mix-blend-mode: difference;
-  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 6rem);
 
   @media only screen and (max-width: 640px) {
     top: 18px;
-    padding: 0 1.5rem;
     width: calc(100% - 3rem);
   }
 `
 
-const HeaderTitle = styled.div`
+const StyledTitle = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -27,30 +21,24 @@ const HeaderTitle = styled.div`
   font-family: 'Bodoni Moda', sans-serif;
   font-size: max(25px, 1.3vw);
 
-  a {
-    color: var(--black-difference);
-  }
-
   @media only screen and (max-width: 640px) {
     display: none;
   }
 `
 
-const HeaderEm = styled.em`
+const StyledEm = styled.em`
   font-family: 'Now', sans-serif;
-  color: var(--active-difference);
+  color: var(--active);
 `
 
-const HeaderSide = styled.div`
+const StyledSide = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
-const HeaderItem = styled.div`
+const StyledSideItem = styled.div`
   font-size: 1.6rem;
-  font-weight: 200;
-  color: var(--black-difference);
 
   &.left-item {
     display: flex;
@@ -94,25 +82,15 @@ const HeaderItem = styled.div`
 `
 
 export default function Header() {
-  const { isMenuOpen, toggleSideMenu } = useCustomContext(SideMenuContext)
-
   return (
-    <StyledHeaderLayout>
-      <HeaderTitle>
-        <Link>
-          PERF<HeaderEm>AN</HeaderEm>
-        </Link>
-      </HeaderTitle>
-      <HeaderSide>
-        <HeaderItem className="left-item">Highflier Developer</HeaderItem>
-        <HeaderItem
-          className={`right-item ${isMenuOpen ? 'close-btn' : ''}`}
-          onClick={toggleSideMenu}
-        >
-          Henry
-        </HeaderItem>
-      </HeaderSide>
-      {isMenuOpen && <SideMenu />}
-    </StyledHeaderLayout>
+    <StyledHeader>
+      <StyledTitle>
+        PERF<StyledEm>AN</StyledEm>
+      </StyledTitle>
+      <StyledSide>
+        <StyledSideItem className="left-item">Highflier Developer</StyledSideItem>
+        <StyledSideItem>Henry. K</StyledSideItem>
+      </StyledSide>
+    </StyledHeader>
   )
 }
