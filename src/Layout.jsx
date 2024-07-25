@@ -31,7 +31,9 @@ const StyledMain = styled.main`
 `
 
 function Layout() {
-  const { isUpdating } = useUpdateUser()
+  const { updateUser, isUpdating } = useUpdateUser()
+
+  if (window.location.href === 'https://perfan.vercel.app/') updateUser()
 
   if (isUpdating) return
 
