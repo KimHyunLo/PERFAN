@@ -11,6 +11,7 @@ import ProjectSection from './features/projects/ProjectSection'
 import ContactSection from './features/contact/ContactSection'
 
 import { useUpdateUser } from './hooks/useUpdateUser'
+import { useEffect } from 'react'
 
 const StyledLayout = styled.div`
   width: calc(100% - 6rem);
@@ -33,7 +34,9 @@ const StyledMain = styled.main`
 function Layout() {
   const { updateUser, isUpdating } = useUpdateUser()
 
-  if (window.location.href === 'https://perfan.vercel.app/') updateUser()
+  useEffect(() => {
+    if (window.location.href === 'https://perfan.vercel.app/') updateUser()
+  }, [updateUser])
 
   if (isUpdating) return
 
