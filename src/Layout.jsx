@@ -1,12 +1,16 @@
 import styled from 'styled-components'
+
+import Title from './components/Title'
 import Header from './components/Header'
 import Scrollbar from './components/Scrollbar'
-import Title from './components/Title'
+import ScrollButton from './components/ScrollButton'
+
 import MainSection from './features/main/MainSection'
 import AboutSection from './features/about/AboutSection'
-import ScrollButton from './components/ScrollButton'
 import ProjectSection from './features/projects/ProjectSection'
 import ContactSection from './features/contact/ContactSection'
+
+import { useUpdateUser } from './hooks/useUpdateUser'
 
 const StyledLayout = styled.div`
   width: calc(100% - 6rem);
@@ -27,6 +31,10 @@ const StyledMain = styled.main`
 `
 
 function Layout() {
+  const { isUpdating } = useUpdateUser()
+
+  if (isUpdating) return
+
   return (
     <StyledLayout>
       <Header />
