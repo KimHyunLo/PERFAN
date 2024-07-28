@@ -15,14 +15,19 @@ const StyledTitle = styled.h1`
   }
 `
 
-const StyledHighlightTitle = styled.span`
+const StyledEm = styled.em`
   color: var(--active);
+  font-weight: normal;
 `
 
-export default function Title({ title }) {
+interface TitleProps {
+  title: string[]
+}
+
+export default function Title({ title }: TitleProps) {
   return (
     <StyledTitle>
-      {title[0]} <StyledHighlightTitle>{title[1]}</StyledHighlightTitle>
+      {title[0]} <StyledEm>{title[1]}</StyledEm>
     </StyledTitle>
   )
 }

@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react'
 import AboutIntroduce from './AboutIntroduce'
 import AboutCareer from './AboutCareer'
 import styled from 'styled-components'
@@ -27,7 +28,11 @@ const StyledHeader = styled.h2`
   }
 `
 
-function AboutSection({ children }) {
+interface AboutSectionProps {
+  children: ReactNode
+}
+
+function AboutSection({ children }: AboutSectionProps) {
   return (
     <section>
       {children}

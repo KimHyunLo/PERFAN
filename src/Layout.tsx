@@ -1,17 +1,17 @@
+import { useEffect } from 'react'
 import styled from 'styled-components'
 
-import Title from './components/Title'
-import Header from './components/Header'
-import Scrollbar from './components/Scrollbar'
-import ScrollButton from './components/ScrollButton'
+import Title from './components/Title.tsx'
+import Header from './components/Header.tsx'
+import Scrollbar from './components/Scrollbar.tsx'
+import ScrollButton from './components/ScrollButton.tsx'
 
-import MainSection from './features/main/MainSection'
-import AboutSection from './features/about/AboutSection'
-import ProjectSection from './features/projects/ProjectSection'
-import ContactSection from './features/contact/ContactSection'
+import MainSection from './features/main/MainSection.tsx'
+import AboutSection from './features/about/AboutSection.tsx'
+import ProjectSection from './features/projects/ProjectSection.tsx'
+import ContactSection from './features/contact/ContactSection.tsx'
 
-import { useUpdateUser } from './hooks/useUpdateUser'
-import { useEffect } from 'react'
+import { useUpdateUser } from './hooks/useUpdateUser.ts'
 
 const StyledLayout = styled.div`
   width: calc(100% - 6rem);
@@ -21,6 +21,7 @@ const StyledLayout = styled.div`
     width: calc(100% - 3rem);
   }
 `
+
 const StyledMain = styled.main`
   display: flex;
   flex-direction: column;

@@ -1,5 +1,6 @@
+import { type ReactNode } from 'react'
 import styled from 'styled-components'
-import LazyImage from '../../components/LazyImage'
+import LazyImage from '../../components/LazyImage.tsx'
 
 const IntroTitle = styled.h3`
   margin-bottom: 2rem;
@@ -66,7 +67,11 @@ const IntroMobileImage = styled.div`
   }
 `
 
-function AboutIntroduce({ children }) {
+interface AboutIntroduceProps {
+  children: ReactNode
+}
+
+function AboutIntroduce({ children }: AboutIntroduceProps) {
   return (
     <div>
       <div>

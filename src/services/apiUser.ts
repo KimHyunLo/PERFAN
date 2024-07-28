@@ -1,15 +1,17 @@
-import supabase from './supabase'
-import { getToday } from '../utils/getToday'
+import supabase from './supabase.ts'
+import { getToday } from '../utils/getToday.ts'
 
 export async function updateUser() {
-  const { data: user, selectError } = await supabase.from('user').select('*')
+  const { data: user, error: selectError } = await supabase.from('user').select('*')
 
   if (selectError) {
     console.error(selectError)
     throw new Error('User could not be selected')
   }
 
-  const todaysVisitor = user?.filter((item) => item.date === getToday())
+  if (!user) return user
+
+  const todaysVisitor = user.filter((item) => item.date === getToday())
 
   if (todaysVisitor.length > 0) {
     const { error: updateError } = await supabase

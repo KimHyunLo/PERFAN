@@ -1,4 +1,4 @@
-import { Link, useRouteError } from 'react-router-dom'
+import { isRouteErrorResponse, Link, useRouteError } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledErrorPage = styled.div`
@@ -43,13 +43,24 @@ const StyledLink = styled(Link)`
 
 function ErrorPage() {
   const error = useRouteError()
+  let errorMessage = ''
 
-  console.log(error.data || error.message)
+  if (isRouteErrorResponse(error)) {
+    errorMessage = error.data.message || error.statusText
+  } else if (error instanceof Error) {
+    errorMessage = error.message
+  } else if (typeof error === 'string') {
+    errorMessage = error
+  } else {
+    console.error(error)
+    errorMessage = 'Unknown error'
+  }
+
   return (
     <StyledErrorPage>
       <StyledWrap>
         <StyledTitle>404 ERROR</StyledTitle>
-        <StyledParagraph>요청하신 페이지를 찾을 수 없습니다.</StyledParagraph>
+        <StyledParagraph>{errorMessage}</StyledParagraph>
         <StyledLink to="/">홈으로 이동</StyledLink>
       </StyledWrap>
     </StyledErrorPage>

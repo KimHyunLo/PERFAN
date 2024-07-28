@@ -1,4 +1,4 @@
-import ListSection from '../../components/ListSection'
+import ListSection from '../../components/ListSection.tsx'
 
 function NoljangWeb() {
   return (

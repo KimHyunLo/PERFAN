@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import NoljangWeb from './NoljangWeb'
-import NoljangApp from './NoljangApp'
+import NoljangWeb from './NoljangWeb.tsx'
+import NoljangApp from './NoljangApp.tsx'
 
 const StyledLayout = styled.div`
   width: 80%;

@@ -1,6 +1,6 @@
-import ListSection from '../../components/ListSection'
+import ListSection from '../../components/ListSection.tsx'
 
-function Markettree() {
+function MarketTree() {
   return (
     <ListSection>
       <ListSection.LeftSide>
@@ -54,4 +54,4 @@ function Markettree() {
   )
 }
 
-export default Markettree
+export default MarketTree

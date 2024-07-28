@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import LazyImage from '../../components/LazyImage'
+import LazyImage from '../../components/LazyImage.tsx'
 
 const StyledMainContent = styled.div`
   width: max(80%, 950px);

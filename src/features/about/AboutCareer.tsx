@@ -1,6 +1,7 @@
-import Markettree from './Markettree'
-import Ecclgo from './Ecclgo'
+import { type ReactNode } from 'react'
 import styled from 'styled-components'
+import MarketTree from './MarketTree.tsx'
+import Ecclgo from './Ecclgo.tsx'
 
 const StyledCareerList = styled.ul`
   display: flex;
@@ -8,12 +9,16 @@ const StyledCareerList = styled.ul`
   gap: min(10rem, 10vw);
 `
 
-function AboutCareer({ children }) {
+interface AboutCareer {
+  children: ReactNode
+}
+
+function AboutCareer({ children }: AboutCareer) {
   return (
     <div>
       {children}
       <StyledCareerList>
-        <Markettree />
+        <MarketTree />
         <Ecclgo />
       </StyledCareerList>
     </div>

@@ -1,7 +1,7 @@
-import { createContext } from 'react'
+import { createContext, type ReactNode } from 'react'
 import styled from 'styled-components'
 
-const StyledProjectItem = styled.li`
+const StyledListItem = styled.li`
   position: relative;
   display: grid;
   grid-template-columns: 30% 1fr;
@@ -80,25 +80,42 @@ const StyledKeywordList = styled.ul`
   }
 `
 
-const ListSectionContext = createContext()
+const ListSectionContext = createContext(null)
 
-function ListSection({ children }) {
+interface ListSectionProps {
+  children: ReactNode
+}
+
+function ListSection({ children }: ListSectionProps) {
   return (
-    <ListSectionContext.Provider value={{}}>
-      <StyledProjectItem>{children}</StyledProjectItem>
+    <ListSectionContext.Provider value={null}>
+      <StyledListItem>{children}</StyledListItem>
     </ListSectionContext.Provider>
   )
 }
 
-function LeftSide({ children }) {
+interface LeftSideProps {
+  children: ReactNode
+}
+
+function LeftSide({ children }: LeftSideProps) {
   return <StyledLeftSide>{children}</StyledLeftSide>
 }
 
-function RightSide({ children }) {
+interface RightSideProps {
+  children: ReactNode
+}
+
+function RightSide({ children }: RightSideProps) {
   return <StyledRightSide>{children}</StyledRightSide>
 }
 
-function DotList({ main, children }) {
+interface DotListProps {
+  main: string
+  children: ReactNode
+}
+
+function DotList({ main, children }: DotListProps) {
   return (
     <div>
       <StyledTitle>{main}</StyledTitle>
@@ -107,7 +124,12 @@ function DotList({ main, children }) {
   )
 }
 
-function KeywordList({ main, children }) {
+interface KeywordListProps {
+  main: string
+  children: ReactNode
+}
+
+function KeywordList({ main, children }: KeywordListProps) {
   return (
     <div>
       <StyledTitle>{main}</StyledTitle>

@@ -1,6 +1,7 @@
+import { type ReactNode } from 'react'
 import styled from 'styled-components'
-import ContactImage from './ContactImage'
-import ContactInfo from './ContactInfo'
+import ContactImage from './ContactImage.tsx'
+import ContactInfo from './ContactInfo.tsx'
 
 const StyledBox = styled.div`
   display: flex;
@@ -16,7 +17,11 @@ const StyledBox = styled.div`
   }
 `
 
-function ContactSection({ children }) {
+interface ContactSectionProps {
+  children: ReactNode
+}
+
+function ContactSection({ children }: ContactSectionProps) {
   return (
     <div>
       {children}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import styled from 'styled-components'
 
 const StyledLayout = styled.div`
@@ -10,12 +10,16 @@ const StyledLayout = styled.div`
   z-index: 2;
 `
 
-const StyledScrollbar = styled.div.attrs((props) => ({
+interface StyledScrollbarProps {
+  height: number
+}
+
+const StyledScrollbar = styled.div.attrs<StyledScrollbarProps>(({ height }) => ({
   style: {
-    transform: `scale(1, ${props.$height})`,
-    opacity: props.$height,
+    transform: `scale(1, ${height})`,
+    opacity: height,
   },
-}))`
+}))<StyledScrollbarProps>`
   will-change: transform, opacity;
   height: 100%;
   width: 100%;
@@ -23,9 +27,13 @@ const StyledScrollbar = styled.div.attrs((props) => ({
   transform-origin: top center;
 `
 
-function Scrollbar({ target }) {
+type ScrollbarProps = {
+  target: HTMLElement
+}
+
+function Scrollbar({ target }: ScrollbarProps) {
   const [scrollbarHeight, setScrollbarHeight] = useState(0)
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(
     function () {
@@ -44,15 +52,14 @@ function Scrollbar({ target }) {
       return () =>
         window.removeEventListener('scroll', handleScroll, {
           capture: true,
-          passive: true,
         })
     },
     [target.scrollHeight],
   )
 
-  function handleClick(e) {
+  function handleClick(e: MouseEvent<HTMLDivElement>) {
     const totalPageHeight = target.scrollHeight - window.innerHeight
-    const newPageScroll = (e.clientY / containerRef.current.offsetHeight) * totalPageHeight
+    const newPageScroll = (e.clientY / containerRef.current!.offsetHeight) * totalPageHeight
 
     window.scrollTo({
       top: newPageScroll,
@@ -62,7 +69,7 @@ function Scrollbar({ target }) {
 
   return (
     <StyledLayout onClick={handleClick} ref={containerRef}>
-      <StyledScrollbar $height={scrollbarHeight} />
+      <StyledScrollbar height={scrollbarHeight} />
     </StyledLayout>
   )
 }
