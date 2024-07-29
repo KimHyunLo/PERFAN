@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Layout from './Layout.tsx'
-import ErrorPage from './ErrorPage.tsx'
+import Layout from './pages/Layout.tsx'
+import ErrorPage from './pages/ErrorPage.tsx'
 import './index.css'
 
 const router = createBrowserRouter([
