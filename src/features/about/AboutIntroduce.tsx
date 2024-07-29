@@ -77,7 +77,7 @@ function AboutIntroduce({ children }: AboutIntroduceProps) {
       <div>
         {children}
         <IntroMobileImage>
-          <LazyImage src="signature.png" alt="signature" className="signature" loading="eager" />
+          <LazyImage src="signature.png" alt="signature" className="signature" />
           <LazyImage src="portrait.png" alt="portrait" className="portrait" />
         </IntroMobileImage>
         <IntroTitle>개발자의 꿈을 찾아, 몽골에서 한국으로</IntroTitle>

@@ -15,7 +15,7 @@ const StyledImage = styled(LazyImage)`
 `
 
 function ContactImage() {
-  return <StyledImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
+  return <StyledImage src="avatar.png" alt="avatar" className="avatar" />
 }
 
 export default ContactImage

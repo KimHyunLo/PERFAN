@@ -115,7 +115,7 @@ function MainContent() {
             어울린다고 생각합니다.
           </p>
         </div>
-        <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
+        <LazyImage src="avatar.png" alt="avatar" className="avatar" />
       </MobileMain>
       <PcMain>
         <StyledParagraph>
@@ -124,7 +124,7 @@ function MainContent() {
           저는 무색이지만 특색있고, 소심하지만 소신있는 사람입니다. 제 매력이 당신에게 전달되었으면
           좋겠습니다.
         </StyledParagraph>
-        <LazyImage src="avatar.png" alt="avatar" className="avatar" loading="eager" />
+        <LazyImage src="avatar.png" alt="avatar" className="avatar" />
         <StyledParagraph>
           완벽한 계획을 세우는 것을 좋아합니다.
           <br />

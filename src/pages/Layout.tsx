@@ -33,13 +33,11 @@ const StyledMain = styled.main`
 `
 
 function Layout() {
-  const { updateUser, isUpdating } = useUpdateUser()
+  const { updateUser } = useUpdateUser()
 
   useEffect(() => {
     if (window.location.href === 'https://perfan.vercel.app/') updateUser()
   }, [updateUser])
-
-  if (isUpdating) return
 
   return (
     <StyledLayout>
