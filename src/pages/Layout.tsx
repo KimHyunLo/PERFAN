@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
-import Title from './components/Title.tsx'
-import Header from './components/Header.tsx'
-import Scrollbar from './components/Scrollbar.tsx'
-import ScrollButton from './components/ScrollButton.tsx'
+import Title from '../components/Title.tsx'
+import Header from '../components/Header.tsx'
+import Scrollbar from '../components/Scrollbar.tsx'
+import ScrollButton from '../components/ScrollButton.tsx'
 
-import MainSection from './features/main/MainSection.tsx'
-import AboutSection from './features/about/AboutSection.tsx'
-import ProjectSection from './features/projects/ProjectSection.tsx'
-import ContactSection from './features/contact/ContactSection.tsx'
+import MainSection from '../features/main/MainSection.tsx'
+import AboutSection from '../features/about/AboutSection.tsx'
+import ProjectSection from '../features/projects/ProjectSection.tsx'
+import ContactSection from '../features/contact/ContactSection.tsx'
 
-import { useUpdateUser } from './hooks/useUpdateUser.ts'
+import { useUpdateUser } from '../hooks/useUpdateUser.ts'
 
 const StyledLayout = styled.div`
   width: calc(100% - 6rem);
