@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Layout from './pages/Layout.tsx'
 import ErrorPage from './pages/ErrorPage.tsx'
 import './index.css'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ if (root !== null) {
     <React.StrictMode>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
+        <SpeedInsights />
         <RouterProvider router={router} />
       </QueryClientProvider>
     </React.StrictMode>,
