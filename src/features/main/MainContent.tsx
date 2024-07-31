@@ -64,13 +64,17 @@ const MobileMain = styled.div`
 `
 
 const PcMain = styled.div`
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(1000px, 80%);
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 
   .avatar {
-    min-width: 300px;
-    width: max(350px, 20vw);
+    width: max(300px, 20vw);
     height: auto;
   }
 
@@ -80,8 +84,7 @@ const PcMain = styled.div`
 `
 
 const StyledParagraph = styled.p`
-  max-width: max(280px, 18vw);
-  min-width: 200px;
+  max-width: max(250px, 18vw);
   text-align: center;
   word-break: keep-all;
 
@@ -92,8 +95,8 @@ const StyledParagraph = styled.p`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: max(35px, 2vw);
-    margin: 0 auto 3.5rem;
+    height: 35px;
+    margin: 0 auto 20px;
   }
 `
 

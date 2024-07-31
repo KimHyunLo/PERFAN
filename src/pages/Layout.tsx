@@ -12,10 +12,10 @@ import ProjectSection from '../features/projects/ProjectSection.tsx'
 import ContactSection from '../features/contact/ContactSection.tsx'
 
 import { useUpdateUser } from '../hooks/useUpdateUser.ts'
+import Nav from '../components/Nav.tsx'
 
 const StyledLayout = styled.div`
-  width: calc(100% - 6rem);
-  margin: 15vh auto 10vh;
+  margin: 0 30px;
 
   @media only screen and (max-width: 640px) {
     width: calc(100% - 3rem);
@@ -42,6 +42,7 @@ function Layout() {
   return (
     <StyledLayout>
       <Header />
+      <Nav />
       <Scrollbar target={document.body} />
       <ScrollButton />
       <StyledMain>

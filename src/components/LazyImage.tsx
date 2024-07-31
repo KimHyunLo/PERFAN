@@ -11,7 +11,7 @@ function LazyImage({ src, ...otherProps }: LazyImageProps) {
   return (
     <picture>
       {isIcon || <source srcSet={`webp/${fileName}.webp`} type="image/webp" />}
-      <img height="300px" width="300px" loading="lazy" {...otherProps} />
+      <img height="300px" width="300px" loading="lazy" src={src} {...otherProps} />
     </picture>
   )
 }

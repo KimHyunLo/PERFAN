@@ -2,15 +2,14 @@ import styled from 'styled-components'
 
 const StyledHeader = styled.header`
   position: fixed;
-  top: 26px;
+  top: 1%;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 6rem);
-
-  @media only screen and (max-width: 640px) {
-    top: 18px;
-    width: calc(100% - 3rem);
-  }
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1;
+  mix-blend-mode: exclusion;
+  color: var(--white);
 `
 
 const StyledTitle = styled.div`
@@ -28,18 +27,18 @@ const StyledTitle = styled.div`
 
 const StyledEm = styled.em`
   font-family: 'Now', sans-serif;
-  color: var(--active);
+  color: var(--active-difference);
 `
 
 const StyledSide = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3rem;
+  font-weight: 300;
 `
 
 const StyledSideItem = styled.div`
-  font-size: 1.6rem;
-
   &.left-item {
     display: flex;
     align-items: center;
@@ -57,8 +56,6 @@ const StyledSideItem = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    font-size: clamp(12px, 1.8vw, 16px);
-
     &.right-item {
       font-size: 0;
       cursor: pointer;

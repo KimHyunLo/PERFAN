@@ -5,6 +5,7 @@ const StyledTitle = styled.h1`
   font-family: 'Bodoni Moda', sans-serif;
   word-spacing: 2rem;
   margin-bottom: 15vh;
+  letter-spacing: -10px;
 
   @media only screen and (max-width: 1024px) {
     margin-bottom: 10vh;

@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   justify-content: center;
   width: max(2.5vw, 40px);
   height: max(2.5vw, 40px);
-  background-color: var(--active-difference);
+  background-color: var(--active);
   border-radius: 50px;
 `
 
@@ -23,7 +23,7 @@ const StyledImage = styled.img`
 
 function ScrollButton() {
   function handleClick() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0 })
   }
 
   return (
