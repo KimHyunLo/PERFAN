@@ -10,6 +10,7 @@ const StyledFooter = styled.footer`
     position: relative;
     bottom: auto;
     left: auto;
+    margin-top: 15px;
   }
 `
 

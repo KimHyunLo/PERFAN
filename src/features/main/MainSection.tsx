@@ -9,6 +9,7 @@ const StyledSection = styled.section`
 
   @media only screen and (max-width: 1024px) {
     height: auto;
+    margin-top: min(20vh, 30vw);
   }
 `
 
@@ -24,7 +25,6 @@ const StyledTitleBox = styled.div`
     top: auto;
     left: auto;
     transform: none;
-    margin-top: 20vh;
   }
 `
 

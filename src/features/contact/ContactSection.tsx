@@ -44,15 +44,18 @@ const StyledBox = styled.div`
     transform: none;
     flex-direction: column;
     align-items: center;
-    gap: 5vh;
-    padding-bottom: 5vh;
-    margin: 0 auto;
+    gap: 10vh;
+    margin: 0 auto 5vh;
   }
 `
 
 const StyledImage = styled(LazyImage)`
   height: auto;
   width: max(300px, 20vw);
+
+  @media only screen and (max-width: 1024px) {
+    width: min(350px, 70vw);
+  }
 `
 
 interface ContactSectionProps {
