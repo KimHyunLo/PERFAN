@@ -36,7 +36,7 @@ const MobileMain = styled.div`
       margin-bottom: 100px;
 
       p {
-        max-width: 400px;
+        max-width: 420px;
         width: 80vw;
         text-align: center;
         word-break: keep-all;
@@ -44,10 +44,10 @@ const MobileMain = styled.div`
     }
 
     .avatar {
-      max-width: 400px;
+      max-width: 350px;
+      height: auto;
       width: 80vw;
       margin-bottom: 3rem;
-      height: auto;
     }
   }
 

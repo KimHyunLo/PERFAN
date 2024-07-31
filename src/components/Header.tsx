@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
-  position: fixed;
-  top: 1%;
+  position: absolute;
+  top: 3vh;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 20px 0;
   z-index: 1;
-  mix-blend-mode: exclusion;
-  color: var(--white);
 `
 
 const StyledTitle = styled.div`
@@ -27,15 +24,13 @@ const StyledTitle = styled.div`
 
 const StyledEm = styled.em`
   font-family: 'Now', sans-serif;
-  color: var(--active-difference);
+  color: var(--active);
 `
 
 const StyledSide = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem;
-  font-weight: 300;
 `
 
 const StyledSideItem = styled.div`
@@ -85,8 +80,8 @@ export default function Header() {
         PERF<StyledEm>AN</StyledEm>
       </StyledTitle>
       <StyledSide>
-        <StyledSideItem className="left-item">Highflier Developer</StyledSideItem>
-        <StyledSideItem>Henry. K</StyledSideItem>
+        <StyledSideItem className="left-item small-font">Highflier Developer</StyledSideItem>
+        <StyledSideItem className="small-font">Henry's Portfolio</StyledSideItem>
       </StyledSide>
     </StyledHeader>
   )

@@ -4,14 +4,16 @@ const StyledTitle = styled.h1`
   text-align: center;
   font-family: 'Bodoni Moda', sans-serif;
   word-spacing: 2rem;
-  margin-bottom: 15vh;
   letter-spacing: -10px;
+  margin-bottom: 15vh;
 
   @media only screen and (max-width: 1024px) {
+    letter-spacing: -5px;
     margin-bottom: 10vh;
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 768px) {
+    letter-spacing: -1px;
     margin-bottom: 5vh;
   }
 `

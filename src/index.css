@@ -38,30 +38,9 @@ body::-webkit-scrollbar {
   background: linear-gradient(transparent, var(--active) 70%);
 }
 
-@media only screen and (min-width: 0\0) {
-  /* IE 9, IE 10, IE 11 */
-  :root,
-  html {
-    font-size: 10px;
-  }
-}
-@media only screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  /* IE 10, IE 11 */
-  :root,
-  html {
-    font-size: 10px;
-  }
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 50%;
-  }
 }
 
 body {
@@ -70,11 +49,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--white);
   color: var(--black);
-}
-
-body,
-button {
-  font-size: max(14px, 0.9vw);
 }
 
 a {
@@ -113,6 +87,16 @@ h4 {
   word-break: keep-all;
 }
 
+/* 폰트 사이즈 조절 */
+body,
+button {
+  font-size: max(14px, 0.9vw);
+}
+
+.small-font {
+  font-size: max(12px, 0.7vw);
+}
+
 h1 {
   font-size: max(45px, 13vw);
 }
@@ -130,7 +114,11 @@ h3 {
 @media only screen and (max-width: 1024px) {
   body,
   button {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 16px);
+  }
+
+  .small-font {
+    font-size: max(10px, 1.3vw);
   }
 
   h2 {

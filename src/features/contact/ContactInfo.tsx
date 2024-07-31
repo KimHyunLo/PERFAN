@@ -10,8 +10,11 @@ const StyledContactInfo = styled.ul`
   column-gap: 3vw;
 
   @media only screen and (max-width: 1024px) {
-    grid-template-columns: 1fr;
+    width: auto;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 2vw;
+    column-gap: 5vw;
   }
 `
 

@@ -33,7 +33,6 @@ const StyledButton = styled.button`
   margin: 0 auto;
 
   .number {
-    font-size: max(12px, 0.7vw);
     color: var(--gray);
     margin-bottom: 15px;
     align-self: start;
@@ -53,7 +52,7 @@ export default function Nav() {
         {sections.map((section, index) => (
           <StyledListItem key={section}>
             <StyledButton>
-              <div className="number">0{index + 1}</div>
+              <div className="number small-font">0{index + 1}</div>
               <div className="path">{section}</div>
             </StyledButton>
           </StyledListItem>

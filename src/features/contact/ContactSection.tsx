@@ -6,6 +6,10 @@ import LazyImage from '../../components/LazyImage.tsx'
 const StyledSection = styled.section`
   position: relative;
   height: 100vh;
+
+  @media only screen and (max-width: 1024px) {
+    height: auto;
+  }
 `
 
 const StyledTitleBox = styled.div`
@@ -14,6 +18,13 @@ const StyledTitleBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
 `
 
 const StyledBox = styled.div`
@@ -27,20 +38,21 @@ const StyledBox = styled.div`
   width: 90%;
 
   @media only screen and (max-width: 1024px) {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     flex-direction: column;
     align-items: center;
-    gap: 7rem;
+    gap: 5vh;
+    padding-bottom: 5vh;
+    margin: 0 auto;
   }
 `
 
 const StyledImage = styled(LazyImage)`
   height: auto;
   width: max(300px, 20vw);
-
-  @media only screen and (max-width: 1024px) {
-    width: max(300px, 30vw);
-    margin-bottom: 5rem;
-  }
 `
 
 interface ContactSectionProps {
