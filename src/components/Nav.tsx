@@ -24,7 +24,7 @@ const StyledList = styled.ul`
 `
 
 const StyledListItem = styled.li`
-  width: 80px;
+  width: max(80px, 5vw);
 `
 
 const StyledButton = styled.button`
@@ -32,9 +32,12 @@ const StyledButton = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: 300;
   margin: 0 auto;
   z-index: 1;
+
+  &.text {
+    cursor: default;
+  }
 
   .number {
     color: var(--gray);
@@ -42,14 +45,10 @@ const StyledButton = styled.button`
     align-self: start;
   }
 
-  &.text {
-    cursor: default;
-  }
-
   &:hover {
     .sans span,
     .serif span {
-      transform: translateY(-0.9vw);
+      transform: translateY(min(-15px, -0.9vw));
     }
   }
 `
@@ -72,33 +71,30 @@ const StyledTitleBox = styled.div<{ $index: number }>`
       transform: translateY(0);
     }
   }
+`
 
-  .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    font-family: 'Bodoni Moda', sans-serif;
-    font-size: max(45px, 13vw);
-    word-spacing: 2rem;
-    text-align: center;
-    letter-spacing: -10px;
-    line-height: 1;
-    color: var(--dark-gray);
+const StyledTitle = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Bodoni Moda', sans-serif;
+  font-size: max(45px, 10vw);
+  text-align: center;
+  letter-spacing: -5px;
+  color: var(--dark-gray);
 
-    span {
-      transform: translateY(25vh);
+  span {
+    transform: translateY(25vh);
 
-      &:nth-child(1) {
-        text-transform: uppercase;
-      }
+    &:nth-child(1) {
+      text-transform: uppercase;
     }
   }
 `
 
 const StyledLinkBox = styled.div`
-  height: 0.9vw;
+  height: max(15px, 0.9vw);
   line-height: 1;
   overflow: hidden;
 
@@ -117,7 +113,7 @@ const StyledLetterSpan = styled.span<{ $delay: number }>`
 export default function Nav() {
   const { sections, onNavClick } = useCustomContext(SectionsContext)
   const [isSelected, setIsSelected] = useState<boolean>(false)
-  const [title, setTitle] = useState<number>(0)
+  const [selectedIndex, setSelectedIndex] = useState<number>(0)
 
   function handleClick(index: number) {
     onNavClick(sections[index].ref.current)
@@ -125,7 +121,7 @@ export default function Nav() {
 
   function handleMoustEnter(index: number) {
     setIsSelected(true)
-    setTitle(index)
+    setSelectedIndex(index)
   }
 
   function handleMoustLeave() {
@@ -137,14 +133,17 @@ export default function Nav() {
       <StyledList>
         {sections.map((section, sectionIndex) => (
           <StyledListItem key={section.nav}>
-            <StyledTitleBox className={`${isSelected && `on${sectionIndex}`}`} $index={title}>
-              <div className="title">
+            <StyledTitleBox
+              className={`${isSelected && `on${sectionIndex}`}`}
+              $index={selectedIndex}
+            >
+              <StyledTitle className="title">
                 {[...section.nav].map((letter, index) => (
                   <StyledLetterSpan key={index} $delay={index}>
                     {letter}
                   </StyledLetterSpan>
                 ))}
-              </div>
+              </StyledTitle>
             </StyledTitleBox>
             <StyledButton
               onClick={() => handleClick(sectionIndex)}
