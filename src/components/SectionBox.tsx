@@ -17,7 +17,7 @@ const StyledSection = styled.section`
 `
 
 const StyledContentBox = styled.div`
-  width: max(85%, 1000px);
+  width: max(85%, 950px);
   padding-top: 60vh;
   margin: 0 auto;
 

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useCustomContext } from '../hooks/useCustomContext '
 import { SectionsContext } from '../store/section-context'
 import { useScroll } from '../hooks/useScroll'
+import { useAnimation } from '../hooks/useAnimation'
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -40,7 +41,13 @@ const StyledButton = styled.button`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  transition: all 0.2s;
   z-index: 1;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   &.text {
     cursor: default;
@@ -60,7 +67,7 @@ const StyledButton = styled.button`
   }
 `
 
-const StyledTitleBox = styled.div<{ $index: number }>`
+const StyledTitleBox = styled.div`
   position: absolute;
   top: 50%;
   left: 0;
@@ -68,16 +75,7 @@ const StyledTitleBox = styled.div<{ $index: number }>`
   width: 100vw;
   height: 0;
   background-color: var(--black);
-  transition: all 0.5s;
   overflow: hidden;
-
-  &.on${(props) => props.$index} {
-    height: 25vh;
-
-    .title span {
-      transform: translateY(0);
-    }
-  }
 `
 
 const StyledTitle = styled.div`
@@ -93,6 +91,7 @@ const StyledTitle = styled.div`
 
   span {
     transform: translateY(25vh);
+    cursor: default;
 
     &:nth-child(1) {
       text-transform: uppercase;
@@ -118,34 +117,43 @@ const StyledLetterSpan = styled.span<{ $delay: number }>`
 `
 
 export default function Nav() {
-  const { sections, onNavClick } = useCustomContext(SectionsContext)
-  const [isSelected, setIsSelected] = useState<boolean>(false)
-  const [selectedIndex, setSelectedIndex] = useState<number>(0)
   const { isNavHidden, setLastScrollY } = useScroll()
+  const { navTransition, navItemHover } = useAnimation()
+  const { sections, onNavClick } = useCustomContext(SectionsContext)
+  const [isButtonClicked, setIsButtonClicked] = useState(false)
 
   function handleClick(index: number) {
-    onNavClick(sections[index].ref.current)
-    setLastScrollY(window.scrollY)
+    setIsButtonClicked(true)
+    navTransition(index)
+    document.body.style.overflow = 'hidden'
+
+    setTimeout(() => {
+      onNavClick(sections[index].ref.current)
+      setLastScrollY(window.scrollY)
+    }, 1700)
+
+    setTimeout(() => {
+      setIsButtonClicked(false)
+      document.body.style.overflow = 'unset'
+    }, 3000)
   }
 
   function handleMoustEnter(index: number) {
-    setIsSelected(true)
-    setSelectedIndex(index)
+    navItemHover(index).play()
   }
 
-  function handleMoustLeave() {
-    setIsSelected(false)
+  function handleMoustLeave(index: number) {
+    if (!isButtonClicked) {
+      navItemHover(index).reverse(0)
+    }
   }
 
   return (
-    <StyledNav className={`${isNavHidden && 'hidden'}`}>
+    <StyledNav className={`${isNavHidden ? 'hidden' : ''}`}>
       <StyledList>
         {sections.map((section, sectionIndex) => (
           <StyledListItem key={section.nav}>
-            <StyledTitleBox
-              className={`${isSelected && `on${sectionIndex}`}`}
-              $index={selectedIndex}
-            >
+            <StyledTitleBox className={`title-box${sectionIndex}`}>
               <StyledTitle className="title">
                 {[...section.nav].map((letter, index) => (
                   <StyledLetterSpan key={index} $delay={index}>
@@ -155,9 +163,10 @@ export default function Nav() {
               </StyledTitle>
             </StyledTitleBox>
             <StyledButton
+              className={`${isButtonClicked ? 'hidden' : ''}`}
               onClick={() => handleClick(sectionIndex)}
               onMouseEnter={() => handleMoustEnter(sectionIndex)}
-              onMouseLeave={handleMoustLeave}
+              onMouseLeave={() => handleMoustLeave(sectionIndex)}
             >
               <div className="number small-font">0{sectionIndex + 1}</div>
               <StyledLinkBox>
@@ -180,7 +189,7 @@ export default function Nav() {
           </StyledListItem>
         ))}
         <StyledListItem>
-          <StyledButton className="text">
+          <StyledButton className={`text ${isButtonClicked ? 'hidden' : ''}`}>
             <StyledLinkBox>ⓒ 2024.</StyledLinkBox>
           </StyledButton>
         </StyledListItem>
