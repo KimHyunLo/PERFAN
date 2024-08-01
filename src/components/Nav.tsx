@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { useState } from 'react'
 import { useCustomContext } from '../hooks/useCustomContext '
 import { SectionsContext } from '../store/section-context'
-import { useState } from 'react'
+import { useScroll } from '../hooks/useScroll'
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -9,7 +10,13 @@ const StyledNav = styled.nav`
   left: 0;
   transform: translateY(-50%);
   width: 100%;
-  z-index: 1;
+  z-index: 9999;
+  transition: all 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   @media only screen and (max-width: 1024px) {
     display: none;
@@ -114,9 +121,11 @@ export default function Nav() {
   const { sections, onNavClick } = useCustomContext(SectionsContext)
   const [isSelected, setIsSelected] = useState<boolean>(false)
   const [selectedIndex, setSelectedIndex] = useState<number>(0)
+  const { isNavHidden, setLastScrollY } = useScroll()
 
   function handleClick(index: number) {
     onNavClick(sections[index].ref.current)
+    setLastScrollY(window.scrollY)
   }
 
   function handleMoustEnter(index: number) {
@@ -129,7 +138,7 @@ export default function Nav() {
   }
 
   return (
-    <StyledNav>
+    <StyledNav className={`${isNavHidden && 'hidden'}`}>
       <StyledList>
         {sections.map((section, sectionIndex) => (
           <StyledListItem key={section.nav}>

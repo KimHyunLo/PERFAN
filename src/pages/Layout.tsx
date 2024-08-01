@@ -9,6 +9,7 @@ import SectionBox from '../components/SectionBox.tsx'
 import { useUpdateUser } from '../hooks/useUpdateUser.ts'
 import { useCustomContext } from '../hooks/useCustomContext .ts'
 import { SectionsContext } from '../store/section-context.tsx'
+import { useAnimation } from '../hooks/useAnimation.ts'
 
 const StyledLayout = styled.div`
   width: calc(100% - 60px);
@@ -20,6 +21,7 @@ const StyledLayout = styled.div`
 `
 
 function Layout() {
+  useAnimation()
   const { sections } = useCustomContext(SectionsContext)
   const { updateUser } = useUpdateUser()
 
