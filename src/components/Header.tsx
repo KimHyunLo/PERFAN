@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
-  position: absolute;
-  top: 3vh;
+  position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   z-index: 1;
+  padding: 3vh 0;
 `
 
 const StyledTitle = styled.div`
@@ -31,6 +32,11 @@ const StyledSide = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 30px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 15px;
+  }
 `
 
 const StyledSideItem = styled.div`

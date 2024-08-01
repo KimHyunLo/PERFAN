@@ -1,23 +1,22 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
-import Title from '../components/Title.tsx'
 import Header from '../components/Header.tsx'
 import Scrollbar from '../components/Scrollbar.tsx'
 import ScrollButton from '../components/ScrollButton.tsx'
 import Nav from '../components/Nav.tsx'
-
-import MainSection from '../features/main/MainSection.tsx'
-import AboutSection from '../features/about/AboutSection.tsx'
-import ProjectSection from '../features/projects/ProjectSection.tsx'
-import ContactSection from '../features/contact/ContactSection.tsx'
+import SectionBox from '../components/SectionBox.tsx'
 
 import { useUpdateUser } from '../hooks/useUpdateUser.ts'
 import { useCustomContext } from '../hooks/useCustomContext .ts'
 import { SectionsContext } from '../store/section-context.tsx'
 
+import MainContent from '../features/main/MainContent.tsx'
+import AboutSection from '../features/about/AboutSection.tsx'
+import ProjectList from '../features/projects/ProjectList.tsx'
+import ContactSection from '../features/contact/ContactSection.tsx'
+
 const StyledLayout = styled.div`
-  position: relative;
   width: calc(100% - 60px);
   margin: 0 auto;
 
@@ -41,18 +40,18 @@ function Layout() {
       <Scrollbar target={document.body} />
       <ScrollButton />
       <main>
-        <MainSection ref={sections[0].ref}>
-          <Title title={sections[0].title} />
-        </MainSection>
-        <AboutSection ref={sections[1].ref}>
-          <Title title={sections[1].title} />
-        </AboutSection>
-        <ProjectSection ref={sections[2].ref}>
-          <Title title={sections[2].title} />
-        </ProjectSection>
-        <ContactSection ref={sections[3].ref}>
-          <Title title={sections[3].title} />
-        </ContactSection>
+        <SectionBox section={sections[0]}>
+          <MainContent />
+        </SectionBox>
+        <SectionBox section={sections[1]}>
+          <AboutSection />
+        </SectionBox>
+        <SectionBox section={sections[2]}>
+          <ProjectList />
+        </SectionBox>
+        <SectionBox section={sections[3]}>
+          <ContactSection />
+        </SectionBox>
       </main>
     </StyledLayout>
   )

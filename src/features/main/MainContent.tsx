@@ -1,15 +1,6 @@
 import styled from 'styled-components'
 import LazyImage from '../../components/LazyImage.tsx'
 
-const StyledMainContent = styled.div`
-  width: max(80%, 950px);
-  margin: 0 auto;
-
-  @media only screen and (max-width: 1024px) {
-    width: 100%;
-  }
-`
-
 const MobileMain = styled.div`
   display: none;
 
@@ -20,11 +11,6 @@ const MobileMain = styled.div`
 `
 
 const PcMain = styled.div`
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max(1000px, 80%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,9 +61,14 @@ const StyledAvatarImage = styled(LazyImage)`
   }
 `
 
+const StyledParagraph = styled.p`
+  margin-top: 3vh;
+  text-align: center;
+`
+
 function MainContent() {
   return (
-    <StyledMainContent>
+    <>
       <MobileMain>
         <StyledParagraphBox>
           <p>
@@ -114,7 +105,10 @@ function MainContent() {
           </p>
         </StyledParagraphBox>
       </PcMain>
-    </StyledMainContent>
+      <StyledParagraph className="small-font">
+        Coding for a living. Ordinary Front-end developer.
+      </StyledParagraph>
+    </>
   )
 }
 
