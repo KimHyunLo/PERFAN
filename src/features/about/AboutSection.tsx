@@ -1,7 +1,11 @@
-import { type ReactNode } from 'react'
+import { forwardRef, type ReactNode } from 'react'
 import AboutIntroduce from './AboutIntroduce'
 import AboutCareer from './AboutCareer'
 import styled from 'styled-components'
+
+const StyledSection = styled.section`
+  padding-top: 20vh;
+`
 
 const StyledBox = styled.div`
   display: flex;
@@ -32,9 +36,12 @@ interface AboutSectionProps {
   children: ReactNode
 }
 
-function AboutSection({ children }: AboutSectionProps) {
+const AboutSection = forwardRef<HTMLElement, AboutSectionProps>(function AboutSection(
+  { children },
+  ref,
+) {
   return (
-    <section>
+    <StyledSection ref={ref}>
       {children}
       <StyledBox>
         <AboutIntroduce>
@@ -44,8 +51,8 @@ function AboutSection({ children }: AboutSectionProps) {
           <StyledHeader>Career</StyledHeader>
         </AboutCareer>
       </StyledBox>
-    </section>
+    </StyledSection>
   )
-}
+})
 
 export default AboutSection

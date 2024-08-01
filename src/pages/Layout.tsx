@@ -13,6 +13,8 @@ import ProjectSection from '../features/projects/ProjectSection.tsx'
 import ContactSection from '../features/contact/ContactSection.tsx'
 
 import { useUpdateUser } from '../hooks/useUpdateUser.ts'
+import { useCustomContext } from '../hooks/useCustomContext .ts'
+import { SectionsContext } from '../store/section-context.tsx'
 
 const StyledLayout = styled.div`
   position: relative;
@@ -24,17 +26,8 @@ const StyledLayout = styled.div`
   }
 `
 
-const StyledMain = styled.main`
-  display: flex;
-  flex-direction: column;
-  gap: 30vh;
-
-  @media only screen and (max-width: 1024px) {
-    gap: 15vh;
-  }
-`
-
 function Layout() {
+  const { sections } = useCustomContext(SectionsContext)
   const { updateUser } = useUpdateUser()
 
   useEffect(() => {
@@ -47,20 +40,20 @@ function Layout() {
       <Nav />
       <Scrollbar target={document.body} />
       <ScrollButton />
-      <StyledMain>
-        <MainSection>
-          <Title title={['Perfect', 'Plan']} />
+      <main>
+        <MainSection ref={sections[0].ref}>
+          <Title title={sections[0].title} />
         </MainSection>
-        <AboutSection>
-          <Title title={['About', 'Me']} />
+        <AboutSection ref={sections[1].ref}>
+          <Title title={sections[1].title} />
         </AboutSection>
-        <ProjectSection>
-          <Title title={['My', 'Projects']} />
+        <ProjectSection ref={sections[2].ref}>
+          <Title title={sections[2].title} />
         </ProjectSection>
-        <ContactSection>
-          <Title title={['Contact', 'Me']} />
+        <ContactSection ref={sections[3].ref}>
+          <Title title={sections[3].title} />
         </ContactSection>
-      </StyledMain>
+      </main>
     </StyledLayout>
   )
 }

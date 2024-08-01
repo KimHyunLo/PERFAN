@@ -1,17 +1,25 @@
-import { type ReactNode } from 'react'
+import { forwardRef, type ReactNode } from 'react'
 import ProjectList from './ProjectList.tsx'
+import styled from 'styled-components'
+
+const StyledSection = styled.section`
+  padding-top: 20vh;
+`
 
 interface ProjectSectionProps {
   children: ReactNode
 }
 
-function ProjectSection({ children }: ProjectSectionProps) {
+const ProjectSection = forwardRef<HTMLElement, ProjectSectionProps>(function ProjectSection(
+  { children },
+  ref,
+) {
   return (
-    <div>
+    <StyledSection ref={ref}>
       {children}
       <ProjectList />
-    </div>
+    </StyledSection>
   )
-}
+})
 
 export default ProjectSection

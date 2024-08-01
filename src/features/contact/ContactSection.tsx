@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import { forwardRef, type ReactNode } from 'react'
 import styled from 'styled-components'
 import ContactInfo from './ContactInfo.tsx'
 import LazyImage from '../../components/LazyImage.tsx'
@@ -62,9 +62,12 @@ interface ContactSectionProps {
   children: ReactNode
 }
 
-function ContactSection({ children }: ContactSectionProps) {
+const ContactSection = forwardRef<HTMLElement, ContactSectionProps>(function ContactSection(
+  { children },
+  ref,
+) {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <StyledTitleBox>{children}</StyledTitleBox>
       <StyledBox>
         <ContactInfo />
@@ -72,6 +75,6 @@ function ContactSection({ children }: ContactSectionProps) {
       </StyledBox>
     </StyledSection>
   )
-}
+})
 
 export default ContactSection

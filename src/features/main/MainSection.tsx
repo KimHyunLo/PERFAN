@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react'
+import { forwardRef, type ReactNode } from 'react'
 import MainContent from './MainContent.tsx'
 import styled from 'styled-components'
 import MainFooter from './MainFooter.tsx'
@@ -32,14 +32,17 @@ interface MainSectionProps {
   children: ReactNode
 }
 
-function MainSection({ children }: MainSectionProps) {
+const MainSection = forwardRef<HTMLElement, MainSectionProps>(function MainSection(
+  { children },
+  ref,
+) {
   return (
-    <StyledSection>
+    <StyledSection ref={ref}>
       <StyledTitleBox>{children}</StyledTitleBox>
       <MainContent />
       <MainFooter />
     </StyledSection>
   )
-}
+})
 
 export default MainSection

@@ -28,15 +28,8 @@ function ContactInfo() {
     <StyledContactInfo>
       <InfoTitle>developer</InfoTitle>
       <div>Henry</div>
-      <InfoTitle>resume</InfoTitle>
-      <div>
-        <a
-          href="https://perfect-plan.notion.site/Henry-a59a80d7c117476ba3fcfa541df09c3e?pvs=4"
-          target="blank"
-        >
-          Notion
-        </a>
-      </div>
+      <InfoTitle>specialty</InfoTitle>
+      <div>Organizing</div>
       <InfoTitle>social</InfoTitle>
       <ul>
         <li>
