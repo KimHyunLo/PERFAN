@@ -11,11 +11,6 @@ import { useUpdateUser } from '../hooks/useUpdateUser.ts'
 import { useCustomContext } from '../hooks/useCustomContext .ts'
 import { SectionsContext } from '../store/section-context.tsx'
 
-import MainContent from '../features/main/MainContent.tsx'
-import ProjectList from '../features/projects/ProjectList.tsx'
-import ContactSection from '../features/contact/ContactSection.tsx'
-import AboutIntroduce from '../features/about/AboutIntroduce.tsx'
-
 const StyledLayout = styled.div`
   width: calc(100% - 60px);
   margin: 0 auto;
@@ -40,18 +35,11 @@ function Layout() {
       <Scrollbar target={document.body} />
       <ScrollButton />
       <main>
-        <SectionBox section={sections[0]}>
-          <MainContent />
-        </SectionBox>
-        <SectionBox section={sections[1]}>
-          <AboutIntroduce />
-        </SectionBox>
-        <SectionBox section={sections[2]}>
-          <ProjectList />
-        </SectionBox>
-        <SectionBox section={sections[3]}>
-          <ContactSection />
-        </SectionBox>
+        {sections.map((section) => (
+          <SectionBox section={section} key={section.nav}>
+            {section.content}
+          </SectionBox>
+        ))}
       </main>
     </StyledLayout>
   )

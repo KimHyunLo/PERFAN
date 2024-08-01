@@ -28,7 +28,7 @@ const StyledImage = styled(LazyImage)`
   }
 `
 
-export default function ContactSection() {
+export default function ContactContent() {
   return (
     <StyledBox>
       <ContactInfo />

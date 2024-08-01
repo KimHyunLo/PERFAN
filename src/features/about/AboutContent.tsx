@@ -66,7 +66,7 @@ const IntroMobileImage = styled.div`
   }
 `
 
-function AboutIntroduce() {
+function AboutContent() {
   return (
     <div>
       <div>
@@ -102,4 +102,4 @@ function AboutIntroduce() {
   )
 }
 
-export default AboutIntroduce
+export default AboutContent
