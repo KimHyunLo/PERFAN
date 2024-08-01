@@ -68,7 +68,7 @@ const IntroMobileImage = styled.div`
 
 function AboutContent() {
   return (
-    <div>
+    <>
       <div>
         <IntroMobileImage>
           <LazyImage src="signature.png" alt="signature" className="signature" />
@@ -98,7 +98,7 @@ function AboutContent() {
         <LazyImage src="signature.png" alt="signature" className="signature" />
         <LazyImage src="portrait.png" alt="portrait" className="portrait" />
       </IntroImage>
-    </div>
+    </>
   )
 }
 
