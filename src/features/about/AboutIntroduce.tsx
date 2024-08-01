@@ -1,4 +1,3 @@
-import { type ReactNode } from 'react'
 import styled from 'styled-components'
 import LazyImage from '../../components/LazyImage.tsx'
 
@@ -67,15 +66,10 @@ const IntroMobileImage = styled.div`
   }
 `
 
-interface AboutIntroduceProps {
-  children: ReactNode
-}
-
-function AboutIntroduce({ children }: AboutIntroduceProps) {
+function AboutIntroduce() {
   return (
     <div>
       <div>
-        {children}
         <IntroMobileImage>
           <LazyImage src="signature.png" alt="signature" className="signature" />
           <LazyImage src="portrait.png" alt="portrait" className="portrait" />

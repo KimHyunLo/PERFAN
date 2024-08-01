@@ -12,9 +12,9 @@ import { useCustomContext } from '../hooks/useCustomContext .ts'
 import { SectionsContext } from '../store/section-context.tsx'
 
 import MainContent from '../features/main/MainContent.tsx'
-import AboutSection from '../features/about/AboutSection.tsx'
 import ProjectList from '../features/projects/ProjectList.tsx'
 import ContactSection from '../features/contact/ContactSection.tsx'
+import AboutIntroduce from '../features/about/AboutIntroduce.tsx'
 
 const StyledLayout = styled.div`
   width: calc(100% - 60px);
@@ -44,7 +44,7 @@ function Layout() {
           <MainContent />
         </SectionBox>
         <SectionBox section={sections[1]}>
-          <AboutSection />
+          <AboutIntroduce />
         </SectionBox>
         <SectionBox section={sections[2]}>
           <ProjectList />
