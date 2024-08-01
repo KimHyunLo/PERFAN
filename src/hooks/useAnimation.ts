@@ -5,6 +5,4 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 export function useAnimation() {
   gsap.registerPlugin(useGSAP)
   gsap.registerPlugin(ScrollTrigger)
-
-  useGSAP(() => {})
 }

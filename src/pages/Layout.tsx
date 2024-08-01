@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Header from '../components/Header.tsx'
 import Scrollbar from '../components/Scrollbar.tsx'
-import ScrollButton from '../components/ScrollButton.tsx'
 import Nav from '../components/Nav.tsx'
 import SectionBox from '../components/SectionBox.tsx'
 
@@ -33,7 +32,6 @@ function Layout() {
       <Header />
       <Nav />
       <Scrollbar target={document.body} />
-      <ScrollButton />
       <main>
         {sections.map((section) => (
           <SectionBox section={section} key={section.nav}>
