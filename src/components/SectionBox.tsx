@@ -6,12 +6,31 @@ import styled from 'styled-components'
 const StyledSection = styled.section`
   position: relative;
 
+  &:not(&:last-child) {
+    margin-bottom: 20vh;
+  }
+
   &#main,
   &#contact {
     height: 100vh;
 
     @media only screen and (max-width: 1024px) {
       height: auto;
+    }
+  }
+
+  &#projects .content-box {
+    display: flex;
+    flex-direction: column;
+    gap: min(100px, 10vw);
+    width: max(70%, 900px);
+
+    @media only screen and (max-width: 1024px) {
+      width: 80%;
+    }
+
+    @media only screen and (max-width: 425px) {
+      width: 95%;
     }
   }
 
@@ -31,6 +50,15 @@ const StyledSection = styled.section`
       margin: 0 auto 10vh;
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 20vh;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-top: 10vh;
+    }
+  }
 `
 
 const StyledContentBox = styled.div`
@@ -39,8 +67,12 @@ const StyledContentBox = styled.div`
   margin: 0 auto;
 
   @media only screen and (max-width: 1024px) {
-    width: 90%;
+    width: 80%;
     padding-top: 0;
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 95%;
   }
 `
 

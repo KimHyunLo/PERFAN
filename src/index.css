@@ -2,7 +2,6 @@
 
 :root {
   --active: #15470d;
-  --active-difference: #cfa3c3;
   --highlight: #d3486f;
   --white: #eeeae4;
   --dark-gray: #454545;
@@ -118,7 +117,7 @@ h3 {
   }
 
   .small-font {
-    font-size: max(10px, 1.3vw);
+    font-size: max(12px, 1.3vw);
   }
 
   h2 {

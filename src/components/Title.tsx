@@ -19,7 +19,6 @@ const StyledTitle = styled.h1`
     transform: none;
     letter-spacing: -5px;
     word-spacing: 10px;
-    margin-top: 20vh;
     margin-bottom: 10vh;
   }
 

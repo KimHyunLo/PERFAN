@@ -1,7 +1,7 @@
 import { createContext, type ReactNode } from 'react'
 import styled from 'styled-components'
 
-const StyledListItem = styled.li`
+const StyledListBox = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: 30% 1fr;
@@ -89,7 +89,7 @@ interface ListBoxProps {
 function ListBox({ children }: ListBoxProps) {
   return (
     <ListBoxContext.Provider value={null}>
-      <StyledListItem>{children}</StyledListItem>
+      <StyledListBox>{children}</StyledListBox>
     </ListBoxContext.Provider>
   )
 }
