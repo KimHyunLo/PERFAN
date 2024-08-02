@@ -14,6 +14,23 @@ const StyledSection = styled.section`
       height: auto;
     }
   }
+
+  &#contact .content-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    @media only screen and (max-width: 1024px) {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10vh;
+      margin: 0 auto 10vh;
+    }
+  }
 `
 
 const StyledContentBox = styled.div`
@@ -36,7 +53,7 @@ export default function SectionBox({ section, children }: SectionBox) {
   return (
     <StyledSection id={section.nav} ref={section.ref}>
       <Title title={section.title} />
-      <StyledContentBox>{children}</StyledContentBox>
+      <StyledContentBox className="content-box">{children}</StyledContentBox>
     </StyledSection>
   )
 }

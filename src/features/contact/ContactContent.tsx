@@ -2,23 +2,6 @@ import styled from 'styled-components'
 import ContactInfo from './ContactInfo.tsx'
 import LazyImage from '../../components/LazyImage.tsx'
 
-const StyledBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-
-  @media only screen and (max-width: 1024px) {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10vh;
-    margin: 0 auto 10vh;
-  }
-`
-
 const StyledImage = styled(LazyImage)`
   height: auto;
   width: max(300px, 20vw);
@@ -30,9 +13,9 @@ const StyledImage = styled(LazyImage)`
 
 export default function ContactContent() {
   return (
-    <StyledBox>
+    <>
       <ContactInfo />
       <StyledImage src="avatar.png" alt="avatar" className="avatar" />
-    </StyledBox>
+    </>
   )
 }
