@@ -6,6 +6,10 @@ export function useAnimation() {
   gsap.registerPlugin(useGSAP)
   gsap.registerPlugin(ScrollTrigger)
 
+  useGSAP(() => {
+    sectionTitleFadeIn()
+  })
+
   return {
     navTransition,
     navItemHover,
@@ -79,7 +83,7 @@ function navTransition(index: number) {
       {
         y: '-10vh',
         opacity: 0,
-        duration: 0.05,
+        duration: 0.1,
         ease: 'power3.in',
       },
       '<',
@@ -107,4 +111,36 @@ function navTransition(index: number) {
   )
 
   return timeline.play()
+}
+
+function sectionTitleFadeIn() {
+  gsap.utils.toArray('section').forEach((section) => {
+    const timeline = gsap.timeline()
+
+    ScrollTrigger.create({
+      animation: timeline,
+      trigger: section as HTMLElement,
+      start: '0% 30%',
+      end: '0% 20%',
+      onLeaveBack: () => timeline.reverse(0),
+    })
+
+    gsap.utils.toArray((section as HTMLElement).querySelector('h1')).forEach((heading) => {
+      gsap.utils.toArray((heading as HTMLElement).querySelectorAll('span')).forEach((letter) => {
+        timeline.fromTo(
+          letter as HTMLElement,
+          {
+            y: -250,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+          },
+          '<0.05',
+        )
+      })
+    })
+  })
 }

@@ -6,8 +6,8 @@ import styled from 'styled-components'
 const StyledSection = styled.section`
   position: relative;
 
-  &.main,
-  &.contact {
+  &#main,
+  &#contact {
     height: 100vh;
 
     @media only screen and (max-width: 1024px) {
@@ -34,7 +34,7 @@ interface SectionBox {
 
 export default function SectionBox({ section, children }: SectionBox) {
   return (
-    <StyledSection className={section.nav} ref={section.ref}>
+    <StyledSection id={section.nav} ref={section.ref}>
       <Title title={section.title} />
       <StyledContentBox>{children}</StyledContentBox>
     </StyledSection>

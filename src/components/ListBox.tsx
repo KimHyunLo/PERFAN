@@ -27,7 +27,7 @@ const StyledLeftSide = styled.aside`
   }
 `
 
-const StyledRightSide = styled.section`
+const StyledRightSide = styled.article`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -80,17 +80,17 @@ const StyledKeywordList = styled.ul`
   }
 `
 
-const ListSectionContext = createContext(null)
+const ListBoxContext = createContext(null)
 
-interface ListSectionProps {
+interface ListBoxProps {
   children: ReactNode
 }
 
-function ListSection({ children }: ListSectionProps) {
+function ListBox({ children }: ListBoxProps) {
   return (
-    <ListSectionContext.Provider value={null}>
+    <ListBoxContext.Provider value={null}>
       <StyledListItem>{children}</StyledListItem>
-    </ListSectionContext.Provider>
+    </ListBoxContext.Provider>
   )
 }
 
@@ -138,9 +138,9 @@ function KeywordList({ main, children }: KeywordListProps) {
   )
 }
 
-ListSection.LeftSide = LeftSide
-ListSection.RightSide = RightSide
-ListSection.DotList = DotList
-ListSection.KeywordList = KeywordList
+ListBox.LeftSide = LeftSide
+ListBox.RightSide = RightSide
+ListBox.DotList = DotList
+ListBox.KeywordList = KeywordList
 
-export default ListSection
+export default ListBox

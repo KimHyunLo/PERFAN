@@ -122,6 +122,7 @@ export default function Nav() {
   const { sections, onNavClick } = useCustomContext(SectionsContext)
   const [isButtonClicked, setIsButtonClicked] = useState(false)
 
+  // 메뉴 버튼 클릭
   function handleClick(index: number) {
     setIsButtonClicked(true)
     navTransition(index)
