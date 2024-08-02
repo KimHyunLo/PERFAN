@@ -139,7 +139,9 @@ export default function Nav() {
   }
 
   function handleMoustEnter(index: number) {
-    navItemHover(index).play()
+    if (!isButtonClicked) {
+      navItemHover(index).play()
+    }
   }
 
   function handleMoustLeave(index: number) {

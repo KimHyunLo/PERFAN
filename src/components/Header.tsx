@@ -86,7 +86,7 @@ export default function Header() {
         PERF<StyledEm>AN</StyledEm>
       </StyledTitle>
       <StyledSide>
-        <StyledSideItem className="left-item small-font">Highflier Developer</StyledSideItem>
+        <StyledSideItem className="left-item small-font">FrontEnd Developer</StyledSideItem>
         <StyledSideItem className="small-font">Henry's Portfolio</StyledSideItem>
       </StyledSide>
     </StyledHeader>

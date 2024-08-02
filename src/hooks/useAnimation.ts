@@ -93,7 +93,7 @@ function navTransition(index: number) {
       y: 0,
       transition: 'none',
     },
-    '<2',
+    '<1',
   )
 
   timeline.set(
