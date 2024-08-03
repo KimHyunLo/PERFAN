@@ -7,9 +7,13 @@ TypeScript를 기반으로 React 라이브러리를 사용해서 구현한 프�
 
 > [배포 링크 보러가기](https://perfan.vercel.app/)
 
+<br/>
+
 ## 👀 미리보기
 
 ![introduction](public/perfan_미리보기.gif)
+
+<br/>
 
 ## 🛠️ 개발 스택
 
@@ -20,6 +24,8 @@ TypeScript를 기반으로 React 라이브러리를 사용해서 구현한 프�
 - styled-components
 - supabase
 - gsap
+
+<br/>
 
 ## 📁 구현 사항
 
@@ -49,6 +55,8 @@ function Layout() {
   )
 }
 ```
+
+<br/>
 
 ### supabase API 연동
 
@@ -95,6 +103,8 @@ export async function updateUser() {
 }
 ```
 
+<br/>
+
 ### 이미지 로딩 최적화
 
 - webp 확장자를 지원하는 브라우저에선 용량이 적은 webp 이미지를 출력하도록 구현
@@ -114,6 +124,8 @@ function LazyImage({ src, ...otherProps }: LazyImageProps) {
   )
 }
 ```
+
+<br/>
 
 ### contextAPI를 활용한 컴포넌트
 
