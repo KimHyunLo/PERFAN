@@ -11,7 +11,7 @@ function NoljangWeb() {
         <ListSection.DotList main="서비스 링크">
           <li>
             <a href="https://www.noljang.co.kr" target="_blank">
-              🔗 https://www.noljang.co.kr
+              https://www.noljang.co.kr
             </a>
           </li>
         </ListSection.DotList>

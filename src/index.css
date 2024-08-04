@@ -57,6 +57,18 @@ a {
   cursor: pointer;
 }
 
+a::after {
+  content: '↗️';
+  display: inline-block;
+  font-size: 1.3em;
+  line-height: 0;
+  transform: translateY(3px);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 li {
   list-style: none;
 }
@@ -105,7 +117,7 @@ h2 {
 }
 
 h3 {
-  font-size: min(40px, 3vw);
+  font-size: min(30px, 2vw);
   font-weight: 600;
   color: var(--active);
 }
@@ -125,6 +137,6 @@ h3 {
   }
 
   h3 {
-    font-size: max(20px, 3.1vw);
+    font-size: max(20px, 2.5vw);
   }
 }

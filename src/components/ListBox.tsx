@@ -37,6 +37,11 @@ const StyledTitle = styled.div`
   background-color: var(--active-blur);
   width: fit-content;
   font-weight: bold;
+  font-size: max(16px, 1vw);
+
+  @media only screen and (max-width: 1024px) {
+    font-size: clamp(16px, 2.2vw, 18px);
+  }
 `
 
 const StyledDotList = styled.ul`
@@ -64,7 +69,7 @@ const StyledDotList = styled.ul`
 const StyledKeywordList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 5px 10px;
+  gap: 5px;
   margin-top: 10px;
 
   li {
@@ -76,7 +81,7 @@ const StyledKeywordList = styled.ul`
     border-radius: 25px;
     font-weight: 300;
     line-height: 1;
-    padding: 0.5rem 1.5rem;
+    padding: 8px 15px;
   }
 `
 

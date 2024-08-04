@@ -55,7 +55,6 @@ const StyledButton = styled.button`
 
   .number {
     color: var(--gray);
-    margin-bottom: 15px;
     align-self: start;
   }
 

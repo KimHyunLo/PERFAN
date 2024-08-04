@@ -20,10 +20,18 @@ const StyledSection = styled.section`
   }
 
   &#projects .content-box {
-    display: flex;
-    flex-direction: column;
-    gap: min(100px, 10vw);
-    width: max(70%, 900px);
+    & > div:not(& > div:last-child) {
+      position: relative;
+      margin-bottom: min(100px, 10vw);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: max(-50px, -5vw);
+        width: 100%;
+        border-bottom: 1px solid var(--gray);
+      }
+    }
 
     @media only screen and (max-width: 1024px) {
       width: 80%;

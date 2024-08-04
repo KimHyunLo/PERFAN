@@ -11,12 +11,12 @@ function NoljangApp() {
         <ListSection.DotList main="서비스 링크">
           <li>
             <a href="https://play.google.com/store/apps/details?id=kr.wiju.noljang" target="_blank">
-              🔗 Google Play
+              Google Play
             </a>
           </li>
           <li>
             <a href="https://apps.apple.com/kr/app/%EB%86%80%EC%9E%A5/id1169889915" target="_blank">
-              🔗 App Store
+              App Store
             </a>
           </li>
         </ListSection.DotList>
