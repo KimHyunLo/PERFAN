@@ -20,16 +20,16 @@ const StyledSection = styled.section`
   }
 
   &#projects .content-box {
-    & > div:not(& > div:last-child) {
+    & > div:not(& > div:first-child) {
       position: relative;
-      margin-bottom: min(100px, 10vw);
+      margin-top: min(100px, 10vw);
 
-      &::after {
+      &::before {
         content: '';
         position: absolute;
-        bottom: max(-50px, -5vw);
+        top: max(-50px, -5vw);
         width: 100%;
-        border-bottom: 1px solid var(--gray);
+        border-top: 1px solid var(--gray);
       }
     }
 

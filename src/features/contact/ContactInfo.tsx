@@ -9,6 +9,10 @@ const StyledContactInfo = styled.ul`
   row-gap: 4vw;
   column-gap: 3vw;
 
+  li:not(li:first-child) {
+    margin-top: 5px;
+  }
+
   @media only screen and (max-width: 1024px) {
     width: auto;
     grid-template-columns: auto auto;

@@ -7,15 +7,31 @@ export function useAnimation() {
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(() => {
-    sectionTitleFadeIn()
-    sectionContentFadeIn()
     headerFadeIn()
+    sectionTitleFadeIn()
+    outsideSectionContentFadeIn()
+    insideSectionContentFadeIn()
   })
 
   return {
     navTransition,
     navItemHover,
   }
+}
+
+function headerFadeIn() {
+  gsap.fromTo(
+    'header',
+    {
+      opacity: 0,
+      y: -50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      delay: 1,
+    },
+  )
 }
 
 function navItemHover(index: number) {
@@ -122,7 +138,7 @@ function sectionTitleFadeIn() {
     ScrollTrigger.create({
       animation: timeline,
       trigger: section as HTMLElement,
-      start: '0% 70%',
+      start: '0% 50%',
       end: '0% 0%',
       onLeaveBack: () => timeline.reverse(0),
     })
@@ -147,14 +163,14 @@ function sectionTitleFadeIn() {
   })
 }
 
-function sectionContentFadeIn() {
-  gsap.utils.toArray('section').forEach((section) => {
+function outsideSectionContentFadeIn() {
+  gsap.utils.toArray('#main, #contact').forEach((section) => {
     const timeline = gsap.timeline()
 
     ScrollTrigger.create({
       animation: timeline,
       trigger: section as HTMLElement,
-      start: '0% 60%',
+      start: '0% 30%',
       end: '0% 0%',
       onLeaveBack: () => timeline.reverse(0),
     })
@@ -173,23 +189,39 @@ function sectionContentFadeIn() {
             y: 0,
             duration: 0.5,
           },
-          '<0.5',
         )
       })
   })
 }
 
-function headerFadeIn() {
-  gsap.fromTo(
-    'header',
-    {
-      opacity: 0,
-      y: -50,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      delay: 1,
-    },
-  )
+function insideSectionContentFadeIn() {
+  gsap.utils.toArray('section:not(#main, #contact)').forEach((section) => {
+    gsap.utils
+      .toArray((section as HTMLElement).querySelectorAll('.content-box > *'))
+      .forEach((box) => {
+        console.log(box)
+        const timeline = gsap.timeline()
+
+        ScrollTrigger.create({
+          animation: timeline,
+          trigger: box as HTMLElement,
+          start: '0% 50%',
+          end: '0% 0%',
+          onLeaveBack: () => timeline.reverse(0),
+        })
+
+        timeline.fromTo(
+          box as HTMLElement,
+          {
+            opacity: 0,
+            y: -50,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+          },
+        )
+      })
+  })
 }
