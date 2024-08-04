@@ -11,7 +11,7 @@ export function useScroll() {
 
       if (
         lastScrollY >= window.scrollY ||
-        window.scrollY >= document.body.scrollHeight - window.innerHeight
+        window.scrollY >= document.body.scrollHeight - window.innerHeight - 10
       ) {
         setIsNavHidden(false)
       } else if (lastScrollY < window.scrollY) {

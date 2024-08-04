@@ -199,7 +199,6 @@ function insideSectionContentFadeIn() {
     gsap.utils
       .toArray((section as HTMLElement).querySelectorAll('.content-box > *'))
       .forEach((box) => {
-        console.log(box)
         const timeline = gsap.timeline()
 
         ScrollTrigger.create({
