@@ -3,6 +3,7 @@ import MainContent from '../features/main/MainContent'
 import AboutContent from '../features/about/AboutContent'
 import ProjectsContent from '../features/projects/ProjectsContent'
 import ContactContent from '../features/contact/ContactContent'
+import SkillsContent from '../features/skills/SkillsContent'
 
 export type Section = {
   nav: string
@@ -39,6 +40,12 @@ export default function SectionsContextProvider({ children }: SectionsContextPro
         title: ['About', 'Me'],
         ref: useRef<HTMLElement>(null),
         content: <AboutContent />,
+      },
+      {
+        nav: 'skills',
+        title: ['My', 'Skills'],
+        ref: useRef<HTMLElement>(null),
+        content: <SkillsContent />,
       },
       {
         nav: 'projects',

@@ -44,7 +44,7 @@ function navItemHover(index: number) {
       duration: 0.5,
     },
     {
-      height: '25vh',
+      height: '12vw',
       duration: 0.5,
     },
   )
@@ -53,7 +53,7 @@ function navItemHover(index: number) {
     timeline.fromTo(
       selector as HTMLElement,
       {
-        y: '25vh',
+        y: '12vw',
       },
       {
         y: 0,
@@ -204,7 +204,7 @@ function insideSectionContentFadeIn() {
         ScrollTrigger.create({
           animation: timeline,
           trigger: box as HTMLElement,
-          start: '0% 50%',
+          start: '0% 70%',
           end: '0% 0%',
           onLeaveBack: () => timeline.reverse(0),
         })

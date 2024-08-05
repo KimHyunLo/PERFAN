@@ -31,10 +31,6 @@ const StyledList = styled.ul`
   padding: 0 3rem;
 `
 
-const StyledListItem = styled.li`
-  width: max(80px, 5vw);
-`
-
 const StyledButton = styled.button`
   position: relative;
   display: flex;
@@ -154,7 +150,7 @@ export default function Nav() {
     <StyledNav className={`${isNavHidden ? 'hidden' : ''}`}>
       <StyledList>
         {sections.map((section, sectionIndex) => (
-          <StyledListItem key={section.nav}>
+          <li key={section.nav}>
             <StyledTitleBox className={`title-box${sectionIndex}`}>
               <StyledTitle className="title">
                 {[...section.nav].map((letter, index) => (
@@ -188,13 +184,13 @@ export default function Nav() {
                 </div>
               </StyledLinkBox>
             </StyledButton>
-          </StyledListItem>
+          </li>
         ))}
-        <StyledListItem>
+        <li>
           <StyledButton className={`text ${isButtonClicked ? 'hidden' : ''}`}>
             <StyledLinkBox>ⓒ 2024.</StyledLinkBox>
           </StyledButton>
-        </StyledListItem>
+        </li>
       </StyledList>
     </StyledNav>
   )

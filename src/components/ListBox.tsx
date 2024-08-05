@@ -1,22 +1,25 @@
-import { createContext, type ReactNode } from 'react'
+import { ComponentPropsWithoutRef, createContext, type ReactNode } from 'react'
 import styled from 'styled-components'
 
 const StyledListBox = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: 30% 1fr;
-  column-gap: 12rem;
+  column-gap: 120px;
+  width: 80%;
+  margin: 0 auto;
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: none;
     column-gap: 0;
-    row-gap: 2rem;
+    row-gap: 20px;
+    width: 100%;
   }
 `
 
 const StyledLeftSide = styled.aside`
   position: sticky;
-  top: 10vh;
+  top: 20vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -28,6 +31,7 @@ const StyledLeftSide = styled.aside`
 `
 
 const StyledRightSide = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -115,30 +119,30 @@ function RightSide({ children }: RightSideProps) {
   return <StyledRightSide>{children}</StyledRightSide>
 }
 
-interface DotListProps {
-  main: string
+interface DotListProps extends ComponentPropsWithoutRef<'ul'> {
+  main?: string
   children: ReactNode
 }
 
-function DotList({ main, children }: DotListProps) {
+function DotList({ main, children, ...otherProps }: DotListProps) {
   return (
     <div>
       <StyledTitle>{main}</StyledTitle>
-      <StyledDotList>{children}</StyledDotList>
+      <StyledDotList {...otherProps}>{children}</StyledDotList>
     </div>
   )
 }
 
-interface KeywordListProps {
+interface KeywordListProps extends ComponentPropsWithoutRef<'ul'> {
   main: string
   children: ReactNode
 }
 
-function KeywordList({ main, children }: KeywordListProps) {
+function KeywordList({ main, children, ...otherProps }: KeywordListProps) {
   return (
     <div>
       <StyledTitle>{main}</StyledTitle>
-      <StyledKeywordList>{children}</StyledKeywordList>
+      <StyledKeywordList {...otherProps}>{children}</StyledKeywordList>
     </div>
   )
 }
