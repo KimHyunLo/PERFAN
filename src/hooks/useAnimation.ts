@@ -172,6 +172,7 @@ function outsideSectionContentFadeIn() {
       trigger: section as HTMLElement,
       start: '0% 30%',
       end: '0% 0%',
+      markers: true,
       onLeaveBack: () => timeline.reverse(0),
     })
 
