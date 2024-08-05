@@ -170,9 +170,8 @@ function outsideSectionContentFadeIn() {
     ScrollTrigger.create({
       animation: timeline,
       trigger: section as HTMLElement,
-      start: '0% 30%',
+      start: '0% 50%',
       end: '0% 0%',
-      markers: true,
       onLeaveBack: () => timeline.reverse(0),
     })
 
