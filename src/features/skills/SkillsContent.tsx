@@ -146,7 +146,9 @@ export default function SkillsContent() {
       </ListBox.LeftSide>
       <ListBox.RightSide>
         <ListBox.DotList>
-          <h3>{skill}</h3>
+          <li className="no-dot">
+            <h2>{skill}</h2>
+          </li>
           {details.map((detail) => (
             <li key={detail}>{detail}</li>
           ))}

@@ -122,7 +122,7 @@ function navTransition(index: number) {
     `.title-box${index} .title span`,
     {
       y: '25vh',
-      color: 'var(--dark-gray)',
+      color: 'var(--gray)',
       opacity: 1,
     },
     '<',

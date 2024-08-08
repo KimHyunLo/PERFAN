@@ -4,8 +4,7 @@
   --active: #15470d;
   --highlight: #d3486f;
   --white: #eeeae4;
-  --dark-gray: #454545;
-  --gray: #a9a9a9;
+  --gray: #454545;
   --black: #222;
   --black-difference: #ddd;
   --active-blur: rgba(21, 71, 13, 0.15);
@@ -113,10 +112,6 @@ h1 {
 }
 
 h2 {
-  font-size: min(80px, 6vw);
-}
-
-h3 {
   font-size: min(30px, 2vw);
   font-weight: 600;
   color: var(--active);
@@ -133,10 +128,6 @@ h3 {
   }
 
   h2 {
-    font-size: max(32px, 6.1vw);
-  }
-
-  h3 {
     font-size: max(20px, 2.5vw);
   }
 }

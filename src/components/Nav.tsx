@@ -82,7 +82,7 @@ const StyledTitle = styled.div`
   font-size: max(45px, 10vw);
   text-align: center;
   letter-spacing: -5px;
-  color: var(--dark-gray);
+  color: var(--gray);
 
   span {
     transform: translateY(25vh);

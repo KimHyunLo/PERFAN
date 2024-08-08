@@ -9,6 +9,10 @@ const StyledContactInfo = styled.ul`
   row-gap: 4vw;
   column-gap: 3vw;
 
+  li {
+    white-space: nowrap;
+  }
+
   li:not(li:first-child) {
     margin-top: 5px;
   }
@@ -22,7 +26,7 @@ const StyledContactInfo = styled.ul`
   }
 `
 
-const InfoTitle = styled.div`
+const InfoTitleItem = styled.li`
   text-transform: capitalize;
   color: var(--gray);
 `
@@ -30,32 +34,34 @@ const InfoTitle = styled.div`
 function ContactInfo() {
   return (
     <StyledContactInfo>
-      <InfoTitle>developer</InfoTitle>
-      <div>Henry</div>
-      <InfoTitle>specialty</InfoTitle>
-      <div>Organizing</div>
-      <InfoTitle>social</InfoTitle>
-      <ul>
-        <li>
-          <a href="https://github.com/KimHyunLo" target="blank">
-            Github
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74"
-            target="blank"
-          >
-            Blog
-          </a>
-        </li>
-      </ul>
-      <InfoTitle>email</InfoTitle>
-      <div>
+      <InfoTitleItem>developer</InfoTitleItem>
+      <li>Henry</li>
+      <InfoTitleItem>specialty</InfoTitleItem>
+      <li>Organizing</li>
+      <InfoTitleItem>social</InfoTitleItem>
+      <li>
+        <ul>
+          <li>
+            <a href="https://github.com/KimHyunLo" target="blank">
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://perfect-plan.notion.site/c60c5c6ffd8843c6804e2de03ab68149?pvs=74"
+              target="blank"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+      </li>
+      <InfoTitleItem>email</InfoTitleItem>
+      <li>
         <a href="mailto:leeas016@gmail.com" target="blank">
           leeas016@gmail.com
         </a>
-      </div>
+      </li>
     </StyledContactInfo>
   )
 }

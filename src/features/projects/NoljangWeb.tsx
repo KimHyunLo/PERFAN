@@ -4,7 +4,7 @@ function NoljangWeb() {
   return (
     <ListSection>
       <ListSection.LeftSide>
-        <h3>놀장 웹 버전 리뉴얼</h3>
+        <h2>놀장 웹 버전 리뉴얼</h2>
         <ListSection.DotList main="프로젝트 기간">
           <li>2023. 11 ~ 2024. 03 (5 개월)</li>
         </ListSection.DotList>

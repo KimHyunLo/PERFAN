@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import LazyImage from '../../components/LazyImage.tsx'
 
-const IntroTitle = styled.h3`
+const IntroTitle = styled.h2`
   margin-bottom: 2rem;
 `
 

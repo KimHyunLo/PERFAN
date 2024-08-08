@@ -4,7 +4,7 @@ function NoljangApp() {
   return (
     <ListSection>
       <ListSection.LeftSide>
-        <h3>놀장 레거시 앱 리메이크</h3>
+        <h2>놀장 레거시 앱 리메이크</h2>
         <ListSection.DotList main="프로젝트 기간">
           <li>2023. 04 ~ 2023. 10 (6 개월)</li>
         </ListSection.DotList>

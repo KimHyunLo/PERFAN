@@ -49,7 +49,7 @@ const StyledTitle = styled.div`
 `
 
 const StyledDotList = styled.ul`
-  li {
+  li:not(.no-dot) {
     position: relative;
     word-break: keep-all;
     white-space: pre-wrap;
