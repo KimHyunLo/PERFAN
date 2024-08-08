@@ -84,7 +84,7 @@ function MainContent() {
             어울린다고 생각합니다.
           </p>
         </StyledParagraphBox>
-        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" fetchPriority="high" />
+        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" />
       </MobileMain>
       <PcMain>
         <StyledParagraphBox>
@@ -95,7 +95,7 @@ function MainContent() {
             전달되었으면 좋겠습니다.
           </p>
         </StyledParagraphBox>
-        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" fetchPriority="high" />
+        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" />
         <StyledParagraphBox>
           <p>
             완벽한 계획을 세우는 것을 좋아합니다.
