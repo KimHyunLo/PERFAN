@@ -84,7 +84,7 @@ function MainContent() {
             어울린다고 생각합니다.
           </p>
         </StyledParagraphBox>
-        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" />
+        <StyledAvatarImage src="avatar.png" alt="avatar" loading="eager" width={394} height={292} />
       </MobileMain>
       <PcMain>
         <StyledParagraphBox>

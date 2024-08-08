@@ -71,8 +71,20 @@ function AboutContent() {
     <>
       <div>
         <IntroMobileImage>
-          <LazyImage src="signature.png" alt="signature" className="signature" />
-          <LazyImage src="portrait.png" alt="portrait" className="portrait" />
+          <LazyImage
+            src="signature.png"
+            alt="signature"
+            className="signature"
+            width={1179}
+            height={480}
+          />
+          <LazyImage
+            src="portrait.png"
+            alt="portrait"
+            className="portrait"
+            width={566}
+            height={844}
+          />
         </IntroMobileImage>
         <IntroTitle>개발자의 꿈을 찾아, 몽골에서 한국으로</IntroTitle>
         <StyledParagraphBox>
