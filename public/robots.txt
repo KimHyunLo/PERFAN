@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://perfan.vercel.app/sitemap.xml
