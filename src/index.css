@@ -1,10 +1,11 @@
 @import url(./font.css);
 
 :root {
-  --active: #15470d;
+  /* --active: #15470d; */
+  --active: #133d0a;
   --highlight: #d3486f;
   --white: #eeeae4;
-  --gray: #454545;
+  --gray: #626262;
   --black: #222;
   --black-difference: #ddd;
   --active-blur: rgba(21, 71, 13, 0.15);
